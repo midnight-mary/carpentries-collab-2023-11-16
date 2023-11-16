@@ -9,5 +9,5 @@ This lesson uses [The Carpentries Workbench][workbench].
 – Maria Perevedentseva (https://github.com/midnight-mary)
 Part of https://acceleratingdigitalskills.github.io
 
-This lesson is visible at: https://midnight-mary.github.io/carpentries-collab-2023-11-16/
+This lesson is visible at: https://acceleratingdigitalskills.github.io/carpentries-collab-2023-11-16/
 
