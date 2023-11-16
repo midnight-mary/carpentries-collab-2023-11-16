@@ -14,8 +14,8 @@ exercises: 0
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- load data into Voyant and perform inductive analysis
-- define key terms relating to textual analysis
-- identify affordances and constraints of a frequency-based approach to corpus analysis
+- Load data into Voyant and perform inductive analysis
+- Define key terms relating to textual analysis
+- Identify affordances and constraints of a frequency-based approach to corpus analysis
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
