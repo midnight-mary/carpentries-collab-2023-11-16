@@ -1,6 +1,6 @@
 # A lesson on processing text-based corpora for musical discourse analysis
 
-This is a 1-day workshop introducing basic natural language processing concepts and tools for music researchers. 
+This is a 1-day workshop introducing natural language processing concepts and tools for music researchers. 
 
 This lesson uses [The Carpentries Workbench][workbench].
 
