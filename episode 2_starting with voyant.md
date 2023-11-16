@@ -6,7 +6,7 @@ exercises: 0
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How can I load data into Voyant?
+- How do I start using Voyant?
 - What are the principles underpinning its dashboard tools?
 - What kinds of insights do they yield?
 
@@ -14,8 +14,8 @@ exercises: 0
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- load data into Voyant and perform inductive analysis
-- define key terms relating to textual analysis
-- identify affordances and constraints of a frequency-based approach to corpus analysis
+- Load data into Voyant and perform inductive analysis
+- Define key terms relating to textual analysis
+- Identify affordances and constraints of a frequency-based approach to corpus analysis
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
