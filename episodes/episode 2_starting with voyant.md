@@ -6,7 +6,7 @@ exercises: 0
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How can I load data into Voyant?
+- How do I start using Voyant?
 - What are the principles underpinning its dashboard tools?
 - What kinds of insights do they yield?
 
