@@ -5,7 +5,7 @@
 "index.md" "1b0ad58f046207a8b290b1cb5adfdeb8" "site/built/index.md" "2023-11-16"
 "links.md" "8184cf4149eafbf03ce8da8ff0778c14" "site/built/links.md" "2022-04-22"
 "episodes/introduction.md" "6c55d31b41d322729fb3276f8d4371fc" "site/built/introduction.md" "2023-07-24"
-"episodes/episode 1_intro.md" "10308031613b558361d12135c641d173" "site/built/episode 1_intro.md" "2023-11-16"
+"episodes/episode 1_intro.md" "767524f4c098a5a9b7287a3528048aa3" "site/built/episode 1_intro.md" "2023-11-16"
 "episodes/episode 2_starting with voyant.md" "87c4bdd573dea68822888f2fd4fbc9c7" "site/built/episode 2_starting with voyant.md" "2023-11-16"
 "instructors/instructor-notes.md" "cae72b6712578d74a49fea7513099f8c" "site/built/instructor-notes.md" "2023-03-16"
 "learners/reference.md" "1c7cc4e229304d9806a13f69ca1b8ba4" "site/built/reference.md" "2023-03-16"
