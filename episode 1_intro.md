@@ -6,7 +6,9 @@ exercises: 0
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- TODO
+- What is corpus linguistics?
+- What can I do using corpus lingustic analysis tools?
+- How does this method differ from 'close reading' methods in musicology?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
