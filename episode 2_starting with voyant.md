@@ -34,7 +34,7 @@ print(word_tokens)
 doc = nlp(text)    
  word_tokens = [token.text      
                for token in doc if not token.is_punct]     
-print(word_tokens)  
+print(word_tokens)      
 
 ::::::  
 
