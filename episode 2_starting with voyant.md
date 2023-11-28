@@ -36,7 +36,7 @@ doc = nlp(text)
                for token in doc if not token.is_punct]     
 print(word_tokens)  
 
-::::::
+::::::  
 
 :::
                 
