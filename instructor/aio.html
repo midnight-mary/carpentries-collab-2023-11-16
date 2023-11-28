@@ -587,7 +587,7 @@ to corpus analysis</li>
 punctuation symbols. You should only have to change one word.</p>
 <p>doc = nlp(text)<br>
 word_tokens = [token.text<br>
-for token in text if not token.is_punct]<br>
+       for token in text if not token.is_punct]<br>
 print(word_tokens)</p>
 </div>
 </div>
@@ -603,7 +603,7 @@ print(word_tokens)</p>
 <div class="accordion-body">
 <p>doc = nlp(text)<br>
 word_tokens = [token.text<br>
-for token in doc if not token.is_punct]<br>
+       for token in doc if not token.is_punct]<br>
 print(word_tokens)</p>
 </div>
 </div>
