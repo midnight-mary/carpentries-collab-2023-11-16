@@ -20,7 +20,7 @@ exercises: 0
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-:::challenge
+::: challenge
 
 Exercise1 - count tokens in text:
 
@@ -31,7 +31,7 @@ b) 5
 c) 9
 d) 11
 
-::::::solution
+:::::: solution
 
 a) 8
 
