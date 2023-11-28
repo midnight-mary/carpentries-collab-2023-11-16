@@ -22,19 +22,23 @@ exercises: 0
 
 ::: challenge
 
- Correct this command to generate a list of token words, excluding punctuation symbols. You should only have to change one word.  
-  
+ Correct this command to generate a list of token words, excluding punctuation symbols. You should only have to change one word. 
+ 
+ ``` 
  doc = nlp(text)    
  word_tokens = [token.text      
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for token in text if not token.is_punct]     
 print(word_tokens)     
+```
 
 :::::: solution
 
+```
 doc = nlp(text)    
  word_tokens = [token.text      
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for token in doc if not token.is_punct]     
-print(word_tokens)      
+print(word_tokens)
+```  
 
 ::::::  
 
