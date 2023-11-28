@@ -20,3 +20,23 @@ exercises: 0
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+:::challenge
+
+Exercise1 - count tokens in text:
+
+text = “Let’s get started with spaCy :) .”
+
+a) 8
+b) 5
+c) 9
+d) 11
+
+::::::solution
+
+a) 8
+
+::::::
+
+:::
+
+
