@@ -528,7 +528,7 @@ to corpus analysis</li>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: lower-alpha">
 <li>8</li>
@@ -585,8 +585,10 @@ to corpus analysis</li>
 <div class="callout-content">
 <p>Correct this command to generate a list of token words, excluding
 punctuation symbols. You should only have to change one word.</p>
-<p>doc = nlp(text) word_tokens = [token.text for token in text if not
-token.is_punct] print(word_tokens)</p>
+<p>doc = nlp(text)<br>
+word_tokens = [token.text<br>
+for token in text if not token.is_punct]<br>
+print(word_tokens)</p>
 </div>
 </div>
 </div></section>
