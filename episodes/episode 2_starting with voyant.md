@@ -26,14 +26,14 @@ exercises: 0
   
  doc = nlp(text)    
  word_tokens = [token.text      
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for token in text if not token.is_punct]     
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for token in text if not token.is_punct]     
 print(word_tokens)     
 
 :::::: solution
 
 doc = nlp(text)    
  word_tokens = [token.text      
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for token in doc if not token.is_punct]     
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for token in doc if not token.is_punct]     
 print(word_tokens)      
 
 ::::::  
