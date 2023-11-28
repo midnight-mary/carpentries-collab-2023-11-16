@@ -27,7 +27,7 @@ exercises: 0
  ``` 
  doc = nlp(text)    
  word_tokens = [token.text      
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for token in text if not token.is_punct]     
+                for token in text if not token.is_punct]     
 print(word_tokens)     
 ```
 
@@ -36,7 +36,7 @@ print(word_tokens)
 ```
 doc = nlp(text)    
  word_tokens = [token.text      
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for token in doc if not token.is_punct]     
+                for token in doc if not token.is_punct]     
 print(word_tokens)
 ```  
 
