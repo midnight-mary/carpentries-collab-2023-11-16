@@ -41,11 +41,11 @@ a) 8
 
 ::::::::: keypoints
 
-Corpus linguistics is the compilation and analysis of collections of text which enable description of the nature, structure, and use of languages. (Or: The study of language as part of a “body” of text, wherein language appears in its “natural” context.)
+- Corpus linguistics is the compilation and analysis of collections of text which enable description of the nature, structure, and use of languages. (Or: The study of language as part of a “body” of text, wherein language appears in its “natural” context.)
 
-Corpus linguistic analysis tools can be used to investigate underlying patterns and contextual associations of words in a body of text, amongst other uses.
+- Corpus linguistic analysis tools can be used to investigate underlying patterns and contextual associations of words in a body of text, amongst other uses.
 
-Corpus analysis enables a more 'distant reading' approach, focused on identifying patterns across large datasets...
+- Corpus analysis enables a more 'distant reading' approach, focused on identifying patterns across large datasets...
 
 :::::::::
 
