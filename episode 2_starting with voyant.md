@@ -43,4 +43,12 @@ print(word_tokens)
 ::::::  
 
 :::
-                
+
+::::: keypoints  
+
+1. The Voyant website allows you to dive into your corpus right away by uploading a document or several to its server.  
+2. Most of Voyant's dashboard tools such as Cirrus, Termsberry and Contexts, rely on token frequency counts and collocations.  
+3. These types of tools can yield insights into the lexical diversity of the corpus, which terms in a given corpus are most or least prominent, and the other words with which they frequently appear. This can highlight patterns or trends that can then be further analysed with other tools.
+
+::::: 
+
