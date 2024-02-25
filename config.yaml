@@ -59,12 +59,8 @@ contact: 'm.perevedentseva@salford.ac.uk' # FIXME
 
 # Order of episodes in your lesson
 episodes:
-  – episode0_summary-setup.md
-  - episode 1_intro.md
-  - episode 2_exploring text-based corpora with voyant.md
-  – episode 3_natural language processing with spacy.md
-  – episode 4_organising data with pandas.md
-  – episode 5_word embeddings.md
+
+ 
 
 # Information for Learners
 learners: 
