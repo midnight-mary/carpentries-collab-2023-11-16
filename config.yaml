@@ -58,9 +58,9 @@ contact: 'm.perevedentseva@salford.ac.uk' # FIXME
 # - another-learner.md
 
 # Order of episodes in your lesson
-episodes:  
-- episode 1_intro.md
-- episode 2_exploring text-based corpora with voyant.md
+episodes:
+  summary.md
+ 
 
 # Information for Learners
 learners: 

@@ -182,19 +182,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="episode%201_intro.html">1. Introduction: Analysing Web-Based Musical Discourse</a>
-    </div>
-<!--/div.accordion-header-->
-        
-  </div>
-<!--/div.accordion-item-->
-</div>
-<!--/div.accordion-flush-->
-
-<div class="accordion accordion-flush" id="accordionFlush3">
-  <div class="accordion-item">
-    <div class="accordion-header" id="flush-heading3">
-        <a href="episode%202_exploring%20text-based%20corpora%20with%20voyant.html">2. Exploring Text-Based Corpora with Voyant</a>
+        <a href="summary.html">1. Lesson Summary and Setup</a>
     </div>
 <!--/div.accordion-header-->
         
@@ -258,11 +246,11 @@
     <main id="main-content" class="main-content"><div class="container lesson-content">
         
         
-<section id="aio-episode 1_intro"><p>Content from <a href="episode%201_intro.html">Introduction: Analysing Web-Based Musical Discourse</a></p>
+<section id="aio-summary"><p>Content from <a href="summary.html">Lesson Summary and Setup</a></p>
 <hr>
 <p>Last updated on 2024-02-25 |
         
-        <a href="https://github.com/acceleratingdigitalskills/Processing-Text-Based-Corpora/edit/main/episodes/episode%201_intro.html" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/acceleratingdigitalskills/Processing-Text-Based-Corpora/edit/main/episodes/summary.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 0 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -275,10 +263,7 @@
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>What is corpus linguistics?</li>
-<li>What can I do using corpus lingustic analysis tools?</li>
-<li>How does this method differ from ‘analogue’ ‘close reading’ methods
-in musicology?</li>
+<li>In progress</li>
 </ul>
 </div>
 </div>
@@ -288,11 +273,7 @@ in musicology?</li>
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>define what constitutes a corpus and a sublanguage</li>
-<li>define key concepts relating to textual analysis e.g. type and
-token, lemmatization, collocation, n-gram, etc.</li>
-<li>identify affordances and constraints of a frequency-based approach
-to corpus analysis</li>
+<li>In progress</li>
 </ul>
 </div>
 </div>
@@ -308,110 +289,8 @@ to corpus analysis</li>
 </h3>
 <div class="callout-content">
 <ul>
-<li><p>Corpus linguistics is the compilation and analysis of collections
-of text which enable description of the nature, structure, and use of
-languages. (Or: The study of language as part of a “body” of text,
-wherein language appears in its “natural” context.)</p></li>
-<li><p>Corpus linguistic analysis tools can be used to investigate
-underlying patterns and contextual associations of words in a body of
-text, amongst other uses.</p></li>
-<li><p>Corpus analysis enables a ‘distant reading’ approach to texts,
-focused on identifying patterns across large datasets.</p></li>
+<li>In progress</li>
 </ul>
-</div>
-</div>
-</div></section><section id="aio-episode 2_exploring text-based corpora with voyant"><p>Content from <a href="episode%202_exploring%20text-based%20corpora%20with%20voyant.html">Exploring Text-Based Corpora with Voyant</a></p>
-<hr>
-<p>Last updated on 2024-02-25 |
-        
-        <a href="https://github.com/acceleratingdigitalskills/Processing-Text-Based-Corpora/edit/main/episodes/episode%202_exploring%20text-based%20corpora%20with%20voyant.html" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
-<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 0 minutes</p>
-<div class="text-end">
-          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
-        </div>
-<div class="overview card">
-<h2 class="card-header">Overview</h2>
-<div class="row g-0">
-<div class="col-md-4">
-<div class="card-body">
-<div class="inner">
-<h3 class="card-title">Questions</h3>
-<ul>
-<li>How do I start using Voyant?</li>
-<li>What are the principles underpinning its dashboard tools?</li>
-<li>What kinds of insights do they yield?</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col-md-8">
-<div class="card-body">
-<div class="inner bordered">
-<h3 class="card-title">Objectives</h3>
-<ul>
-<li>Load data into Voyant and perform inductive analysis</li>
-<li>Define key terms relating to textual analysis</li>
-<li>Identify affordances and constraints of a frequency-based approach
-to corpus analysis</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="challenge1" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<div class="callout-inner">
-<h3 class="callout-title">Challenge<a class="anchor" aria-label="anchor" href="#challenge1"></a>
-</h3>
-<div class="callout-content">
-<p>Correct this command to generate a list of token words, excluding
-punctuation symbols. You should only have to change one word.</p>
-<pre><code>doc = nlp(text)    
-word_tokens = [token.text      
-               for token in text if not token.is_punct]     
-print(word_tokens)     </code></pre>
-</div>
-</div>
-</div>
-<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
-</button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
-<div class="accordion-body">
-<pre><code>doc = nlp(text)    
- word_tokens = [token.text      
-                for token in doc if not token.is_punct]     
-print(word_tokens)</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div id="keypoints1" class="callout keypoints">
-<div class="callout-square">
-<i class="callout-icon" data-feather="key"></i>
-</div>
-<div class="callout-inner">
-<h3 class="callout-title">Key Points<a class="anchor" aria-label="anchor" href="#keypoints1"></a>
-</h3>
-<div class="callout-content">
-<ol style="list-style-type: decimal">
-<li>The Voyant website allows you to dive into your corpus right away by
-uploading a document or several to its server.<br>
-</li>
-<li>Most of Voyant’s dashboard tools such as Cirrus, Termsberry and
-Contexts, rely on token frequency counts and collocations.<br>
-</li>
-<li>These types of tools can yield insights into the lexical diversity
-of the corpus, which terms in a given corpus are most or least
-prominent, and the other words with which they frequently appear. This
-can highlight patterns or trends that can then be further analysed with
-other tools.</li>
-</ol>
 </div>
 </div>
 </div></section>
