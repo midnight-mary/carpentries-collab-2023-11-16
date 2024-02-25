@@ -1,7 +1,7 @@
 ---
 title: "Exploring Text-Based Corpora with Voyant"
-teaching: 0
-exercises: 0
+teaching: 35
+exercises: 15
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
@@ -53,6 +53,18 @@ Despite its simplicity, this approach is extremely powerful and versatile. Besid
 ::::::: callout
 Frequency-based text analysis is often traced back to Father Roberto Busa, a Jesuit Priest who worked with IBM in the 1940s to manually index 11 million medieval Latin words from the writings of St. Thomas Aquinas, count each appearance of the word 'in' and look at its collocations in order to explore the concept of 'presence' in his work. This somewhat quaint story has come to be venerated as the origin myth of the field of humanities computing as a whole, and has more recently been the subject of critique.^[Arun, Jacob. 2021. 'Punching Holes in the International Busa Machine Narrative'. In Kim, Dorothy and Coh, Adeline, Eds. *Alternative Historiographies of the Digital Humanities*. Punctum: 121–139]
 :::::::::::
+With these core principles in mind, we can now have a go at using Voyant to explore the Boomkat corpus.
+
+:::::::::: discussion
+In pairs or groups of three, choose **one** of the subgenre datasets from the ['For Voyant'](https://drive.google.com/drive/folders/1sY2irnuaS4tM9i7PxG3lOz_46E1XYDHb?usp=sharing) folder which you should already have downloaded to your computer, go to the [Voyant website](https://voyant-tools.org/), and click the 'Upload' button to load the data to Voyant's server. This may take a few moments. 
+
+Once the data has loaded, take a few minutes to look around the various panes of the Dashboard and think about:
+- What do the individual panels do? Can you describe it using the NLP terms we defined earlier?
+- Which tool or finding grabs your attention? Why?
+- Are there any problems with how the data appears that prevent a more meaningful analysis? 
+
+::::::::::
+
 
 
 ::::: keypoints  
