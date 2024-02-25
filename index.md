@@ -2,7 +2,7 @@
 site: sandpaper::sandpaper_site
 ---
 
-This course introduces tools and practices for natural language processing for musical discourse analysis.
+This course introduces fundamental concepts and tools for working with large bodies of text and natural language processing for musical discourse analysis.
 
 ::: prereq
 Before joining this training, participants should have:
