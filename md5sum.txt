@@ -4,7 +4,7 @@
 "config.yaml" "9bfa9448a523abc6bee337780c07b745" "site/built/config.yaml" "2024-02-25"
 "index.md" "c9cc02c89708906017d811b6119e44a6" "site/built/index.md" "2023-11-16"
 "links.md" "8184cf4149eafbf03ce8da8ff0778c14" "site/built/links.md" "2022-04-22"
-"episodes/episode 1_intro.md" "980c399ee9ce65be6c9c77d808a6ab29" "site/built/episode 1_intro.md" "2023-11-30"
+"episodes/episode 1_intro.md" "3a18b9100917a670ca0dc668b9813c10" "site/built/episode 1_intro.md" "2024-02-25"
 "episodes/episode 2_starting with voyant.md" "b19399d46c4159d1f71133425a2a0305" "site/built/episode 2_starting with voyant.md" "2023-11-30"
 "instructors/instructor-notes.md" "cae72b6712578d74a49fea7513099f8c" "site/built/instructor-notes.md" "2023-03-16"
 "learners/reference.md" "1c7cc4e229304d9806a13f69ca1b8ba4" "site/built/reference.md" "2023-03-16"
