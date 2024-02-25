@@ -14,7 +14,7 @@ exercises: 15
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Define key terms relating to textual analysis
+- Define key terms relating to Natural Language Processing
 - Load data into Voyant and conduct inductive analysis
 - Identify affordances and limitations of a frequency-based approach to corpus analysis
 
@@ -43,7 +43,7 @@ The relationship between tokens and types (or **type-token ratio**), i.e. how ma
 
 In line with the importance placed on knowing the company words keep in computational linguistics, discussed in the [last episode](introduction.md), besides parsing a corpus for tokens and types, Voyant also analyses the relationships between tokens and their neighbours. 
 
-- An **n-gram** is a contiguous sequence of items in a text. For example a **bigram** is a pair of consecutive written units, i.e. characters, syllables or words; a trigram is a sequence of three consecutive written units, and so on. Any number of consecutive units can be specified for an n-gram and it functions somewhat like a sample-rate for extracting information from the text that could be important for predicting aspects of meaning or function.
+- An **n-gram** is a contiguous sequence of items in a text. For example a **bigram** is a pair of consecutive written units, i.e. characters, syllables or words; a trigram is a sequence of three consecutive written units, and so on. Any number of consecutive units can be specified for an n-gram and it functions somewhat like a sample-rate for extracting informationřfrom the text that could be important for predicting aspects of meaning or function.
 - A **collocation** is typically a bi-gram, often at word level, which occurs in a text at a rate greater than chance. For example, type-pairs like 'red wine' and 'string quartet' are collocations in English.
 
 The original and most common application of automated text analysis uses computers to count how often certain words occur in a given text. The analytical strategy employed in a **frequency-based approach** is relatively simple: count the number of occurrences of a specific word token and then normalise this according to how many words there are in the text overall to obtain **relative term frequency**. 
@@ -66,12 +66,22 @@ Once the data has loaded, take a few minutes to look around the various panes of
 * Are there any features that you do not understand?
 
 ::::::::::
+## Fine-Tuning Parameters for Corpus Sensitivity
 
+Stopwords bringing to mind the apocr
+Sentiment 
+
+::::::::: callout
+Remember that data cleaning is an iterative process, not simply an initial step. We have been working with a dataset that has already been UTF-8 encoded and which contains one uniform data type within it. Consideration of the type of data you are working with and how it is presented for analysis is important in pre-processing but does not end there.
+
+Relatedly, stopword lists should be thought through carefully in order to remain sensitive to the discursive priorities of the types of texts being analysed while also being used to streamline the dataset and remove 'noise'. This, too, should be an iterative process, 
+
+::::::::::::::
 
 
 ::::: keypoints  
 
-1. The Voyant website allows you to dive into your corpus right away by uploading a document or several to its server.  
+1. The Voyant website allows you to dive into your corpus right away by uploading a document (or several) to its server.  
 2. Most of Voyant's dashboard tools such as Cirrus, Termsberry and Contexts, rely on token frequency counts and collocations.  
 3. These types of tools can yield insights into the lexical diversity of the corpus, which terms in a given corpus are most or least prominent, and the other words with which they frequently appear. This can highlight patterns or trends that can then be further analysed with other tools.
 
