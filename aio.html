@@ -434,14 +434,20 @@ detail, it is useful to define some core NLP concepts so that you can
 understand what Voyant is looking for as it reads text data.</p>
 <p>First of all, Voyant needs to parse the text as a sequence of
 characters (or <strong>string</strong>) and identify meaningful
-linguistic units such as words, numbers and punctuation. A
-<strong>token</strong> is a defined unit within a string, such as an
-individual appearance of word or number, usually separated from other
-tokens by whitespace. A <strong>type</strong>, on the other hand, is a
-unique word form, which may appear many times in a corpus. The
-relationship between tokens and types, i.e. how many unique word forms
-there are in a corpus versus how many times they are used, is a measure
-of the <strong>lexical diversity</strong> of the corpus.</p>
+linguistic units such as words, numbers and punctuation.</p>
+<ul>
+<li>A <strong>token</strong> is a defined unit within a string, such as
+an individual appearance of a word or number, usually separated from
+other tokens by whitespace.</li>
+<li>A <strong>type</strong>, on the other hand, is a unique word form,
+which may appear many times in a corpus.</li>
+<li>A <strong>lemma</strong> is the root form of a derived (inflected)
+word, e.g. ‘music’ as the root of ‘musically’, ‘musician’, ‘musicking’,
+etc.</li>
+</ul>
+<p>The relationship between tokens and types, i.e. how many unique word
+forms there are in a corpus versus how many times they are used, is a
+measure of the <strong>lexical diversity</strong> of the corpus.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
