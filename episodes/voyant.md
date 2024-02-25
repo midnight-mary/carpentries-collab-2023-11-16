@@ -34,7 +34,13 @@ Voyant **does not require any prior programming knowledge** and enables **induct
 
 Before we start using Voyant to explore our text corpora in more detail, it is useful to define some core NLP concepts so that you can understand what Voyant is looking for as it reads text data.
 
-First of all, Voyant needs to parse the text as a sequence of characters (or **string**) and identify meaningful linguistic units such as words, numbers and punctuation. A **token** is a defined unit within a string, such as an individual appearance of word or number, usually separated from other tokens by whitespace. A **type**, on the other hand, is a unique word form, which may appear many times in a corpus. The relationship between tokens and types, i.e. how many unique word forms there are in a corpus versus how many times they are used, is a measure of the **lexical diversity** of the corpus. 
+First of all, Voyant needs to parse the text as a sequence of characters (or **string**) and identify meaningful linguistic units such as words, numbers and punctuation. 
+
+- A **token** is a defined unit within a string, such as an individual appearance of a word or number, usually separated from other tokens by whitespace.
+- A **type**, on the other hand, is a unique word form, which may appear many times in a corpus.
+- A **lemma** is the root form of a derived (inflected) word, e.g. 'music' as the root of 'musically', 'musician', 'musicking', etc.
+
+The relationship between tokens and types, i.e. how many unique word forms there are in a corpus versus how many times they are used, is a measure of the **lexical diversity** of the corpus. 
 
 
 ::::: keypoints  
