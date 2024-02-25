@@ -1,5 +1,5 @@
 ---
-title: "Starting with Voyant"
+title: "Exploring Text-Based Corpora with Voyant"
 teaching: 0
 exercises: 0
 ---
