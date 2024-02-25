@@ -278,7 +278,7 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>How do I start using Voyant?</li>
+<ul><li>What is Voyant and what is it used for?</li>
 <li>What are the principles underpinning its dashboard tools?</li>
 <li>What kinds of insights do they yield?</li>
 </ul></div>
@@ -301,17 +301,17 @@ to corpus analysis</li>
 </h2>
 <hr class="half-width"><p><a href="https://voyant-tools.org/" class="external-link">Voyant</a> is a simple, powerful
 and user-friendly open-source reading and analysis environment for
-digital texts founded by Stéfan Sinclair and now maintaned by Geoffrey
-Rockwell, Andrew MacDonald and Cecily Raynor at the Universities of
-McGill and Alberta in Canada. It is browser-based and allows you to
-upload documents or copy and paste text directly into the interface,
-which Voyant then automatically analyses according to some core Natural
-Language Processing (NLP) principles.</p>
+digital texts. It was founded by Stéfan Sinclair and is now maintaned by
+Geoffrey Rockwell, Andrew MacDonald and Cecily Raynor at the
+Universities of McGill and Alberta in Canada. It is browser-based and
+allows you to upload documents or copy and paste text directly into the
+interface, which Voyant then automatically analyses according to some
+core Natural Language Processing (NLP) principles.</p>
 <p>Voyant is a useful tool for those new to NLP because its ‘Dashboard’
 landing site provides an instant, synchronic and customisable overview
 of many facets of the corpus uploaded while keeping the workings ‘under
-the hood’. This allows you to dive straight into exploring the
-linguistic features of your corpus intuitively, without getting bogged
+the hood’. This allows users to dive straight into exploring the
+linguistic features of their corpus intuitively, without getting bogged
 down in the linear, incremental coding workflow of NLP libraries such as
 the Natural Language Toolkit, spaCy and Flair.</p>
 <div id="callout1" class="callout callout">
@@ -354,20 +354,21 @@ ratio</strong>), i.e. how many unique word forms there are in a corpus
 versus how many times they are used, is a measure of the <strong>lexical
 diversity</strong> of the corpus.</p>
 <p>In line with the importance placed on knowing the company words keep
-in computational linguistics discussed in the last episode, besides
-parsing a corpus for tokens and types, Voyant also analyses the
-relationships between tokens and their neighbours.</p>
+in computational linguistics, discussed in the <a href="introduction.html">last episode</a>, besides parsing a corpus for
+tokens and types, Voyant also analyses the relationships between tokens
+and their neighbours.</p>
 <ul><li>An <strong>n-gram</strong> is a contiguous sequence of items in a
 text. For example a <strong>bigram</strong> is a pair of consecutive
-written units, e.g. characters, syllables or words. A trigram is a
-sequence of three consecutive written units, etc. Any number can be
-specified for an n-gram and it functions like a window-size or
-sample-rate for extracting information from the text that can be
-important for predicting aspects of meaning or function.</li>
+written units, i.e. characters, syllables or words; a trigram is a
+sequence of three consecutive written units, and so on. Any number of
+consecutive units can be specified for an n-gram and it functions
+somewhat like a sample-rate for extracting information from the text
+that could be important for predicting aspects of meaning or
+function.</li>
 <li>A <strong>collocation</strong> is typically a bi-gram, often at word
 level, which occurs in a text at a rate greater than chance. For
 example, type-pairs like ‘red wine’ and ‘string quartet’ are
-collocations in everyday language.</li>
+collocations in English.</li>
 </ul><p>The original and most common application of automated text analysis
 uses computers to count how often certain words occur in a given text.
 The analytical strategy employed in a <strong>frequency-based
@@ -377,12 +378,13 @@ words there are in the text overall to obtain <strong>relative term
 frequency</strong>.</p>
 <p>Despite its simplicity, this approach is extremely powerful and
 versatile. Besides relative term frequency, other common techniques used
-for making frequency counts reflect data more meaningfull are the
+for making frequency counts reflect data more meaningfully, especially
+if working with corpora across multiple documents, are the
 <strong>corrected type-token ratio</strong> (CTTR) and <strong>text
 frequency-inverse document frequency</strong>. These help to minimise
 the weighting of frequently occurring but perhaps less significant terms
-(like ‘the’, ‘a’, etc.) while making less frequent terms have a higher
-impact.</p>
+(such as ‘the’, ‘a’, etc.) while making less frequent terms have a
+higher impact.</p>
 <div id="callout2" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
