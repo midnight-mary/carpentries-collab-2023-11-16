@@ -56,12 +56,14 @@ Frequency-based text analysis is often traced back to Father Roberto Busa, a Jes
 With these core principles in mind, we can now have a go at using Voyant to explore the Boomkat corpus.
 
 :::::::::: discussion
-In pairs or groups of three, choose **one** of the subgenre datasets from the ['For Voyant'](https://drive.google.com/drive/folders/1sY2irnuaS4tM9i7PxG3lOz_46E1XYDHb?usp=sharing) folder which you should already have downloaded to your computer, go to the [Voyant website](https://voyant-tools.org/), and click the 'Upload' button to load the data to Voyant's server. This may take a few moments. 
+In pairs or groups of three, choose one of the subgenre datasets from the ['For Voyant'](https://drive.google.com/drive/folders/1sY2irnuaS4tM9i7PxG3lOz_46E1XYDHb?usp=sharing) folder which you should already have downloaded to your computer. Then, go to the [Voyant website](https://voyant-tools.org/) and click the 'Upload' button to load the data to Voyant's server. This may take a few moments. 
 
 Once the data has loaded, take a few minutes to look around the various panes of the Dashboard and think about:
-- What do the individual panels do? Can you describe it using the NLP terms we defined earlier?
-- Which tool or finding grabs your attention? Why?
-- Are there any problems with how the data appears that prevent a more meaningful analysis? 
+
+* What do the individual panels do? Can you describe it using the NLP terms we defined earlier?
+* Which tool or finding grabs your attention? Why?
+* Are there any problems with how the data appears that prevent a more meaningful analysis?
+* Are there any features that you do not understand?
 
 ::::::::::
 
