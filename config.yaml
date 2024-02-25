@@ -11,23 +11,23 @@
 carpentry: 'incubator'
 
 # Overall title for pages.
-title: 'Lesson Title' # FIXME
+title: 'Processing Text-Based Corpora for Musical Discourse Analysis' 
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
 created: 2023-11-16
 
 # Comma-separated list of keywords for the lesson
-keywords: 'nlp, music, English, Python, The Carpentries, pre-alpha' 
+keywords: 'nlp, music, corpus studies, English, Python, The Carpentries, pre-alpha' 
 
 # Life cycle stage of the lesson
 # possible values: pre-alpha, alpha, beta, stable
-life_cycle: 'pre-alpha' # FIXME
+life_cycle: 'pre-alpha' 
 
 # License of the lesson
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://github.com/carpentries/workbench-template-md' # FIXME
+source: 'https://github.com/acceleratingdigitalskills/Processing-Text-Based-Corpora' 
 
 # Default branch of your lesson
 branch: 'main'
