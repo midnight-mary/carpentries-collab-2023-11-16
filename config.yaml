@@ -59,6 +59,7 @@ contact: 'm.perevedentseva@salford.ac.uk' # FIXME
 
 # Order of episodes in your lesson
 episodes:
+  - summary.md
   - introduction.md
  
 
