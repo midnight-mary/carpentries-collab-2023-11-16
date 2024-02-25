@@ -61,6 +61,7 @@ contact: 'm.perevedentseva@salford.ac.uk' # FIXME
 episodes:  
 - episode 1_intro.md
 - episode 2_exploring text-based corpora with voyant.md
+– episode 3_natural language processing with spacy.md
 
 # Information for Learners
 learners: 
