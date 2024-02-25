@@ -62,6 +62,7 @@ episodes:
 - episode 1_intro.md
 - episode 2_exploring text-based corpora with voyant.md
 – episode 3_natural language processing with spacy.md
+– episode 4_organising data with pandas.md
 
 # Information for Learners
 learners: 
