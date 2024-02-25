@@ -58,8 +58,7 @@ contact: 'm.perevedentseva@salford.ac.uk' # FIXME
 # - another-learner.md
 
 # Order of episodes in your lesson
-episodes: 
-- introduction.md  
+episodes:  
 - episode 1_intro.md
 - episode 2_starting with voyant.md
 
