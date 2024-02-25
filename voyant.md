@@ -20,6 +20,10 @@ exercises: 0
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+## Introduction to Voyant
+
+[Voyant](https://voyant-tools.org/) is a simple, powerful and very user-friendly reading and analysis environment for digital texts. 
+
 ::::: keypoints  
 
 1. The Voyant website allows you to dive into your corpus right away by uploading a document or several to its server.  
