@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Corpus Linguistics Principles"
+title: "Introduction: Analysing Web-Based Musical Discourse"
 teaching: 0
 exercises: 0
 ---
@@ -26,7 +26,7 @@ exercises: 0
 
 - Corpus linguistic analysis tools can be used to investigate underlying patterns and contextual associations of words in a body of text, amongst other uses.
 
-- Corpus analysis enables a more 'distant reading' approach, focused on identifying patterns across large datasets...
+- Corpus analysis enables a 'distant reading' approach to texts, focused on identifying patterns across large datasets.
 
 :::::::::
 
