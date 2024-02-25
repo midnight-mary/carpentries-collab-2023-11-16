@@ -64,18 +64,17 @@ Once the data has loaded, take a few minutes to look around the various panes of
 * Which tool or finding grabs your attention? Why?
 * Are there any problems with how the data appears that prevent a more meaningful analysis?
 * Are there any features that you do not understand?
-
 ::::::::::
 ## Fine-Tuning Parameters for Corpus Sensitivity
 
-Stopwords bringing to mind the apocr
+Stopwords bringing to mind the (apocryphal) saying that 'writing about music is **like** dancing about architecture'.
+
 Sentiment 
 
 ::::::::: callout
-Remember that data cleaning is an iterative process, not simply an initial step. We have been working with a dataset that has already been UTF-8 encoded and which contains one uniform data type within it. Consideration of the type of data you are working with and how it is presented for analysis is important in pre-processing but does not end there.
+Remember that data cleaning is an iterative process, not simply an initial step. We have been working with a dataset that has already been converted from .csv to .xlsm, UTF-8 encoded and which contains one uniform data type within it. Consideration of the type of data you are working with and how it is presented for analysis is important in pre-processing but does not end there.
 
-Relatedly, stopword lists should be thought through carefully in order to remain sensitive to the discursive priorities of the types of texts being analysed while also being used to streamline the dataset and remove 'noise'. This, too, should be an iterative process, 
-
+Relatedly, stopword lists and any other filters should be thought through carefully in order to remain sensitive to the discursive priorities of the types of texts being analysed while also being used to streamline the dataset and remove 'noise'. This, too, should be an iterative process and can involve trial and error as you get a feel for the shape and contents of your corpus.
 ::::::::::::::
 
 
