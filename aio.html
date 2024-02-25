@@ -381,7 +381,7 @@ focused on identifying patterns across large datasets.</p></li>
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Define key terms relating to textual analysis</li>
+<li>Define key terms relating to Natural Language Processing</li>
 <li>Load data into Voyant and conduct inductive analysis</li>
 <li>Identify affordances and limitations of a frequency-based approach
 to corpus analysis</li>
@@ -461,7 +461,7 @@ text. For example a <strong>bigram</strong> is a pair of consecutive
 written units, i.e. characters, syllables or words; a trigram is a
 sequence of three consecutive written units, and so on. Any number of
 consecutive units can be specified for an n-gram and it functions
-somewhat like a sample-rate for extracting information from the text
+somewhat like a sample-rate for extracting informationřfrom the text
 that could be important for predicting aspects of meaning or
 function.</li>
 <li>A <strong>collocation</strong> is typically a bi-gram, often at word
@@ -533,6 +533,31 @@ meaningful analysis?</li>
 </div>
 </div>
 </div>
+</section><section id="fine-tuning-parameters-for-corpus-sensitivity"><h2 class="section-heading">Fine-Tuning Parameters for Corpus Sensitivity<a class="anchor" aria-label="anchor" href="#fine-tuning-parameters-for-corpus-sensitivity"></a>
+</h2>
+<hr class="half-width">
+<p>Stopwords bringing to mind the apocr Sentiment</p>
+<div id="callout3" class="callout callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout<a class="anchor" aria-label="anchor" href="#callout3"></a>
+</h3>
+<div class="callout-content">
+<p>Remember that data cleaning is an iterative process, not simply an
+initial step. We have been working with a dataset that has already been
+UTF-8 encoded and which contains one uniform data type within it.
+Consideration of the type of data you are working with and how it is
+presented for analysis is important in pre-processing but does not end
+there.</p>
+<p>Relatedly, stopword lists should be thought through carefully in
+order to remain sensitive to the discursive priorities of the types of
+texts being analysed while also being used to streamline the dataset and
+remove ‘noise’. This, too, should be an iterative process,</p>
+</div>
+</div>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -543,7 +568,7 @@ meaningful analysis?</li>
 <div class="callout-content">
 <ol style="list-style-type: decimal">
 <li>The Voyant website allows you to dive into your corpus right away by
-uploading a document or several to its server.<br>
+uploading a document (or several) to its server.<br>
 </li>
 <li>Most of Voyant’s dashboard tools such as Cirrus, Termsberry and
 Contexts, rely on token frequency counts and collocations.<br>
