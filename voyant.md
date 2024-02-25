@@ -39,12 +39,17 @@ First of all, Voyant needs to parse the text as a sequence of characters (or **s
 - A **lemma** is the root form of a derived (inflected) word, e.g. 'music' is the lemma of the types 'musically', 'musician', 'musicking', etc.
 - A **hapax legomena** (or simply **hapax**) is a type that appears only once in a corpus.
 
-The relationship between tokens and types, i.e. how many unique word forms there are in a corpus versus how many times they are used, is a measure of the **lexical diversity** of the corpus. 
+The relationship between tokens and types (or **type-token ratio**), i.e. how many unique word forms there are in a corpus versus how many times they are used, is a measure of the **lexical diversity** of the corpus. 
 
 In line with the importance placed on knowing the company words keep in computational linguistics discussed in the last episode, besides parsing a corpus for tokens and types, Voyant also analyses the relationships between tokens and their neighbours. 
 
 - An **n-gram** is a contiguous sequence of items in a text. For example a **bigram** is a pair of consecutive written units, e.g. characters, syllables or words. A trigram is a sequence of three consecutive written units, etc. Any number can be specified for an n-gram and it functions like a window-size or sample-rate for extracting information from the text that can be important for predicting aspects of meaning or function.
 - A **collocation** is typically a bi-gram, often at word level, which occurs in a text at a rate greater than chance. For example, type-pairs like 'red wine' and 'string quartet' are collocations in everyday language.
+
+The original and most common application of automated text analysis uses computers to count how often certain words occur in a given text. The analytical strategy employed in a **frequency-based approach** is relatively simple: count the number of occurrences of a specific word token and then normalise this according to how many words there are in the text overall to obtain **relative term frequency**. 
+
+Despite its simplicity, this approach is extremely powerful and versatile. Besides relative term frequency, other common techniques used for making frequency counts reflect data more meaningfull are the **corrected type-token ratio** (CTTR) and **text frequency-inverse document frequency**. These help to minimise the weighting of frequently occurring but perhaps less significant terms (like 'the', 'a', etc.) while making infrequent terms have a higher impact. 
+
 
 
 ::::: keypoints  
