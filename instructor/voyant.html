@@ -351,9 +351,10 @@ word, e.g. ‘music’ is the lemma of the types ‘musically’, ‘musician�
 ‘musicking’, etc.</li>
 <li>A <strong>hapax legomena</strong> (or simply <strong>hapax</strong>)
 is a type that appears only once in a corpus.</li>
-</ul><p>The relationship between tokens and types, i.e. how many unique word
-forms there are in a corpus versus how many times they are used, is a
-measure of the <strong>lexical diversity</strong> of the corpus.</p>
+</ul><p>The relationship between tokens and types (or <strong>type-token
+ratio</strong>), i.e. how many unique word forms there are in a corpus
+versus how many times they are used, is a measure of the <strong>lexical
+diversity</strong> of the corpus.</p>
 <p>In line with the importance placed on knowing the company words keep
 in computational linguistics discussed in the last episode, besides
 parsing a corpus for tokens and types, Voyant also analyses the
@@ -369,7 +370,22 @@ important for predicting aspects of meaning or function.</li>
 level, which occurs in a text at a rate greater than chance. For
 example, type-pairs like ‘red wine’ and ‘string quartet’ are
 collocations in everyday language.</li>
-</ul><div id="keypoints1" class="callout keypoints">
+</ul><p>The original and most common application of automated text analysis
+uses computers to count how often certain words occur in a given text.
+The analytical strategy employed in a <strong>frequency-based
+approach</strong> is relatively simple: count the number of occurrences
+of a specific word token and then normalise this according to how many
+words there are in the text overall to obtain <strong>relative term
+frequency</strong>.</p>
+<p>Despite its simplicity, this approach is extremely powerful and
+versatile. Besides relative term frequency, other common techniques used
+for making frequency counts reflect data more meaningfull are the
+<strong>corrected type-token ratio</strong> (CTTR) and <strong>text
+frequency-inverse document frequency</strong>. These help to minimise
+the weighting of frequently occurring but perhaps less significant terms
+(like ‘the’, ‘a’, etc.) while making infrequent terms have a higher
+impact.</p>
+<div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
