@@ -19,7 +19,6 @@ exercises: 0
 - Identify affordances and limitations of a frequency-based approach to corpus analysis
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-
 ## Introduction to Voyant
 
 [Voyant](https://voyant-tools.org/) is a simple, powerful and user-friendly open-source reading and analysis environment for digital texts founded by Stéfan Sinclair and now maintaned by Geoffrey Rockwell, Andrew MacDonald and Cecily Raynor at the Universities of McGill and Alberta in Canada. It is browser-based and allows you to upload documents or copy and paste text directly into the interface, which Voyant then automatically analyses according to some core Natural Language Processing (NLP) principles.
@@ -29,7 +28,6 @@ Voyant is a useful tool for those new to NLP because its 'Dashboard' landing sit
 ::::::: callout
 Voyant **does not require any prior programming knowledge** and enables **inductive, corpus-driven** observations to be made with relative ease. This allows you to **refine your research questions** in response to the data you are working with, and then move on to using other tools in a more targeted way.
 ::::::::
-
 ## Core NLP Terminology
 
 Before we start using Voyant to explore our text corpora in more detail, it is useful to define some core NLP concepts so that you can understand what Voyant is looking for as it reads text data.
@@ -38,9 +36,15 @@ First of all, Voyant needs to parse the text as a sequence of characters (or **s
 
 - A **token** is a defined unit within a string, such as an individual appearance of a word or number, usually separated from other tokens by whitespace.
 - A **type**, on the other hand, is a unique word form, which may appear many times in a corpus.
-- A **lemma** is the root form of a derived (inflected) word, e.g. 'music' as the root of 'musically', 'musician', 'musicking', etc.
+- A **lemma** is the root form of a derived (inflected) word, e.g. 'music' is the lemma of the types 'musically', 'musician', 'musicking', etc.
+- A **hapax legomena** or simply **hapax** is a type that appears only once in a corpus.
 
 The relationship between tokens and types, i.e. how many unique word forms there are in a corpus versus how many times they are used, is a measure of the **lexical diversity** of the corpus. 
+
+In line with the importance placed on knowing the company words keep in computational linguistics discussed in the last episode, besides parsing a corpus for tokens and types, Voyant also analyses the relationships between tokens and their neighbours. 
+
+– An **n-gram** is a contiguous sequence of items in a text. For example a **bigram** is a pair of consecutive written units, e.g. characters, syllables or words. A trigram is a sequence of three consecutive written units, etc. Any number can be specified for an n-gram and it functions like a window-size or sample-rate for extracting information from the text that can be important for predicting aspects of meaning or function.
+- A **collocation** is typically a bi-gram, often at word level, which occurs in a text at a rate greater than chance. For example, type-pairs like 'red wine' and 'string quartet' are collocations in everyday language.
 
 
 ::::: keypoints  
