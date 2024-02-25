@@ -60,6 +60,10 @@ contact: 'm.perevedentseva@salford.ac.uk' # FIXME
 # Order of episodes in your lesson
 episodes:
   - introduction.md
+  - voyant.md
+  - spacy.md
+  - pandas.md
+  - embeddings.md
  
 
 # Information for Learners
