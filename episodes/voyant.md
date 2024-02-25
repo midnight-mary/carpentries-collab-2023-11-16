@@ -6,7 +6,7 @@ exercises: 0
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How do I start using Voyant?
+- What is Voyant and what is it used for?
 - What are the principles underpinning its dashboard tools?
 - What kinds of insights do they yield?
 
@@ -21,9 +21,9 @@ exercises: 0
 ::::::::::::::::::::::::::::::::::::::::::::::::
 ## Introduction to Voyant
 
-[Voyant](https://voyant-tools.org/) is a simple, powerful and user-friendly open-source reading and analysis environment for digital texts founded by Stéfan Sinclair and now maintaned by Geoffrey Rockwell, Andrew MacDonald and Cecily Raynor at the Universities of McGill and Alberta in Canada. It is browser-based and allows you to upload documents or copy and paste text directly into the interface, which Voyant then automatically analyses according to some core Natural Language Processing (NLP) principles.
+[Voyant](https://voyant-tools.org/) is a simple, powerful and user-friendly open-source reading and analysis environment for digital texts. It was founded by Stéfan Sinclair and is now maintaned by Geoffrey Rockwell, Andrew MacDonald and Cecily Raynor at the Universities of McGill and Alberta in Canada. It is browser-based and allows you to upload documents or copy and paste text directly into the interface, which Voyant then automatically analyses according to some core Natural Language Processing (NLP) principles.
 
-Voyant is a useful tool for those new to NLP because its 'Dashboard' landing site provides an instant, synchronic and customisable overview of many facets of the corpus uploaded while keeping the workings 'under the hood'. This allows you to dive straight into exploring the linguistic features of your corpus intuitively, without getting bogged down in the linear, incremental coding workflow of NLP libraries such as the Natural Language Toolkit, spaCy and Flair. 
+Voyant is a useful tool for those new to NLP because its 'Dashboard' landing site provides an instant, synchronic and customisable overview of many facets of the corpus uploaded while keeping the workings 'under the hood'. This allows users to dive straight into exploring the linguistic features of their corpus intuitively, without getting bogged down in the linear, incremental coding workflow of NLP libraries such as the Natural Language Toolkit, spaCy and Flair. 
 
 ::::::: callout
 Voyant **does not require any prior programming knowledge** and enables **inductive, corpus-driven** observations to be made with relative ease. This allows you to **refine your research questions** in response to the data you are working with, and then move on to using other tools in a more targeted way.
@@ -41,14 +41,14 @@ First of all, Voyant needs to parse the text as a sequence of characters (or **s
 
 The relationship between tokens and types (or **type-token ratio**), i.e. how many unique word forms there are in a corpus versus how many times they are used, is a measure of the **lexical diversity** of the corpus. 
 
-In line with the importance placed on knowing the company words keep in computational linguistics discussed in the last episode, besides parsing a corpus for tokens and types, Voyant also analyses the relationships between tokens and their neighbours. 
+In line with the importance placed on knowing the company words keep in computational linguistics discussed in the [last episode](introduction.md), besides parsing a corpus for tokens and types, Voyant also analyses the relationships between tokens and their neighbours. 
 
-- An **n-gram** is a contiguous sequence of items in a text. For example a **bigram** is a pair of consecutive written units, e.g. characters, syllables or words. A trigram is a sequence of three consecutive written units, etc. Any number can be specified for an n-gram and it functions like a window-size or sample-rate for extracting information from the text that can be important for predicting aspects of meaning or function.
-- A **collocation** is typically a bi-gram, often at word level, which occurs in a text at a rate greater than chance. For example, type-pairs like 'red wine' and 'string quartet' are collocations in everyday language.
+- An **n-gram** is a contiguous sequence of items in a text. For example a **bigram** is a pair of consecutive written units, i.e. characters, syllables or words; a trigram is a sequence of three consecutive written units, and so on. Any number of consecutive units can be specified for an n-gram and it functions somewhat like a sample-rate for extracting information from the text that could be important for predicting aspects of meaning or function.
+- A **collocation** is typically a bi-gram, often at word level, which occurs in a text at a rate greater than chance. For example, type-pairs like 'red wine' and 'string quartet' are collocations in English.
 
 The original and most common application of automated text analysis uses computers to count how often certain words occur in a given text. The analytical strategy employed in a **frequency-based approach** is relatively simple: count the number of occurrences of a specific word token and then normalise this according to how many words there are in the text overall to obtain **relative term frequency**. 
 
-Despite its simplicity, this approach is extremely powerful and versatile. Besides relative term frequency, other common techniques used for making frequency counts reflect data more meaningfull are the **corrected type-token ratio** (CTTR) and **text frequency-inverse document frequency**. These help to minimise the weighting of frequently occurring but perhaps less significant terms (like 'the', 'a', etc.) while making less frequent terms have a higher impact. 
+Despite its simplicity, this approach is extremely powerful and versatile. Besides relative term frequency, other common techniques used for making frequency counts reflect data more meaningfully, especially if working with corpora across multiple documents, are the **corrected type-token ratio** (CTTR) and **text frequency-inverse document frequency**. These help to minimise the weighting of frequently occurring but perhaps less significant terms (such as 'the', 'a', etc.) while making less frequent terms have a higher impact. 
 
 ::::::: callout
 Frequency-based text analysis is often traced back to Father Roberto Busa, a Jesuit Priest who worked with IBM in the 1940s to manually index 11 million medieval Latin words from the writings of St. Thomas Aquinas, count each appearance of the word 'in' and look at its collocations in order to explore the concept of 'presence' in his work. This somewhat quaint story has come to be venerated as the origin myth of the field of humanities computing as a whole, and has more recently been the subject of critique.^[Arun, Jacob. 2021. 'Punching Holes in the International Busa Machine Narrative'. In Kim, Dorothy and Coh, Adeline, Eds. *Alternative Historiographies of the Digital Humanities*. Punctum: 121–139]
