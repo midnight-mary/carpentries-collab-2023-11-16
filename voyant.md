@@ -64,10 +64,14 @@ Once the data has loaded, take a few minutes to look around the various panes of
 * Which tool or finding grabs your attention? Why?
 * Are there any problems with how the data appears that prevent a more meaningful analysis?
 * Are there any features that you do not understand?
+
+Discuss these with your group.
 ::::::::::
 ## Fine-Tuning Parameters for Corpus Sensitivity
 
-Stopwords bringing to mind the (apocryphal) saying that 'writing about music is **like** dancing about architecture'.
+bringing to mind the (apocryphal) saying that 'writing about music is **like** dancing about architecture'.
+
+# Stopwords 
 
 Sentiment 
 
