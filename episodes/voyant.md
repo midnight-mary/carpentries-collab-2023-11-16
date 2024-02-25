@@ -48,8 +48,11 @@ In line with the importance placed on knowing the company words keep in computat
 
 The original and most common application of automated text analysis uses computers to count how often certain words occur in a given text. The analytical strategy employed in a **frequency-based approach** is relatively simple: count the number of occurrences of a specific word token and then normalise this according to how many words there are in the text overall to obtain **relative term frequency**. 
 
-Despite its simplicity, this approach is extremely powerful and versatile. Besides relative term frequency, other common techniques used for making frequency counts reflect data more meaningfull are the **corrected type-token ratio** (CTTR) and **text frequency-inverse document frequency**. These help to minimise the weighting of frequently occurring but perhaps less significant terms (like 'the', 'a', etc.) while making infrequent terms have a higher impact. 
+Despite its simplicity, this approach is extremely powerful and versatile. Besides relative term frequency, other common techniques used for making frequency counts reflect data more meaningfull are the **corrected type-token ratio** (CTTR) and **text frequency-inverse document frequency**. These help to minimise the weighting of frequently occurring but perhaps less significant terms (like 'the', 'a', etc.) while making less frequent terms have a higher impact. 
 
+::::::: callout
+Frequency-based text analysis is often traced back to Father Roberto Busa, a Jesuit Priest who worked with IBM in the 1940s to manually index 11 million medieval Latin words from the writings of St. Thomas Aquinas, count each appearance of the word 'in' and look at its collocations in order to explore the concept of 'presence' in his work. This somewhat quaint story has come to be venerated as the origin myth of the field of humanities computing as a whole, and has more recently been the subject of critique.^[Arun, Jacob. 2021. 'Punching Holes in the International Busa Machine Narrative'. In Kim, Dorothy and Coh, Adeline, Eds. Alternative Historiographies of the Digital Humanities. Punctum: 121–139]
+:::::::::::
 
 
 ::::: keypoints  
