@@ -532,12 +532,29 @@ meaningful analysis?</li>
 </section><section id="fine-tuning-parameters-for-corpus-sensitivity"><h2 class="section-heading">Fine-Tuning Parameters for Corpus Sensitivity<a class="anchor" aria-label="anchor" href="#fine-tuning-parameters-for-corpus-sensitivity"></a>
 </h2>
 <hr class="half-width">
+<p>From this first pass at our corpus, we can see that Voyant has
+recognised punctuation mark tokens and omitted them from frequency
+counts, word cloud, and other analyses. This is useful for readability
+and can almost go unnoticed. However, it should be remembered that
+punctuation marks are tokens and the decision to remove them is an
+intentional one, which other NLP libraries do not perform
+automatically.</p>
+<p>The most common terms that Voyant has identified are, perhaps
+unsurprisingly, quite generic (articles, prepositions, etc.). They do
+not give a sense of what is distinctive about corpus because it could be
+assumed that a majority of texts would also make regular use of these
+types of words. Of course, depending on your research question, this
+could be precisely the type of information you are after - Father Busa’s
+project, after all, was all about the seemingly generic word ‘in’.</p>
 <p>bringing to mind the (apocryphal) saying that ‘writing about music is
 <strong>like</strong> dancing about architecture’.</p>
 </section><div class="section level1">
 <h1 id="stopwords">Stopwords<a class="anchor" aria-label="anchor" href="#stopwords"></a>
 </h1>
-<p>Sentiment</p>
+</div>
+<div class="section level1">
+<h1 id="sentiment">Sentiment<a class="anchor" aria-label="anchor" href="#sentiment"></a>
+</h1>
 <div id="callout3" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
