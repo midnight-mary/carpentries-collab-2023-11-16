@@ -85,13 +85,13 @@ Because Voyant has so far only performed a raw frequency count of the corpus, th
 
 If you already have some idea about the kind of linguistic devices you are looking for, either because of your initial research question or through what you have observed from this initial analysis, it is possible to get Voyant to filter out certain terms so that you can fine-tune your findings. This involves creating a list of stopwords, which is a common technique in corpus linguistics and NLP more generally.
 
-# Stopwords 
+### Stopwords 
 
 A **stopword** is a word (or any token) that is automatically omitted from a computer-generated concordance. Many NLP libraries have automatic lists of stopwords specific to individual languages, and these can often be edited to suit your specific needs, or you can create your own. 
 
 In Voyant, you can inspect the stopword lists by clicking the 'settings' icon on the top right corner of the 'Terms' tool. As can be seen, there are lists for the different languages that Voyant supports, as well as an 'auto-detect' list. It can be assumed that the removal of punctuation marks from Voyant's reading of our corpus is a feature of its 'auto-detect' stopword list.
 
-# Sentiment 
+### Sentiment 
 
 ::::::::: callout
 
