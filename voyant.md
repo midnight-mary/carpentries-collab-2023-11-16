@@ -26,7 +26,9 @@ exercises: 15
 Voyant is a useful tool for those new to NLP because its dashboard provides an instant and customisable, synchronic overview of many facets of the corpus uploaded while keeping the workings 'under the hood'. This allows users to explore the linguistic features of their corpus intuitively, before getting to grips with the linear, incremental workflow of NLP libraries such as the Natural Language Toolkit (NLTK), spaCy and Flair. 
 
 ::::::: callout
+
 Voyant **does not require any prior programming knowledge** and enables **inductive, corpus-driven** observations to be made with relative ease. This allows you to **refine your research questions** in response to the data you are working with, and then move on to using other tools in a more targeted way.
+
 ::::::::
 ## Core NLP Terminology
 
