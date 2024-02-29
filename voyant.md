@@ -40,6 +40,7 @@ First of all, Voyant needs to parse the text as a sequence of characters (or **s
 - A **type**, on the other hand, is a unique word form, which may appear many times in a corpus.
 - A **lemma** is the root form of a derived (inflected) word, e.g. 'music' is the lemma of the types 'musically', 'musician', 'musicking', etc.
 - A **hapax legomena** (or simply **hapax**) is a type that appears only once in a corpus.
+- A **concordance** is a generated list of all tokens that appear in a digital corpus.
 
 The relationship between tokens and types (or **type-token ratio**), i.e. how many unique word forms there are in a corpus versus how many times they are used, is a measure of the **lexical diversity** of the corpus. 
 
@@ -74,19 +75,21 @@ Once the data has loaded, take a few minutes to look around the various panes of
 * Are there any problems with how the data appears that prevent a more meaningful analysis?
 * Are there any features that you do not understand?
 
-Discuss these with your group.
+Discuss these with your group and jot down some observations to share with everyone else.
 ::::::::::
 ## Fine-Tuning Parameters for Corpus Sensitivity
 
-From this first pass at our corpus, we can see that Voyant has recognised punctuation mark tokens and omitted them from frequency counts, word cloud, and other analyses. This is useful for readability and can almost go unnoticed. However, it should be remembered that punctuation marks are tokens and the decision to remove them is an intentional one, which other NLP libraries do not perform automatically.
+From this first pass at our corpus, we can see that Voyant has recognised punctuation mark tokens and omitted them from frequency counts, the word cloud, and other analyses. This is useful for readability and can almost go unnoticed. However, it should be remembered that **punctuation marks are tokens** and the **decision to remove** them is an **intentional** one, which other NLP libraries do not perform automatically.
 
-The most common terms that Voyant has identified are, perhaps unsurprisingly, quite generic (articles, prepositions, etc.). They do not give a sense of what is distinctive about corpus because it could be assumed that a majority of texts would also make regular use of these types of words. Of course, depending on your research question, this could be precisely the type of information you are after - Father Busa's project, after all, was all about the seemingly generic word 'in'. 
+Because Voyant has so far only performed a raw frequency count of the corpus, the most common terms that Voyant has identified are, perhaps unsurprisingly, quite generic (articles, prepositions, etc.). They do not give a sense of what is distinctive about corpus because it could be assumed that a majority of texts would also make regular use of these types of words. Of course, depending on your research question, this could be precisely the type of information you are after - Father Busa's project, after all, was all about the seemingly generic word 'in'. 
 
-
-
-bringing to mind the (apocryphal) saying that 'writing about music is **like** dancing about architecture'.
+If you already have some idea about the kind of linguistic devices you are looking for, either because of your initial research question or through what you have observed from this initial analysis, it is possible to get Voyant to filter out certain terms so that you can fine-tune your findings. This involves creating a list of stopwords, which is a common technique in corpus linguistics and NLP more generally.
 
 # Stopwords 
+
+A **stopword** is a word (or any token) that is automatically omitted from a computer-generated concordance. Many NLP libraries have automatic lists of stopwords specific to individual languages, and these can often be edited to suit your specific needs, or you can create your own. 
+
+In Voyant, you can inspect the stopword lists by clicking the 'settings' icon on the top right corner of the 'Terms' tool. As can be seen, there are lists for the different languages that Voyant supports, as well as an 'auto-detect' list. It can be assumed that the removal of punctuation marks from Voyant's reading of our corpus is a feature of its 'auto-detect' stopword list.
 
 # Sentiment 
 
