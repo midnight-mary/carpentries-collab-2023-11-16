@@ -78,11 +78,17 @@ Discuss these with your group.
 ::::::::::
 ## Fine-Tuning Parameters for Corpus Sensitivity
 
+From this first pass at our corpus, we can see that Voyant has recognised punctuation mark tokens and omitted them from frequency counts, word cloud, and other analyses. This is useful for readability and can almost go unnoticed. However, it should be remembered that punctuation marks are tokens and the decision to remove them is an intentional one, which other NLP libraries do not perform automatically.
+
+The most common terms that Voyant has identified are, perhaps unsurprisingly, quite generic (articles, prepositions, etc.). They do not give a sense of what is distinctive about corpus because it could be assumed that a majority of texts would also make regular use of these types of words. Of course, depending on your research question, this could be precisely the type of information you are after - Father Busa's project, after all, was all about the seemingly generic word 'in'. 
+
+
+
 bringing to mind the (apocryphal) saying that 'writing about music is **like** dancing about architecture'.
 
 # Stopwords 
 
-Sentiment 
+# Sentiment 
 
 ::::::::: callout
 
