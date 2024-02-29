@@ -46,7 +46,7 @@ The relationship between tokens and types (or **type-token ratio**), i.e. how ma
 Besides parsing a corpus for tokens and types, Voyant also analyses the relationships between tokens and their neighbours, in line with the importance placed on knowing the company words keep in computational linguistics, discussed in the [last episode](introduction.md).
 
 - An **n-gram** is a contiguous or consecutive sequence of tokens in a text. For example a **bigram** is a pair of consecutive written units, i.e. characters, syllables or words; a trigram is a sequence of three consecutive written units, and so on. Any number of consecutive units can be specified for an n-gram and it functions somewhat like a sample-rate for extracting information from the text that could be important for predicting aspects of meaning or function.
-- A **collocation** is typically a bi-gram, often at word level, which occurs in a text at a rate greater than chance. For example, type-pairs like 'red wine' and 'string quartet' are collocations in English.
+- A **collocation** is typically a bigram, often at word level, which occurs in a text at a rate greater than chance. For example, type-pairs like 'red wine' and 'string quartet' are collocations in English.
 
 The original and most common application of automated text analysis uses computers to count how often certain words occur in a given text. The analytical strategy employed in a **frequency-based approach** is relatively simple: count the number of occurrences of a specific word token and then normalise this according to how many words there are in the text overall to obtain **relative term frequency**. 
 
