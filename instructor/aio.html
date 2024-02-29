@@ -354,7 +354,7 @@ focused on identifying patterns across large datasets.</p></li>
 </div>
 </div></section><section id="aio-voyant"><p>Content from <a href="voyant.html">Exploring Text-Based Corpora with Voyant</a></p>
 <hr>
-<p>Last updated on 2024-02-25 |
+<p>Last updated on 2024-02-29 |
         
         <a href="https://github.com/acceleratingdigitalskills/Processing-Text-Based-Corpora/edit/main/episodes/voyant.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 50 minutes</p>
@@ -396,19 +396,19 @@ to corpus analysis</li>
 <hr class="half-width">
 <p><a href="https://voyant-tools.org/" class="external-link">Voyant</a> is a simple, powerful
 and user-friendly open-source reading and analysis environment for
-digital texts. It was founded by Stéfan Sinclair and is now maintaned by
+digital texts. It was created by Stéfan Sinclair and is now maintaned by
 Geoffrey Rockwell, Andrew MacDonald and Cecily Raynor at the
 Universities of McGill and Alberta in Canada. It is browser-based and
 allows you to upload documents or copy and paste text directly into the
 interface, which Voyant then automatically analyses according to some
 core Natural Language Processing (NLP) principles.</p>
-<p>Voyant is a useful tool for those new to NLP because its ‘Dashboard’
-landing site provides an instant, synchronic and customisable overview
-of many facets of the corpus uploaded while keeping the workings ‘under
-the hood’. This allows users to dive straight into exploring the
-linguistic features of their corpus intuitively, without getting bogged
-down in the linear, incremental coding workflow of NLP libraries such as
-the Natural Language Toolkit, spaCy and Flair.</p>
+<p>Voyant is a useful tool for those new to NLP because its dashboard
+provides an instant and customisable, synchronic overview of many facets
+of the corpus uploaded while keeping the workings ‘under the hood’. This
+allows users to explore the linguistic features of their corpus
+intuitively, before getting to grips with the linear, incremental
+workflow of NLP libraries such as the Natural Language Toolkit (NLTK),
+spaCy and Flair.</p>
 <div id="callout1" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -450,18 +450,19 @@ is a type that appears only once in a corpus.</li>
 ratio</strong>), i.e. how many unique word forms there are in a corpus
 versus how many times they are used, is a measure of the <strong>lexical
 diversity</strong> of the corpus.</p>
-<p>In line with the importance placed on knowing the company words keep
-in computational linguistics, discussed in the <a href="introduction.html">last episode</a>, besides parsing a corpus for
-tokens and types, Voyant also analyses the relationships between tokens
-and their neighbours.</p>
+<p>Besides parsing a corpus for tokens and types, Voyant also analyses
+the relationships between tokens and their neighbours, in line with the
+importance placed on knowing the company words keep in computational
+linguistics, discussed in the <a href="introduction.html">last
+episode</a>.</p>
 <ul>
-<li>An <strong>n-gram</strong> is a contiguous sequence of items in a
-text. For example a <strong>bigram</strong> is a pair of consecutive
-written units, i.e. characters, syllables or words; a trigram is a
-sequence of three consecutive written units, and so on. Any number of
-consecutive units can be specified for an n-gram and it functions
-somewhat like a sample-rate for extracting informationřfrom the text
-that could be important for predicting aspects of meaning or
+<li>An <strong>n-gram</strong> is a contiguous or consecutive sequence
+of tokens in a text. For example a <strong>bigram</strong> is a pair of
+consecutive written units, i.e. characters, syllables or words; a
+trigram is a sequence of three consecutive written units, and so on. Any
+number of consecutive units can be specified for an n-gram and it
+functions somewhat like a sample-rate for extracting information from
+the text that could be important for predicting aspects of meaning or
 function.</li>
 <li>A <strong>collocation</strong> is typically a bi-gram, often at word
 level, which occurs in a text at a rate greater than chance. For
@@ -476,14 +477,13 @@ of a specific word token and then normalise this according to how many
 words there are in the text overall to obtain <strong>relative term
 frequency</strong>.</p>
 <p>Despite its simplicity, this approach is extremely powerful and
-versatile. Besides relative term frequency, other common techniques used
-for making frequency counts reflect data more meaningfully, especially
-if working with corpora across multiple documents, are the
-<strong>corrected type-token ratio</strong> (CTTR) and <strong>text
-frequency-inverse document frequency</strong>. These help to minimise
-the weighting of frequently occurring but perhaps less significant terms
-(such as ‘the’, ‘a’, etc.) while making less frequent terms have a
-higher impact.</p>
+versatile. Besides relative term frequency, another common technique
+used for making frequency counts reflect data more meaningfully is
+<strong>term frequency-inverse document frequency (TF-IDF)</strong>,
+especially if working with corpora across multiple documents. This helps
+to minimise the weighting of frequently occurring but perhaps less
+significant terms (such as ‘the’, ‘a’, etc.) while making less frequent
+terms have a higher impact.</p>
 <div id="callout2" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -504,6 +504,19 @@ of critique.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
 </div>
 <p>With these core principles in mind, we can now have a go at using
 Voyant to explore the Boomkat corpus.</p>
+<div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
+  <h3 class="accordion-header" id="headingInstructor1">
+<div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div>Instructor Note</h3>
+</button>
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div class="accordion-body">
+<p>Check for questions before launching the exercise</p>
+</div>
+</div>
+</div>
+</div>
 <div id="discussion1" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
