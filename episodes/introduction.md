@@ -7,16 +7,14 @@ exercises: 0
 :::::::::::::::::::::::::::::::::::::: questions 
 
 - What is corpus linguistics?
-- What can I do using corpus linguistic analysis tools?
-- How does this method differ from 'analogue' 'close reading' methods in musicology?
+- What can I do using corpus linguistics tools?
+- How does this method differ from analogue 'close reading' methods in musicology?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- define what constitutes a corpus and a sublanguage
-- define key concepts relating to textual analysis e.g. type and token, lemmatization, collocation, n-gram, etc.
-- identify affordances and constraints of a frequency-based approach to discourse analysis
+- In progress
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
