@@ -27,8 +27,6 @@ Voyant is a useful tool for those new to NLP because its dashboard provides an i
 
 ::::::: callout
 
-## Voyant
-
 Voyant **does not require any prior programming knowledge** and enables **inductive, corpus-driven** observations to be made with relative ease. This allows you to **refine your research questions** in response to the data you are working with, and then move on to using other tools in a more targeted way.
 
 ::::::::
@@ -55,8 +53,6 @@ The original and most common application of automated text analysis uses compute
 Despite its simplicity, this approach is extremely powerful and versatile. Besides relative term frequency, another common technique used for making frequency counts reflect data more meaningfully is **term frequency-inverse document frequency (TF-IDF)**, especially if working with corpora across multiple documents. This helps to minimise the weighting of frequently occurring but perhaps less significant terms (such as 'the', 'a', etc.) while making less frequent terms have a higher impact. 
 
 ::::::: callout
-
-## Frequency-based analysis and the Digital Humanities
 
 Frequency-based text analysis is often traced back to Father Roberto Busa, a Jesuit Priest who worked with IBM in the 1940s to manually index 11 million medieval Latin words from the writings of St. Thomas Aquinas, count each appearance of the word 'in' and look at its collocations in order to explore the concept of 'presence' in his work. This somewhat quaint story has come to be venerated as the origin myth of the field of humanities computing as a whole, and has more recently been the subject of critique.^[Arun, Jacob. 2021. 'Punching Holes in the International Busa Machine Narrative'. In Kim, Dorothy and Coh, Adeline, Eds. *Alternative Historiographies of the Digital Humanities*. Punctum: 121–139]
 :::::::::::
@@ -89,8 +85,6 @@ bringing to mind the (apocryphal) saying that 'writing about music is **like** d
 Sentiment 
 
 ::::::::: callout
-
-## Cleaning, Filtering and Stopwords
 
 Remember that data cleaning is an iterative process, not simply an initial step. We have been working with a dataset that has already been converted from .csv to .xlsm, UTF-8 encoded and which contains one uniform data type within it. Consideration of the type of data you are working with and how it is presented for analysis is important in pre-processing but does not end there.
 
