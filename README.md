@@ -10,8 +10,7 @@ If you are interested in helping us develop this material, teaching the curricul
 
 ## Authors
 
-– [Maria Perevedentseva](https://github.com/midnight-mary)
-Part of [Accelerating Digital Skills for Music Researchers](https://acceleratingdigitalskills.github.io)
+– [Maria Perevedentseva](https://github.com/midnight-mary), part of [Accelerating Digital Skills for Music Researchers](https://acceleratingdigitalskills.github.io)
 
 ## Maintainer(s)
 Current Maintainers of this lesson are:
