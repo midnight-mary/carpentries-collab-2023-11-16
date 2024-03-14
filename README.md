@@ -1,6 +1,6 @@
 # A lesson on processing text-based corpora for musical discourse analysis
 
-This is a 1-day workshop introducing natural language processing concepts and tools for music researchers. 
+This is the curriculum for a 1-day lesson introducing natural language processing concepts and tools for music researchers. 
 
 This workshop is part of the ARHC-funded project "Accelerating embedded computational analysis of Web data about music in UK universities" (AH/X007316/1) led by researchers at Durham University and University of Birmingham.
 
