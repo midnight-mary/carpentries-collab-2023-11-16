@@ -6,7 +6,7 @@ This workshop is part of the ARHC-funded project "Accelerating embedded computat
 
 This lesson uses [The Carpentries Workbench][workbench].
 
-If you are interested in helping us develop this material, teaching the curriculum, or attending a workshop, please [contact Eamonn Bell](mailto:eamonn.bell@durham.ac.uk).
+If you are interested in helping us develop this material, teaching the curriculum, or attending a workshop, please see [CONTRIBUTING.md](CONTRIBUTING.md) or [contact Eamonn Bell](mailto:eamonn.bell@durham.ac.uk).
 
 ## Authors
 
