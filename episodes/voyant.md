@@ -19,6 +19,12 @@ exercises: 15
 - Identify affordances and limitations of a frequency-based approach to corpus analysis
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::: instructor
+
+Please be prepared to create breakout rooms for the exercise where participants will be working in pairs or groups of 3.
+
+::::::::::::::::::::::
 ## Introduction to Voyant
 
 [Voyant](https://voyant-tools.org/) is a simple, powerful and user-friendly open-source reading and analysis environment for digital texts. It was created by Stéfan Sinclair and is now maintaned by Geoffrey Rockwell, Andrew MacDonald and Cecily Raynor at the Universities of McGill and Alberta in Canada. It is browser-based and allows you to upload documents or copy and paste text directly into the interface, which Voyant then automatically analyses according to some core Natural Language Processing (NLP) principles.
@@ -33,6 +39,12 @@ Voyant **does not require any prior programming knowledge** and enables **induct
 ## Core NLP Terminology
 
 Before we start using Voyant to explore our text corpora in more detail, it is useful to define some core NLP concepts so that you can understand what Voyant is looking for as it reads text data.
+
+:::::::::::::: instructor
+
+Use powerpoint slides and share screen for the introduction of terminology so that all terms in bold can be seen by all on one screen.
+
+::::::::::::::::::::::
 
 First of all, Voyant needs to parse the text as a sequence of characters (or **string**) and identify meaningful linguistic units such as words, numbers and punctuation. 
 
@@ -53,9 +65,18 @@ The original and most common application of automated text analysis uses compute
 
 Despite its simplicity, this approach is extremely powerful and versatile. Besides relative term frequency, another common technique used for making frequency counts reflect data more meaningfully is **term frequency-inverse document frequency (TF-IDF)**, especially if working with corpora across multiple documents. This helps to minimise the weighting of frequently occurring but perhaps less significant terms (such as 'the', 'a', etc.) while making less frequent terms have a higher impact. 
 
+:::::::::::::: instructor
+
+Exit powerpoint now. 
+The below callout does not necessarily need to be read out as part of the training, and can be cut for the sake of time.
+
+::::::::::::::::::::::
+
 ::::::: callout
 
 Frequency-based text analysis is often traced back to Father Roberto Busa, a Jesuit Priest who worked with IBM in the 1940s to manually index 11 million medieval Latin words from the writings of St. Thomas Aquinas, count each appearance of the word 'in' and look at its collocations in order to explore the concept of 'presence' in his work. This somewhat quaint story has come to be venerated as the origin myth of the field of humanities computing as a whole, and has more recently been the subject of critique.^[Arun, Jacob. 2021. 'Punching Holes in the International Busa Machine Narrative'. In Kim, Dorothy and Coh, Adeline, Eds. *Alternative Historiographies of the Digital Humanities*. Punctum: 121–139]
+
+The use of frequency-based text analysis methods is growing, but not yet commonplace, in the field of music studies. A potential explanation for this is given in a 2015 ISMIR paper by Charles Inskip and Frans Wiering, who themselves use term frequency analysis to study data collected in a survey on musicologists' attitudes towards using technology in their work. Their findings show that, while musicologists were generally enthusiastic about incorporating software tools and other technologies into their research projects, they often felt frustrated at the barriers in data literacy they faced.^[Inskip, Charles and Wiering, Frans. 2015. 'In Their Own Words: Using Text to Identify Musicologists' Attitudes Towards Technology'. Presented at: 16th International Society for Music Information Retrieval Conference, Malaga, Spain.](https://discovery.ucl.ac.uk/id/eprint/1470590/) It is hoped, then, that projects such as Accelerating Digital Skills for Music Researchers can contribute to a more widespread adoption of digital tools in the musicological community.
 :::::::::::
 With these core principles in mind, we can now have a go at using Voyant to explore the Boomkat corpus.
 
@@ -66,17 +87,22 @@ With these core principles in mind, we can now have a go at using Voyant to expl
 ::::::::::::::::::::::
 
 :::::::::: discussion
-In pairs or groups of three, choose one of the subgenre datasets from the ['Episode 2'](https://zenodo.org/records/10891402) Zenodo folder which you should already have downloaded to your computer. Then, go to the [Voyant website](https://voyant-tools.org/) and click the 'Upload' button to load the data to Voyant's server. This may take a few moments. 
+In pairs or groups of three, choose one of the subgenre datasets from the ['Episode 2'](https://zenodo.org/records/10891402) Zenodo repository which you should already have downloaded to your computer. Then, go to the [Voyant website](https://voyant-tools.org/) and click the 'Upload' button to load the data to Voyant's server. This may take a few moments. 
 
-Once the data has loaded, take a few minutes to look around the various panes of the Dashboard and think about:
+Once the data has loaded, take 5 minutes to look around the various panes of the Dashboard and think about:
 
 * What do the individual panels do? Can you describe it using the NLP terms we defined earlier?
 * Which tool or finding grabs your attention? Why?
 * Are there any problems with how the data appears that prevent a more meaningful analysis?
 * Are there any features that you do not understand?
 
-Discuss these with your group and jot down some observations to share with everyone else.
+Discuss these with your group and jot down some observations in the Etherpad to share with everyone else.
 ::::::::::
+:::::::::::::: instructor
+
+While participants are in breakout rooms, load up one of the three subgenre datasets into Voyant on your own machine and spend around 5 mins after the breakout rooms have closed discussing findings, how the various tools work, etc. Point out red/green highlights for certain words, point out inconsistencies regarding Voyant's application of stopwords etc. Show the lemma tool by adding * at the end of a search term.
+
+::::::::::::::::::::::
 ## Fine-Tuning Parameters for Corpus Sensitivity
 
 From this first pass at our corpus, we can see that Voyant has recognised punctuation mark tokens and omitted them from frequency counts, the word cloud, and other analyses. This is useful for readability and can almost go unnoticed. However, it should be remembered that **punctuation marks are tokens** and the **decision to remove** them is an **intentional** one, which other NLP libraries do not perform automatically.
@@ -90,12 +116,17 @@ If you already have some idea about the kind of linguistic devices you are looki
 A **stopword** is a word (or any token) that is automatically omitted from a computer-generated concordance. Many NLP libraries have automatic lists of stopwords specific to individual languages, and these can often be edited to suit your specific needs, or you can create your own. 
 
 In Voyant, you can inspect the stopword lists by clicking the 'settings' icon on the top right corner of the 'Terms' tool. As can be seen, there are lists for the different languages that Voyant supports, as well as an 'auto-detect' list. It can be assumed that the removal of punctuation marks from Voyant's reading of our corpus is a feature of its 'auto-detect' stopword list.
+:::::::::::::: instructor
+
+Demonstrate the stopwords tool by editing to 
+
+::::::::::::::::::::::
 
 ### Sentiment 
 
 ::::::::: callout
 
-Remember that data cleaning is an iterative process, not simply an initial step. We have been working with a dataset that has already been converted from .csv to .xlsm, UTF-8 encoded and which contains one uniform data type within it. Consideration of the type of data you are working with and how it is presented for analysis is important in pre-processing but does not end there.
+Remember that data cleaning is an iterative process, not simply an initial step. We have been working with a dataset that has already been converted from .csv to .xlsx, UTF-8 encoded and which contains one uniform data type within it. Consideration of the type of data you are working with and how it is presented for analysis is important in pre-processing but does not end there.
 
 Relatedly, stopword lists and any other filters should be thought through carefully in order to remain sensitive to the discursive priorities of the types of texts being analysed while also being used to streamline the dataset and remove 'noise'. This, too, should be an iterative process and can involve trial and error as you get a feel for the shape and contents of your corpus.
 ::::::::::::::
