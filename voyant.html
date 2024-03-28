@@ -298,6 +298,7 @@ to corpus analysis</li>
 </div>
 </div>
 </div>
+
 <section id="introduction-to-voyant"><h2 class="section-heading">Introduction to Voyant<a class="anchor" aria-label="anchor" href="#introduction-to-voyant"></a>
 </h2>
 <hr class="half-width"><p><a href="https://voyant-tools.org/" class="external-link">Voyant</a> is a simple, powerful
@@ -337,6 +338,7 @@ targeted way.</p>
 <hr class="half-width"><p>Before we start using Voyant to explore our text corpora in more
 detail, it is useful to define some core NLP concepts so that you can
 understand what Voyant is looking for as it reads text data.</p>
+
 <p>First of all, Voyant needs to parse the text as a sequence of
 characters (or <strong>string</strong>) and identify meaningful
 linguistic units such as words, numbers and punctuation.</p>
@@ -388,6 +390,7 @@ especially if working with corpora across multiple documents. This helps
 to minimise the weighting of frequently occurring but perhaps less
 significant terms (such as ‘the’, ‘a’, etc.) while making less frequent
 terms have a higher impact.</p>
+
 <div id="callout2" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -404,6 +407,18 @@ order to explore the concept of ‘presence’ in his work. This somewhat
 quaint story has come to be venerated as the origin myth of the field of
 humanities computing as a whole, and has more recently been the subject
 of critique.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<p>The use of frequency-based text analysis methods is growing, but not
+yet commonplace, in the field of music studies. A potential explanation
+for this is given in a 2015 ISMIR paper by Charles Inskip and Frans
+Wiering, who themselves use term frequency analysis to study data
+collected in a survey on musicologists’ attitudes towards using
+technology in their work. Their findings show that, while musicologists
+were generally enthusiastic about incorporating software tools and other
+technologies into their research projects, they often felt frustrated at
+the barriers in data literacy they faced.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>(<a href="https://discovery.ucl.ac.uk/id/eprint/1470590/" class="external-link uri">https://discovery.ucl.ac.uk/id/eprint/1470590/</a>) It is
+hoped, then, that projects such as Accelerating Digital Skills for Music
+Researchers can contribute to a more widespread adoption of digital
+tools in the musicological community.</p>
 </div>
 </div>
 </div>
@@ -420,23 +435,24 @@ Voyant to explore the Boomkat corpus.</p>
 <div class="callout-content">
 <p>In pairs or groups of three, choose one of the subgenre datasets from
 the <a href="https://zenodo.org/records/10891402" class="external-link">‘Episode 2’</a> Zenodo
-folder which you should already have downloaded to your computer. Then,
-go to the <a href="https://voyant-tools.org/" class="external-link">Voyant website</a> and
-click the ‘Upload’ button to load the data to Voyant’s server. This may
-take a few moments.</p>
-<p>Once the data has loaded, take a few minutes to look around the
-various panes of the Dashboard and think about:</p>
+repository which you should already have downloaded to your computer.
+Then, go to the <a href="https://voyant-tools.org/" class="external-link">Voyant website</a>
+and click the ‘Upload’ button to load the data to Voyant’s server. This
+may take a few moments.</p>
+<p>Once the data has loaded, take 5 minutes to look around the various
+panes of the Dashboard and think about:</p>
 <ul><li>What do the individual panels do? Can you describe it using the NLP
 terms we defined earlier?</li>
 <li>Which tool or finding grabs your attention? Why?</li>
 <li>Are there any problems with how the data appears that prevent a more
 meaningful analysis?</li>
 <li>Are there any features that you do not understand?</li>
-</ul><p>Discuss these with your group and jot down some observations to share
-with everyone else.</p>
+</ul><p>Discuss these with your group and jot down some observations in the
+Etherpad to share with everyone else.</p>
 </div>
 </div>
 </div>
+
 </section><section id="fine-tuning-parameters-for-corpus-sensitivity"><h2 class="section-heading">Fine-Tuning Parameters for Corpus Sensitivity<a class="anchor" aria-label="anchor" href="#fine-tuning-parameters-for-corpus-sensitivity"></a>
 </h2>
 <hr class="half-width"><p>From this first pass at our corpus, we can see that Voyant has
@@ -474,7 +490,9 @@ you can create your own.</p>
 seen, there are lists for the different languages that Voyant supports,
 as well as an ‘auto-detect’ list. It can be assumed that the removal of
 punctuation marks from Voyant’s reading of our corpus is a feature of
-its ‘auto-detect’ stopword list.</p>
+its ‘auto-detect’ stopword list. :::::::::::::: instructor</p>
+<p>Demonstrate the stopwords tool by editing to</p>
+<p>::::::::::::::::::::::</p>
 </div>
 <div class="section level3">
 <h3 id="sentiment">Sentiment<a class="anchor" aria-label="anchor" href="#sentiment"></a></h3>
@@ -488,7 +506,7 @@ its ‘auto-detect’ stopword list.</p>
 <div class="callout-content">
 <p>Remember that data cleaning is an iterative process, not simply an
 initial step. We have been working with a dataset that has already been
-converted from .csv to .xlsm, UTF-8 encoded and which contains one
+converted from .csv to .xlsx, UTF-8 encoded and which contains one
 uniform data type within it. Consideration of the type of data you are
 working with and how it is presented for analysis is important in
 pre-processing but does not end there.</p>
@@ -531,6 +549,10 @@ any links that you are not going to use.
 Busa Machine Narrative’. In Kim, Dorothy and Coh, Adeline, Eds.
 <em>Alternative Historiographies of the Digital Humanities</em>.
 Punctum: 121–139<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Inskip, Charles and Wiering, Frans. 2015. ‘In Their Own
+Words: Using Text to Identify Musicologists’ Attitudes Towards
+Technology’. Presented at: 16th International Society for Music
+Information Retrieval Conference, Malaga, Spain.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
 </ol></div>
 
 
