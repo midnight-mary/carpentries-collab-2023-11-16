@@ -313,9 +313,28 @@ part of the lesson set-up instructions. If not, you need to do so
 </div>
 <p>Then, you need to load one of spaCy’s language pipelines, in this
 case the large English pipeline, and assign it with the variable name
-‘nlp’.</p>
-<pre><code><span><span class="va">nlp</span> <span class="op">=</span> <span class="fu">spacy.load</span><span class="op">(</span><span class="st">"en_core_web_lg"</span><span class="op">)</span></span></code></pre>
-<p>Now, let’s create a text variable with some simple text to</p>
+‘nlp’. Variables are assigned by typing in the name of the new variable,
+the equals sign, and the name and location of the object you want to
+assign to that variable.</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>nlp <span class="op">=</span> spacy.load(<span class="st">"en_core_web_lg"</span>)</span></code></pre>
+</div>
+<p>Now, let’s input some simple text to begin processing. For Jupyter,
+Python and spaCy to recognise what we input <em>as</em> structured text
+rather than code, a different variable name or an undefined string, we
+will need to assign it a variable name, e.g. <code>text</code>, and
+place the text itself into quotation marks. Either single or double
+quotation marks can be used, but consistency is key.</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>text <span class="op">=</span> <span class="st">"Let's get started with spacy :) ."</span></span></code></pre>
+</div>
+<p>Once you have input your text, you need to create a <code>doc</code>
+variable onto which you can call spaCy’s <code>nlp</code> function.
+greeting_doc = nlp(text)</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
