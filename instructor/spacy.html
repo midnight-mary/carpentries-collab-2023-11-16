@@ -305,12 +305,10 @@ commands.</li>
 <hr class="half-width"><p>Open Jupyter Notebook. You should already have installed spaCy as
 part of the lesson set-up instructions. If not, you need to do so
 <strong>before</strong> you import the package.</p>
-<pre><code>! pip -U install spacy
-import spacy</code></pre>
-<p>Then, you need to load one of spaCy’s language pipelines, in this
-case the large English pipeline, and assign it with the variable name
-‘nlp’.</p>
-<pre><code><span><span class="va">nlp</span> <span class="op">=</span> <span class="fu">spacy.load</span><span class="op">(</span><span class="st">"en_core_web_lg"</span><span class="op">)</span></span></code></pre>
+<p><code>{python} ! pip -U install spacy import spacy</code> Then, you
+need to load one of spaCy’s language pipelines, in this case the large
+English pipeline, and assign it with the variable name ‘nlp’.
+<code>{python} nlp = spacy.load("en_core_web_lg")</code></p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
