@@ -21,15 +21,15 @@ exercises: 15
 
 ::::::::: keypoints
 
-- Corpus linguistics is study of language as part of a body of text, wherein language appears in its "natural" context.
+1. Corpus linguistics is study of language as part of a body of text, wherein language appears in its "natural" context.
 
-- Corpus studies involve the compilation and analysis of collections of text (i.e. the body) which afford insights into the nature, structure, and use of language in this context.
+2. Corpus studies involve the compilation and analysis of collections of text (i.e. the body) which afford insights into the nature, structure, and use of language in this context.
 
-- Natural language processing (NLP) is a field that formulates techniques for understanding contexts and rules of language function.
+3. Natural language processing (NLP) is a field that formulates techniques for understanding contexts and rules of language function.
 
-- Corpus methods can be used to determine the underlying patterns and contextual associations of words and phrases in a body of text, amongst other uses. This is known as a "distant reading" approach to texts, focused on identifying and quantifying patterns across large datasets.
+4. Corpus methods can be used to determine the underlying patterns and contextual associations of words and phrases in a body of text, amongst other uses. This is known as a "distant reading" approach to texts, focused on identifying and quantifying patterns across large datasets.
 
-- The insights yielded from NLP approaches to text can supplement more traditional techniques of (critical) discourse analysis.
+5. The insights yielded from NLP approaches to text can supplement more traditional techniques of (critical) discourse analysis.
 :::::::::
 
 
