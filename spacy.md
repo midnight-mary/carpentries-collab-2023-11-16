@@ -37,7 +37,7 @@ Now, let's input some simple text to begin processing. For Jupyter, Python and s
 ```python
 text = "Let's get started with spacy :) ."
 ```
-Once you have input your text, you need to create a ```doc``` variable onto which you can call spaCy's ```nlp``` function. It is good practice to use the ```print()``` function immediately after creating the ```doc``` or indeed any new variable to double-check that the output appears as you expect it to.
+Once you have input your text, you need to create a ```doc``` variable which you will use to call spaCy's ```nlp``` function onto your ```text```. It is good practice to use the ```print()``` function immediately after creating the ```doc``` (or indeed any new variable) to double-check that the output appears as you expect it to.
 ```python
 greeting_doc = nlp(text)
 print(greeting_doc)
@@ -73,8 +73,22 @@ print(greeting_tokens)
 
 From this, we can see that spaCy recognises the smiley face emoji as a single token rather than two punctuation marks. We can also see that it recognises the 's as a single token dependency of the previous token, not as two separate tokens. 
 
+spaCy automatically indexes objects in an array based on their position so that they can be called by their individual index number. It is important to note that **indexes in Python begin with zero**: the first object is assigned the index 0, the second object the index 1, and so on. 
 
-If the length is n, the last index is n-1.
+Index numbers, which are always integers, are presented in [] brackets. You can specify a single index number or a range, by using a semicolon between the numbers inside square brackets, to extract them from your overall text array. For example, this could be useful if you had a set of texts and wanted to compare how they began but were not interested in their middles or endings.
+```python
+greeting_doc[0]
+Let
+
+greeting_doc[0:5]
+Let's get started with
+```
+
+::::::::: callout
+### Indexing in Python
+**Remember** If the length is *n*, the first index is 0 and the last index is *n-1*. In an index range, the output will be from the object indexed as the number before the colon **up to but not including** the number after the colon.
+:::::::::
+
 
 ::::::::::: keypoints
 
