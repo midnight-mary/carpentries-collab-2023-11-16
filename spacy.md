@@ -62,10 +62,16 @@ Use the list comprehension method from above to create the ```greeting_tokens```
 ::::::::: solution
 ```python
 len(greeting_doc)
+```
+```
 8
+```
 
+```python
 greeting_tokens = [token for token in greeting_doc]
 print(greeting_tokens)
+```
+```
 [Let, 's, get, started, with, spacy, :), .]
 ```
 :::::::::
@@ -78,9 +84,14 @@ spaCy automatically indexes objects in an array based on their position so that 
 Index numbers, which are always integers, are presented in [] brackets. You can specify a single index number or a range, by using a semicolon between the numbers inside square brackets, to extract them from your overall text array. For example, this could be useful if you had a set of texts and wanted to compare how they began but were not interested in their middles or endings.
 ```python
 greeting_doc[0]
+```
+```
 Let
-
+```
+```python
 greeting_doc[0:5]
+```
+```
 Let's get started with
 ```
 
