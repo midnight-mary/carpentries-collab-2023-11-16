@@ -340,7 +340,7 @@ texts.</li>
   <h3 class="accordion-header" id="headingInstructor1">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div>Instructor Note</h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>Be ready to activate breakout rooms for the exercise.</p>
 </div>
@@ -787,10 +787,10 @@ Information Retrieval Conference, Malaga, Spain. <a href="https://discovery.ucl.
 </ol>
 </div></section><section id="aio-spacy"><p>Content from <a href="spacy.html">Introduction to Natural Language Processing with spaCy</a></p>
 <hr>
-<p>Last updated on 2024-02-25 |
+<p>Last updated on 2024-04-01 |
         
         <a href="https://github.com/acceleratingdigitalskills/Processing-Text-Based-Corpora/edit/main/episodes/spacy.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
-<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 0 minutes</p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 60 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -802,7 +802,10 @@ Information Retrieval Conference, Malaga, Spain. <a href="https://discovery.ucl.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>In progress</li>
+<li>What is spaCy and what can I do with it?</li>
+<li>What are the steps in its English-language processing pipeline?</li>
+<li>What are the fundamentals of Python?</li>
+<li>How can I get started with Python and spaCy?</li>
 </ul>
 </div>
 </div>
@@ -812,13 +815,34 @@ Information Retrieval Conference, Malaga, Spain. <a href="https://discovery.ucl.
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>In progress</li>
+<li>Understand the steps involved in spaCy’s text processing
+pipeline.</li>
+<li>Understand the fundamentals of Python syntax.</li>
+<li>Write basic Python code in Jupyter Notebook to run spaCy
+commands.</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
-</div></section><section id="aio-pandas"><p>Content from <a href="pandas.html">Organising Data with Pandas</a></p>
+</div>
+<section id="getting-started-with-spacy"><h2 class="section-heading">Getting Started with spaCy<a class="anchor" aria-label="anchor" href="#getting-started-with-spacy"></a>
+</h2>
+<hr class="half-width">
+<p>Open Jupyter Notebook. You should already have installed spaCy as
+part of the lesson set-up instructions.</p>
+<p><code>{python} import spacy nlp = spacy.load("en_core_web_lg") text = "Let's get started with spacy :) ." greeting_doc = nlp(text) print(greeting_doc)</code>
+:::::::: keypoints</p>
+<ol style="list-style-type: decimal">
+<li>spaCy is a free and open-source Python library for Natural Language
+Processing which is based on pre-trained processing pipelines.</li>
+</ol>
+<p>:::::::::::</p>
+<!-- 
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use. 
+ -->
+</section></section><section id="aio-pandas"><p>Content from <a href="pandas.html">Organising Data with Pandas</a></p>
 <hr>
 <p>Last updated on 2024-02-25 |
         
