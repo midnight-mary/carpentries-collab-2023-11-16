@@ -29,11 +29,16 @@ Open Jupyter Notebook. You should already have installed spaCy as part of the le
 ! pip -U install spacy
 import spacy
 ```
-Then, you need to load one of spaCy's language pipelines, in this case the large English pipeline, and assign it with the variable name 'nlp'.
-```
+Then, you need to load one of spaCy's language pipelines, in this case the large English pipeline, and assign it with the variable name 'nlp'. Variables are assigned by typing in the name of the new variable, the equals sign, and the name and location of the object you want to assign to that variable.
+```python
 nlp = spacy.load("en_core_web_lg")
 ```
-Now, let's create a text variable with some simple text to 
+Now, let's input some simple text to begin processing. For Jupyter, Python and spaCy to recognise what we input *as* structured text rather than code, a different variable name or an undefined string, we will need to assign it a variable name, e.g. ```text```, and place the text itself into quotation marks. Either single or double quotation marks can be used, but consistency is key.
+```python
+text = "Let's get started with spacy :) ."
+```
+Once you have input your text, you need to create a ```doc``` variable onto which you can call spaCy's ```nlp``` function. 
+greeting_doc = nlp(text)
 
 ::::::::::: keypoints
 
