@@ -305,10 +305,17 @@ commands.</li>
 <hr class="half-width"><p>Open Jupyter Notebook. You should already have installed spaCy as
 part of the lesson set-up instructions. If not, you need to do so
 <strong>before</strong> you import the package.</p>
-<p><code>{python} ! pip -U install spacy import spacy</code> Then, you
-need to load one of spaCy’s language pipelines, in this case the large
-English pipeline, and assign it with the variable name ‘nlp’.
-<code>{python} nlp = spacy.load("en_core_web_lg")</code></p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="op">!</span> pip <span class="op">-</span>U install spacy</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="im">import</span> spacy</span></code></pre>
+</div>
+<p>Then, you need to load one of spaCy’s language pipelines, in this
+case the large English pipeline, and assign it with the variable name
+‘nlp’.</p>
+<pre><code><span><span class="va">nlp</span> <span class="op">=</span> <span class="fu">spacy.load</span><span class="op">(</span><span class="st">"en_core_web_lg"</span><span class="op">)</span></span></code></pre>
+<p>Now, let’s create a text variable with some simple text to</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
