@@ -25,15 +25,15 @@ exercises: 35
 
 Open Jupyter Notebook. You should already have installed spaCy as part of the lesson set-up instructions. If not, you need to do so **before** you import the package. 
 
-```{python}
+```python
 ! pip -U install spacy
 import spacy
 ```
 Then, you need to load one of spaCy's language pipelines, in this case the large English pipeline, and assign it with the variable name 'nlp'.
-```{python}
+```
 nlp = spacy.load("en_core_web_lg")
 ```
-
+Now, let's create a text variable with some simple text to 
 
 ::::::::::: keypoints
 
