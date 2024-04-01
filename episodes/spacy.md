@@ -21,6 +21,10 @@ exercises: 35
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+## The (Very) Basics of Python
+
+In progress...
+
 ## Getting Started with spaCy
 
 Open Jupyter Notebook. You should already have installed spaCy as part of the lesson set-up instructions. If not, you need to do so **before** you import the package. 
@@ -97,7 +101,9 @@ Let's get started with
 
 ::::::::: callout
 ### Indexing in Python
-**Remember** If the length is *n*, the first index is 0 and the last index is *n-1*. In an index range, the output will be from the object indexed as the number before the colon **up to but not including** the number after the colon.
+**Remember** If the length is *n*, the first index is 0 and the last index is *n-1*. 
+
+In an index range, the output will be from the object indexed as the number before the colon **up to but not including** the number after the colon.
 :::::::::
 
 
