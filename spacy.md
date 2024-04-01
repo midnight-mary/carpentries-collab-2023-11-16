@@ -37,11 +37,13 @@ Now, let's input some simple text to begin processing. For Jupyter, Python and s
 ```python
 text = "Let's get started with spacy :) ."
 ```
-Once you have input your text, you need to create a ```doc``` variable onto which you can call spaCy's ```nlp``` function. It is good practice to use the ```print()``` function immediately after creating the ```doc``` to double-check that your text appears as you expect it to.
+Once you have input your text, you need to create a ```doc``` variable onto which you can call spaCy's ```nlp``` function. It is good practice to use the ```print()``` function immediately after creating the ```doc``` or indeed any new variable to double-check that the output appears as you expect it to.
 ```python
 greeting_doc = nlp(text)
 print(greeting_doc)
 ```
+As expected, the output reads ```Let's get started with spaCy :) .```.
+
 
 ::::::::::: keypoints
 
