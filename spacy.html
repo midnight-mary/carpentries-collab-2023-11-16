@@ -401,13 +401,16 @@ identified.</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="bu">len</span>(greeting_doc)</span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="dv">8</span></span>
-<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a>greeting_tokens <span class="op">=</span> [token <span class="cf">for</span> token <span class="kw">in</span> greeting_doc]</span>
-<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a><span class="bu">print</span>(greeting_tokens)</span>
-<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a>[Let, <span class="st">'s, get, started, with, spacy, :), .]</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="bu">len</span>(greeting_doc)</span></code></pre>
 </div>
+<pre><code><span><span class="fl">8</span></span></code></pre>
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>greeting_tokens <span class="op">=</span> [token <span class="cf">for</span> token <span class="kw">in</span> greeting_doc]</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a><span class="bu">print</span>(greeting_tokens)</span></code></pre>
+</div>
+<pre><code>[Let, 's, get, started, with, spacy, :), .]</code></pre>
 </div>
 </div>
 </div>
@@ -427,15 +430,18 @@ semicolon between the numbers inside square brackets, to extract them
 from your overall text array. For example, this could be useful if you
 had a set of texts and wanted to compare how they began but were not
 interested in their middles or endings.</p>
-<div class="codewrapper sourceCode" id="cb7">
+<div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>greeting_doc[<span class="dv">0</span>]</span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>Let</span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>greeting_doc[<span class="dv">0</span>:<span class="dv">5</span>]</span>
-<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>Let<span class="st">'s get started with</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a>greeting_doc[<span class="dv">0</span>]</span></code></pre>
 </div>
+<pre><code><span><span class="va">Let</span></span></code></pre>
+<div class="codewrapper sourceCode" id="cb12">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a>greeting_doc[<span class="dv">0</span>:<span class="dv">5</span>]</span></code></pre>
+</div>
+<pre><code>Let's get started with</code></pre>
 <div id="indexing-in-python" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
