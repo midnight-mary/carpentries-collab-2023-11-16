@@ -44,6 +44,8 @@ print(greeting_doc)
 ```
 As expected, the output reads ```Let's get started with spaCy :) .```.
 
+One of the advantages of using spaCy is that it automatically tokenizes text in ```doc``` objects, and is able to generate token vectors, and recognise sentences, grammatical attributes and dependencies, named entities and token lemmas. You can find out more detail on the ```en_core_web_lg``` pipeline by visiting [spaCy's documentation pages](https://spacy.io/models/en#en_core_web_lg).
+
 
 ::::::::::: keypoints
 
