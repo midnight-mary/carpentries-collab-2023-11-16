@@ -44,8 +44,37 @@ print(greeting_doc)
 ```
 As expected, the output reads ```Let's get started with spaCy :) .```.
 
-One of the advantages of using spaCy is that it automatically tokenizes text in ```doc``` objects, and is able to generate token vectors, and recognise sentences, grammatical attributes and dependencies, named entities and token lemmas. You can find out more detail on the ```en_core_web_lg``` pipeline by visiting [spaCy's documentation pages](https://spacy.io/models/en#en_core_web_lg).
+One of the advantages of using spaCy is that it automatically tokenizes text and is able to recognise sentences, grammatical attributes and dependencies, named entities, and token lemmas. You can find out more about the features of the ```en_core_web_lg``` pipeline by visiting [spaCy's documentation pages](https://spacy.io/models/en#en_core_web_lg).
 
+You can calculate the length of your ```greeting_doc``` by using the ```len()``` function, which will output the number of tokens in your text doc. If you want to see a list of the tokens spaCy has identified and counted, you should create a new variable and use **list comprehension** syntax to extract the tokens from the text **array**:
+```python
+greeting_tokens = [token for token in greeting_doc]
+print(greeting_tokens)
+```
+:::::: challenge
+
+Manually count what you would classify as tokens in your ```greeting_doc```. Then, in Jupyter Notebook, use the ```len()``` function to check your answer. Do they match? If not, what might be an explanation? 
+
+:::::::::::::::::: hint 
+Use the list comprehension method from above to create the ```greeting_tokens``` variable to see the tokens spaCy identified.
+::::::::::::::::::
+
+::::::::: solution
+```python
+len(greeting_doc)
+8
+
+greeting_tokens = [token for token in greeting_doc]
+print(greeting_tokens)
+[Let, 's, get, started, with, spacy, :), .]
+```
+:::::::::
+::::::
+
+From this, we can see that spaCy recognises the smiley face emoji as a single token rather than two punctuation marks. We can also see that it recognises the 's as a single token dependency of the previous token, not as two separate tokens. 
+
+
+If the length is n, the last index is n-1.
 
 ::::::::::: keypoints
 
