@@ -770,11 +770,78 @@ double-check that the output appears as you expect it to.</p>
 <p>As expected, the output reads
 <code>Let's get started with spaCy :) .</code>.</p>
 <p>One of the advantages of using spaCy is that it automatically
-tokenizes text in <code>doc</code> objects, and is able to generate
-token vectors, and recognise sentences, grammatical attributes and
-dependencies, named entities and token lemmas. You can find out more
-detail on the <code>en_core_web_lg</code> pipeline by visiting <a href="https://spacy.io/models/en#en_core_web_lg" class="external-link">spaCy’s documentation
+tokenizes text and is able to recognise sentences, grammatical
+attributes and dependencies, named entities, and token lemmas. You can
+find out more about the features of the <code>en_core_web_lg</code>
+pipeline by visiting <a href="https://spacy.io/models/en#en_core_web_lg" class="external-link">spaCy’s documentation
 pages</a>.</p>
+<p>You can calculate the length of your <code>greeting_doc</code> by
+using the <code>len()</code> function, which will output the number of
+tokens in your text doc. If you want to see a list of the tokens spaCy
+has identified and counted, you should create a new variable and use
+<strong>list comprehension</strong> syntax to extract the tokens from
+the text <strong>array</strong>:</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>greeting_tokens <span class="op">=</span> [token <span class="cf">for</span> token <span class="kw">in</span> greeting_doc]</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="bu">print</span>(greeting_tokens)</span></code></pre>
+</div>
+<div id="challenge1" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge<a class="anchor" aria-label="anchor" href="#challenge1"></a>
+</h3>
+<div class="callout-content">
+<p>Manually count what you would classify as tokens in your
+<code>greeting_doc</code>. Then, in Jupyter Notebook, use the
+<code>len()</code> function to check your answer. Do they match? If not,
+what might be an explanation?</p>
+</div>
+</div>
+</div>
+<div id="accordionHint1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
+  <h4 class="accordion-header" id="headingHint1">Give me a hint</h4>
+</button>
+<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
+<div class="accordion-body">
+<p>Use the list comprehension method from above to create the
+<code>greeting_tokens</code> variable to see the tokens spaCy
+identified.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="bu">len</span>(greeting_doc)</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="dv">8</span></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a>greeting_tokens <span class="op">=</span> [token <span class="cf">for</span> token <span class="kw">in</span> greeting_doc]</span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a><span class="bu">print</span>(greeting_tokens)</span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a>[Let, <span class="st">'s, get, started, with, spacy, :), .]</span></span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>From this, we can see that spaCy recognises the smiley face emoji as
+a single token rather than two punctuation marks. We can also see that
+it recognises the ’s as a single token dependency of the previous token,
+not as two separate tokens.</p>
+<p>If the length is n, the last index is n-1.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
