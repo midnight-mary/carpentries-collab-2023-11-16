@@ -1,7 +1,7 @@
 ---
 title: "Introduction: Analysing Web-Based Musical Discourse"
-teaching: 0
-exercises: 0
+teaching: 35
+exercises: 15
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
