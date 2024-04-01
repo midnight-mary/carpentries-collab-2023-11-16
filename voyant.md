@@ -116,12 +116,12 @@ If you already have some idea about the kind of linguistic devices you are looki
 A **stopword** is a word (or any token) that is automatically omitted from a computer-generated concordance. Many NLP libraries have automatic lists of stopwords specific to individual languages, and these can often be edited to suit your specific needs, or you can create your own. 
 
 In Voyant, you can inspect the stopword lists by clicking the 'settings' icon on the top right corner of the 'Terms' tool. As can be seen, there are lists for the different languages that Voyant supports, as well as an 'auto-detect' list. It can be assumed that the removal of punctuation marks from Voyant's reading of our corpus is a feature of its 'auto-detect' stopword list.
+
 :::::::::::::: instructor
 
-Demonstrate the stopwords tool by editing to 
+Demonstrate the stopwords tool by editing the master list on your own screen e.g. by removing "like", "system", etc.
 
-::::::::::::::::::::::
-
+:::::::::::::::
 ### Sentiment 
 
 ::::::::: callout
