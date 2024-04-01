@@ -727,14 +727,29 @@ commands.</li>
 </h2>
 <hr class="half-width">
 <p>Open Jupyter Notebook. You should already have installed spaCy as
-part of the lesson set-up instructions.</p>
-<p><code>{python} import spacy nlp = spacy.load("en_core_web_lg") text = "Let's get started with spacy :) ." greeting_doc = nlp(text) print(greeting_doc)</code>
-:::::::: keypoints</p>
+part of the lesson set-up instructions. If not, you need to do so
+<strong>before</strong> you import the package.</p>
+<pre><code>! pip -U install spacy
+import spacy</code></pre>
+<p>Then, you need to load one of spaCy’s language pipelines, in this
+case the large English pipeline, and assign it with the variable name
+‘nlp’.</p>
+<pre><code><span><span class="va">nlp</span> <span class="op">=</span> <span class="fu">spacy.load</span><span class="op">(</span><span class="st">"en_core_web_lg"</span><span class="op">)</span></span></code></pre>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Key Points<a class="anchor" aria-label="anchor" href="#keypoints1"></a>
+</h3>
+<div class="callout-content">
 <ol style="list-style-type: decimal">
 <li>spaCy is a free and open-source Python library for Natural Language
 Processing which is based on pre-trained processing pipelines.</li>
 </ol>
-<p>:::::::::::</p>
+</div>
+</div>
+</div>
 <!-- 
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
