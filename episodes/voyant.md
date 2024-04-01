@@ -1,6 +1,6 @@
 ---
 title: "Exploring Text-Based Corpora with Voyant"
-teaching: 35
+teaching: 40
 exercises: 15
 ---
 
