@@ -14,9 +14,9 @@ exercises: 15
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Define key terms relating to Natural Language Processing
-- Load data into Voyant and conduct inductive analysis
-- Identify affordances and limitations of a frequency-based approach to corpus analysis
+- Define key terms relating to Natural Language Processing.
+- Load data into Voyant and conduct inductive analysis.
+- Identify affordances and limitations of a frequency-based approach to corpus analysis.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -74,9 +74,9 @@ The below callout does not necessarily need to be read out as part of the traini
 
 ::::::: callout
 
-Frequency-based text analysis is often traced back to Father Roberto Busa, a Jesuit Priest who worked with IBM in the 1940s to manually index 11 million medieval Latin words from the writings of St. Thomas Aquinas, count each appearance of the word 'in' and look at its collocations in order to explore the concept of 'presence' in his work. This somewhat quaint story has come to be venerated as the origin myth of the field of humanities computing as a whole, and has more recently been the subject of critique.^[Arun, Jacob. 2021. 'Punching Holes in the International Busa Machine Narrative'. In Kim, Dorothy and Coh, Adeline, Eds. *Alternative Historiographies of the Digital Humanities*. Punctum: 121–139]
+Frequency-based text analysis is often traced back to Father Roberto Busa, a Jesuit Priest who worked with IBM in the 1940s to manually index 11 million medieval Latin words from the writings of St. Thomas Aquinas, count each appearance of the word 'in' and look at its collocations in order to explore the concept of 'presence' in his work. This somewhat quaint story has come to be venerated as the origin myth of the field of humanities computing as a whole, and has more recently been the subject of characteristically humanistic critique.^[Arun, Jacob. 2021. 'Punching Holes in the International Busa Machine Narrative'. In Kim, Dorothy and Coh, Adeline, Eds. *Alternative Historiographies of the Digital Humanities*. Punctum: 121–139]
 
-In music studies, the use of frequency-based text analysis methods is growing, but not yet commonplace. A potential explanation for this is given in a 2015 ISMIR paper by Charles Inskip and Frans Wiering. Their study analyses term frequencies in responses to a survey on musicologists' attitudes towards using technology in their work and find that, while music scholars are generally enthusiastic about incorporating software and other technologies into their research, data literacy represents a barrier that they perceive as frustrating.^[Inskip, Charles and Wiering, Frans. 2015. 'In Their Own Words: Using Text to Identify Musicologists' Attitudes Towards Technology'. Presented at: 16th International Society for Music Information Retrieval Conference, Malaga, Spain. https://discovery.ucl.ac.uk/id/eprint/1470590/]
+In music studies, the use of frequency-based text analysis methods is growing, but not yet commonplace. A potential explanation for this reticence was given in a 2015 ISMIR paper by Charles Inskip and Frans Wiering, which itself uses frequency-based methods to reach its conclusions. Inskip and Wiering analysed responses to a survey on musicologists' attitudes towards using technology in their work and found that, while music scholars were generally enthusiastic about incorporating software and other technologies into their research, data literacy represented a barrier that they perceived as frustrating.^[Inskip, Charles and Wiering, Frans. 2015. 'In Their Own Words: Using Text to Identify Musicologists' Attitudes Towards Technology'. Presented at: 16th International Society for Music Information Retrieval Conference, Malaga, Spain. https://discovery.ucl.ac.uk/id/eprint/1470590/]
 :::::::::::
 With these core principles in mind, we can now have a go at using Voyant to explore the Boomkat corpus.
 
