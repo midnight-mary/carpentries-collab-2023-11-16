@@ -335,14 +335,16 @@ quotation marks can be used, but consistency is key.</p>
 <p>Once you have input your text, you need to create a <code>doc</code>
 variable onto which you can call spaCy’s <code>nlp</code> function. It
 is good practice to use the <code>print()</code> function immediately
-after creating the <code>doc</code> to double-check that your text
-appears as you expect it to.</p>
+after creating the <code>doc</code> or indeed any new variable to
+double-check that the output appears as you expect it to.</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>greeting_doc <span class="op">=</span> nlp(text)</span>
 <span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="bu">print</span>(greeting_doc)</span></code></pre>
 </div>
+<p>As expected, the output reads
+<code>Let's get started with spaCy :) .</code>.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
