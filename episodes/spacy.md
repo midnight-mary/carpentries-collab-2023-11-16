@@ -14,9 +14,10 @@ exercises: 35
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Understand the steps involved in spaCy's text processing pipeline.
+- Understand the components of spaCy's text processing pipeline.
 - Understand the fundamentals of Python syntax.
 - Write simple Python code in Jupyter Notebook to run spaCy commands.
+- Recognise the affordances of different spaCy objects.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -264,7 +265,7 @@ print([ent.label_ for ent in doc.ents if ent.text=="Gaussian Curve"])
 ```
 
 ::::::::::::::::: challenge
-Using the same method as earlier, (a) create a list of ent texts and ent labels for each token in the ```doc```.
+Using the same method as earlier, (a) create a list of ent texts with and ent labels for each token in the ```doc```.
 
 Then, (b) extract only the entities representing people or organizations.
 
@@ -303,10 +304,42 @@ print([ent.text for ent in doc.ents if ent.label_ =="PERSON" or ent.label_=="ORG
 
 :::::::::::::::::
 
+The ```ent.text``` and ```ent.label_``` 'for' loop output of part (a) of the exercise is interesting in itself but cannot be worked on further because it was not assigned as a new variable. This can be done with the following syntax:
+```python
+doc_ents_and_labels = []
+for ent in doc.ents:
+    print(ent.text, ent.label_)
+```
+However, if you try to do further NLP tasks on this variable, such as a simple token count, you will run into issues:
+```python
+len(doc_ents_and_labels)
+```
+```
+0
+```
+The reason that the ```len()``` function did not work as expected is because the type of object that this new variable constitutes is not a ```doc``` object to which spaCy's NLP functions apply. You can inspect the type of object you are dealing with by using the print(type) command:
+```python
+print(type(doc_ents_and_labels))
+```
+```
+<class 'list'>
+```
+On the other hand, if you inspect the type of our original ```doc```:
+```python
+print(type(doc))
+```
+```
+<class 'spacy.tokens.doc.Doc'>
+```
+```List``` objects are not tokenized or indexed in the same way that ```doc``` objects are, which means you cannot perform further NLP tasks on them in their current state. Nevertheless, they are often useful data sources that you will need to know how to manipulate to be able to quantify and analyse their contents in other ways. 
 
+How to do this will be the subject of the [next episode](https://acceleratingdigitalskills.github.io/Processing-Text-Based-Corpora/pandas.html).
 
 ::::::::::: keypoints
 
-1. spaCy is a free and open-source Python library for Natural Language Processing which is based on pre-trained processing pipelines. 
+1. SpaCy is a free and open-source Python library for Natural Language Processing which is based on pre-trained processing pipelines.
+2. SpaCy uses language pipelines which are pre-trained to automatically tokenize and tag parts of speech, with powerful recognition and prediction features built-in.
+3. You can use simple list comprehension syntax to extract information that is relevant to your research question.
+4. The ability to call spaCy's NLP functions depends on the type of data object you are working with.
 
 :::::::::::
