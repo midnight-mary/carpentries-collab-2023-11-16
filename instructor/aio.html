@@ -340,7 +340,7 @@ texts.</li>
   <h3 class="accordion-header" id="headingInstructor1">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div>Instructor Note</h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>Be ready to activate breakout rooms for the exercise.</p>
 </div>
@@ -925,7 +925,7 @@ what might be an explanation?</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1">Give me a hint</h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
 <div class="accordion-body">
 <p>Use the list comprehension method from above to create the
 <code>greeting_tokens</code> variable to see the tokens spaCy
@@ -939,7 +939,7 @@ identified.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1133,24 +1133,36 @@ specify that you want to extract only nouns and proper nouns from your
 <span id="cb28-4"><a href="#cb28-4" tabindex="-1"></a><span class="bu">print</span>(nouns_and_proper_nouns)</span></code></pre>
 </div>
 <pre><code>[Clouds, suite, downbeats, Gigi, Masin, Marco, Sterk, Young, Marco, Johnny, Nash, heart, Amsterdam, light, district, weekend, April, 2014.It, vibes, notes, buzz, streets, studio, windows, improvisations, drift, dub, piano, pieces, night, jazz, patter, sense, similarities, Clouds, Sky, Walking, album, Lawrence, co., looseness, Gaussian, Curve, adult, suaveness, hash, oil]</code></pre>
-<div id="discussion1" class="callout discussion">
+<div id="challenge2" class="callout challenge">
 <div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
+<i class="callout-icon" data-feather="zap"></i>
 </div>
 <div class="callout-inner">
-<h3 class="callout-title">Challenge<a class="anchor" aria-label="anchor" href="#discussion1"></a>
+<h3 class="callout-title">Challenge<a class="anchor" aria-label="anchor" href="#challenge2"></a>
 </h3>
 <div class="callout-content">
 <p>Use <strong>for … if…</strong> syntax to create a list of adjectives
 and adverbs with the variable name <code>adj_and_adv</code> from your
-<code>doc</code>. ::::::::::hint It is a common mistake, but if you use
-<code>and</code> in the code you will get a blank <code>[]</code> result
-because the <code>and</code> specifies that an individual token should
-be both an adjectives <strong>and</strong> an adverb, which is
-impossible in this instance - a distinction that can be missed in casual
-communication but is key to the formal logic of programming. So, you
-should use <code>or</code> to avoid this and print only tokens that are
-<strong>either</strong> adjectives <strong>or</strong> adverbs.</p>
+<code>doc</code>.</p>
+</div>
+</div>
+</div>
+<div id="accordionHint2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint2" aria-expanded="false" aria-controls="collapseHint2">
+  <h4 class="accordion-header" id="headingHint2">Give me a hint</h4>
+</button>
+<div id="collapseHint2" class="accordion-collapse collapse" aria-labelledby="headingHint2" data-bs-parent="#accordionHint2">
+<div class="accordion-body">
+<p>It is a common mistake, but if you use <code>and</code> in the code
+you will get a blank <code>[]</code> result because the <code>and</code>
+specifies that an individual token should be both an adjectives
+<strong>and</strong> an adverb, which is impossible in this instance - a
+distinction that can be missed in casual communication but is key to the
+formal logic of programming. So, you should use <code>or</code> to avoid
+this and print only tokens that are <strong>either</strong> adjectives
+<strong>or</strong> adverbs.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1159,7 +1171,7 @@ should use <code>or</code> to avoid this and print only tokens that are
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2">Show me the solution</h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb30">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1174,7 +1186,6 @@ should use <code>or</code> to avoid this and print only tokens that are
 </div>
 </div>
 </div>
-<p>:::::::::::::::::::</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
