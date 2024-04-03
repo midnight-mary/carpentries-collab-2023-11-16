@@ -292,11 +292,11 @@
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>Understand the steps involved in spaCy’s text processing
-pipeline.</li>
+<ul><li>Understand the components of spaCy’s text processing pipeline.</li>
 <li>Understand the fundamentals of Python syntax.</li>
 <li>Write simple Python code in Jupyter Notebook to run spaCy
 commands.</li>
+<li>Recognise the affordances of different spaCy objects.</li>
 </ul></div>
 </div>
 </div>
@@ -736,8 +736,8 @@ comprehension method from above. For example:</p>
 <h3 class="callout-title">Challenge<a class="anchor" aria-label="anchor" href="#challenge3"></a>
 </h3>
 <div class="callout-content">
-<p>Using the same method as earlier, (a) create a list of ent texts and
-ent labels for each token in the <code>doc</code>.</p>
+<p>Using the same method as earlier, (a) create a list of ent texts with
+and ent labels for each token in the <code>doc</code>.</p>
 <p>Then, (b) extract only the entities representing people or
 organizations.</p>
 </div>
@@ -794,6 +794,51 @@ Gaussian Curve ORG</code></pre>
 </div>
 </div>
 </div>
+<p>The <code>ent.text</code> and <code>ent.label_</code> ‘for’ loop
+output of part (a) of the exercise is interesting in itself but cannot
+be worked on further because it was not assigned as a new variable. This
+can be done with the following syntax:</p>
+<div class="codewrapper sourceCode" id="cb43">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" tabindex="-1"></a>doc_ents_and_labels <span class="op">=</span> []</span>
+<span id="cb43-2"><a href="#cb43-2" tabindex="-1"></a><span class="cf">for</span> ent <span class="kw">in</span> doc.ents:</span>
+<span id="cb43-3"><a href="#cb43-3" tabindex="-1"></a>    <span class="bu">print</span>(ent.text, ent.label_)</span></code></pre>
+</div>
+<p>However, if you try to do further NLP tasks on this variable, such as
+a simple token count, you will run into issues:</p>
+<div class="codewrapper sourceCode" id="cb44">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" tabindex="-1"></a><span class="bu">len</span>(doc_ents_and_labels)</span></code></pre>
+</div>
+<pre><code><span><span class="fl">0</span></span></code></pre>
+<p>The reason that the <code>len()</code> function did not work as
+expected is because the type of object that this new variable
+constitutes is not a <code>doc</code> object to which spaCy’s NLP
+functions apply. You can inspect the type of object you are dealing with
+by using the print(type) command:</p>
+<div class="codewrapper sourceCode" id="cb46">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(doc_ents_and_labels))</span></code></pre>
+</div>
+<pre><code>&lt;class 'list'&gt;</code></pre>
+<p>On the other hand, if you inspect the type of our original
+<code>doc</code>:</p>
+<div class="codewrapper sourceCode" id="cb48">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(doc))</span></code></pre>
+</div>
+<pre><code>&lt;class 'spacy.tokens.doc.Doc'&gt;</code></pre>
+<p><code>List</code> objects are not tokenized or indexed in the same
+way that <code>doc</code> objects are, which means you cannot perform
+further NLP tasks on them in their current state. Nevertheless, they are
+often useful data sources that you will need to know how to manipulate
+to be able to quantify and analyse their contents in other ways.</p>
+<p>How to do this will be the subject of the <a href="https://acceleratingdigitalskills.github.io/Processing-Text-Based-Corpora/pandas.html" class="external-link">next
+episode</a>.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -802,8 +847,15 @@ Gaussian Curve ORG</code></pre>
 <h3 class="callout-title">Key Points<a class="anchor" aria-label="anchor" href="#keypoints1"></a>
 </h3>
 <div class="callout-content">
-<ol style="list-style-type: decimal"><li>spaCy is a free and open-source Python library for Natural Language
+<ol style="list-style-type: decimal"><li>SpaCy is a free and open-source Python library for Natural Language
 Processing which is based on pre-trained processing pipelines.</li>
+<li>SpaCy uses language pipelines which are pre-trained to automatically
+tokenize and tag parts of speech, with powerful recognition and
+prediction features built-in.</li>
+<li>You can use simple list comprehension syntax to extract information
+that is relevant to your research question.</li>
+<li>The ability to call spaCy’s NLP functions depends on the type of
+data object you are working with.</li>
 </ol></div>
 </div>
 </div>
