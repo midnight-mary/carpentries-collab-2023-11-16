@@ -368,9 +368,10 @@ output appears as you expect it to.</p>
 using the <code>len()</code> function, which will output the number of
 tokens in your text doc. If you want to see a list of the tokens spaCy
 has identified and counted, you should create a new variable and use
-<strong>list comprehension</strong> syntax to iterate through the
-<code>greeting_doc</code> and extract the tokens every time they are
-encountered in the text <strong>array</strong>:</p>
+<strong>‘for’ loops</strong> with <strong>list comprehension</strong>
+syntax to iterate through the <code>greeting_doc</code> and extract the
+tokens every time they are encountered in the text
+<strong>array</strong>:</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -397,7 +398,7 @@ what might be an explanation?</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1">Give me a hint</h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
 <div class="accordion-body">
 <p>Use the list comprehension method from above to create the
 <code>greeting_tokens</code> variable to see the tokens spaCy
@@ -411,7 +412,7 @@ identified.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -496,11 +497,10 @@ analyse the descriptive words it contains and their sentiments, or
 isolate named entities such as record labels and place names to begin to
 construct a network.</p>
 <p>Tasks such as these require understanding how spaCy parses text and
-classifies parts of speech, as well as using list comprehensions to
-iterate through text arrays to extract relevant information. Let us
-inspect our <code>greeting_doc</code> in this more systematic way, using
-list comprehension to extract the different token attributes that form
-part of spaCy’s nlp pipeline.</p>
+classifies parts of speech, as well as using ‘for’ loops to iterate
+through text arrays to extract relevant information. Let us inspect our
+<code>greeting_doc</code> in this more systematic way to extract the
+different token attributes that form part of spaCy’s nlp pipeline.</p>
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -563,6 +563,33 @@ variable, as before, and check the length.</p>
 <span id="cb22-2"><a href="#cb22-2" tabindex="-1"></a><span class="bu">len</span>(doc)</span></code></pre>
 </div>
 <pre><code><span><span class="fl">147</span></span></code></pre>
+<p>In Python, you can use ‘if’ and ‘if not’ statements to further refine
+your ‘for’ loop list comprehensions, which makes it possible to focus on
+particular token attributes while ignoring others. These ‘for … in …
+if/not …’ statements rely on standard logical conditions from maths,
+such as equals to (<code>==</code>), not equals to (<code>!=</code>),
+greater/less than (<code>&gt; / &lt;</code>), etc. For example, with the
+Boomkat <code>doc</code> from above, we can create a list of tokens that
+excludes all punctuation marks:</p>
+<div class="codewrapper sourceCode" id="cb24">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a>word_tokens <span class="op">=</span> [token </span>
+<span id="cb24-2"><a href="#cb24-2" tabindex="-1"></a>              <span class="cf">for</span> token <span class="kw">in</span> doc</span>
+<span id="cb24-3"><a href="#cb24-3" tabindex="-1"></a>              <span class="cf">if</span> <span class="kw">not</span> token.is_punct]</span>
+<span id="cb24-4"><a href="#cb24-4" tabindex="-1"></a><span class="bu">print</span>(word_tokens)</span></code></pre>
+</div>
+<pre><code>[Clouds, is, a, perfectly, measured, suite, of, warm, and, hazy, downbeats, from, Gigi, Masin, Marco, Sterk, Young, Marco, and, Johnny, Nash, recorded, in, the, heart, of, Amsterdam, 's, red, light, district, over, one, weekend, in, April, 2014.It, 's, all, about, louche, vibes, and, glowing, notes, gently, absorbing, and, transducing, the, buzz, of, the, streets, outside, the, studio, 's, open, windows, into, eight, elegantly, reserved, improvisations, segueing, between, lush, ambient, drift, dub, wise, solo, piano, pieces, and, chiming, late, night, jazz, patter, In, that, sense, there, 's, striking, similarities, between, Clouds, and, the, recent, Sky, Walking, album, by, Lawrence, and, co., but, where, they, really, go, for, the, looseness, Gaussian, Curve, keep, it, supple, yet, tight, bordering, on, adult, contemporary, suaveness, anointed, with, finest, hash, oil, Imbibe, slowly]</code></pre>
+<p>You can also use equals to (<code>==</code>) and Boolean values of
+<code>True</code> or <code>False</code> to obtain the same result.</p>
+<div class="codewrapper sourceCode" id="cb26">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a>word_tokens2 <span class="op">=</span> [token </span>
+<span id="cb26-2"><a href="#cb26-2" tabindex="-1"></a>              <span class="cf">for</span> token <span class="kw">in</span> doc</span>
+<span id="cb26-3"><a href="#cb26-3" tabindex="-1"></a>              <span class="cf">if</span> token.is_punct<span class="op">==</span><span class="va">False</span>]</span>
+<span id="cb26-4"><a href="#cb26-4" tabindex="-1"></a><span class="bu">print</span>(word_tokens2)</span></code></pre>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
