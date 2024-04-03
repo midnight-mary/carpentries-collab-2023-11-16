@@ -27,7 +27,11 @@ In progress...
 
 ## Getting Started with spaCy
 
-Open Jupyter Notebook. You should already have installed spaCy as part of the lesson set-up instructions. If not, you need to do so **before** you import the package. 
+SpaCy is a free, open-source software library for Natural Language Processing that uses the Python and Cython programming languages. One of the advantages of using spaCy is that it automatically tokenizes text and is able to recognise sentences, grammatical attributes and dependencies, named entities, and token lemmas. It can also calculate text similarity and perform classification and training tasks. 
+
+Unlike other NLP libraries like NLTK and Flair, however, spaCy was developed for professional and commercial rather than educational purposes. Practically, this means it has a different learning curve because while some basic tasks are automatically built into its language pipelines, others are more idiosyncratic. You can find out more about its features by visiting [spaCy's documentation pages](https://spacy.io/usage/spacy-101). 
+
+To begin, open Jupyter Notebook. You should already have installed spaCy as part of the lesson set-up instructions. If not, you need to do so **before** you import the package. 
 
 ```python
 ! pip -U install spacy
@@ -46,9 +50,7 @@ Once you have input your text, you need to create a ```doc``` variable which you
 greeting_doc = nlp(text)
 print(greeting_doc)
 ```
-As expected, the output reads ```Let's get started with spaCy :) .```.
-
-One of the advantages of using spaCy is that it automatically tokenizes text and is able to recognise sentences, grammatical attributes and dependencies, named entities, and token lemmas. You can find out more about the features of the ```en_core_web_lg``` pipeline by visiting [spaCy's documentation pages](https://spacy.io/models/en#en_core_web_lg).
+As expected, the output reads ```Let's get started with spaCy :) .```
 
 You can calculate the length of your ```greeting_doc``` by using the ```len()``` function, which will output the number of tokens in your text doc. If you want to see a list of the tokens spaCy has identified and counted, you should create a new variable and use **list comprehension** syntax to extract the tokens from the text **array**:
 ```python
@@ -85,7 +87,7 @@ From this, we can see that spaCy recognises the smiley face emoji as a single to
 
 spaCy automatically indexes objects in an array based on their position so that they can be called by their individual index number. It is important to note that **indexes in Python begin with zero**: the first object is assigned the index 0, the second object the index 1, and so on. 
 
-Index numbers, which are always integers, are presented in [] brackets. You can specify a single index number or a range, by using a semicolon between the numbers inside square brackets, to extract them from your overall text array. For example, this could be useful if you had a set of texts and wanted to compare how they began but were not interested in their middles or endings.
+Index numbers, which are always integers, are presented in [] brackets. You can specify a single index number or a range by using a semicolon between the numbers inside square brackets to extract them from your overall text array. For example, this could be useful if you had a set of texts and wanted to compare how they began but were not interested in their middles or endings.
 ```python
 greeting_doc[0]
 ```
@@ -101,10 +103,11 @@ Let's get started with
 
 ::::::::: callout
 ### Indexing in Python
-**Remember** If the length is *n*, the first index is 0 and the last index is *n-1*. 
+**Remember**: if the length of your array is *n*, the first index is 0 and the last index is *n-1*. 
 
 In an index range, the output will be from the object indexed as the number before the colon **up to but not including** the number after the colon.
 :::::::::
+
 
 
 ::::::::::: keypoints
