@@ -398,7 +398,7 @@ what might be an explanation?</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1">Give me a hint</h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
 <div class="accordion-body">
 <p>Use the list comprehension method from above to create the
 <code>greeting_tokens</code> variable to see the tokens spaCy
@@ -412,7 +412,7 @@ identified.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -491,11 +491,11 @@ incredibly useful when working with large text corpora. Helpfully,
 spaCy’s nlp pipelines have been trained on large language datasets to be
 able to automatically, and quite reliably, recognise certain linguistic
 attributes such as parts of speech, grammatical functions, named
-entities, and so on. For example, with the Boomkat corpus we have
-already explored in the previous episode, you might want to further
-analyse the descriptive words it contains and their sentiments, or
-isolate named entities such as record labels and place names to begin to
-construct a network.</p>
+entities, and so on.</p>
+<p>For example, with the Boomkat corpus we have already explored in the
+previous episode, you might want to further analyse the descriptive
+words it contains and their sentiments, or isolate named entities such
+as record labels and place names to begin to construct a network.</p>
 <p>Tasks such as these require understanding how spaCy parses text and
 classifies parts of speech, as well as using ‘for’ loops to iterate
 through text arrays to extract relevant information. Let us inspect our
@@ -624,7 +624,7 @@ and adverbs with the variable name <code>adj_and_adv</code> from your
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint2" aria-expanded="false" aria-controls="collapseHint2">
   <h4 class="accordion-header" id="headingHint2">Give me a hint</h4>
 </button>
-<div id="collapseHint2" class="accordion-collapse collapse" aria-labelledby="headingHint2" data-bs-parent="#accordionHint2">
+<div id="collapseHint2" class="accordion-collapse collapse" data-bs-parent="#accordionHint2" aria-labelledby="headingHint2">
 <div class="accordion-body">
 <p>It is a common mistake, but if you use <code>and</code> in the code
 you will get a blank <code>[]</code> result because the <code>and</code>
@@ -644,7 +644,7 @@ adverbs.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2">Show me the solution</h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb30">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -685,12 +685,12 @@ on how to edit spaCy stopword sets</a>.</p>
 </div>
 </section><section id="named-entity-recognition"><h2 class="section-heading">Named Entity Recognition<a class="anchor" aria-label="anchor" href="#named-entity-recognition"></a>
 </h2>
-<hr class="half-width"><p>Another useful feature built into spaCy’s nlp pipeline is Named
-Entity Recognition (NER). This recognises and classifies proper nouns
-like place names, countries, currencies, political organizations, and
-even (some) works of art. As with other tools, we cannot expect NER to
-be 100% reliable, especially when working with musical sublanguages, but
-it can still save time and/or streamline manual coding and tagging
+<hr class="half-width"><p>Another useful feature built into spaCy’s <code>nlp</code> pipeline
+is Named Entity Recognition (NER). This recognises and classifies proper
+nouns like place names, countries, currencies, political organizations,
+and even (some) works of art. As with other tools, we cannot expect NER
+to be 100% reliable, especially when working with musical sublanguages,
+but it can still save time and/or streamline manual coding and tagging
 exercises.</p>
 <p>To see a list of the NER labels spaCy uses, you can type the
 following code (and remember to use the <code>spacy.explain()</code>
@@ -746,7 +746,7 @@ organizations.</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint3" aria-expanded="false" aria-controls="collapseHint3">
   <h4 class="accordion-header" id="headingHint3">Give me a hint</h4>
 </button>
-<div id="collapseHint3" class="accordion-collapse collapse" aria-labelledby="headingHint3" data-bs-parent="#accordionHint3">
+<div id="collapseHint3" class="accordion-collapse collapse" data-bs-parent="#accordionHint3" aria-labelledby="headingHint3">
 <div class="accordion-body">
 <p>Note that <code>.label</code> (without the underscore) outputs the
 numerical index of the label type rather than the text string name of
@@ -761,7 +761,7 @@ are exploring your document properties.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3">Show me the solution</h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <ol style="list-style-type: lower-alpha"><li>
 </li></ol><div class="codewrapper sourceCode" id="cb39">
