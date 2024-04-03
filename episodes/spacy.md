@@ -8,7 +8,6 @@ exercises: 35
 
 - What is spaCy and what can I do with it?
 - What are the steps in its English-language processing pipeline?
-- What are the fundamentals of Python?
 - How can I get started with Python and spaCy?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -17,7 +16,7 @@ exercises: 35
 
 - Understand the steps involved in spaCy's text processing pipeline.
 - Understand the fundamentals of Python syntax.
-- Write basic Python code in Jupyter Notebook to run spaCy commands.
+- Write simple Python code in Jupyter Notebook to run spaCy commands.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
