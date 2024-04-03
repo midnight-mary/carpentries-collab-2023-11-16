@@ -52,7 +52,7 @@ print(greeting_doc)
 ```
 As expected, the output reads ```Let's get started with spaCy :) .```
 
-You can calculate the length of your ```greeting_doc``` by using the ```len()``` function, which will output the number of tokens in your text doc. If you want to see a list of the tokens spaCy has identified and counted, you should create a new variable and use **list comprehension** syntax to iterate through the ```greeting_doc``` and extract the tokens every time they are encountered in the text **array**:
+You can calculate the length of your ```greeting_doc``` by using the ```len()``` function, which will output the number of tokens in your text doc. If you want to see a list of the tokens spaCy has identified and counted, you should create a new variable and use **'for' loops** with **list comprehension** syntax to iterate through the ```greeting_doc``` and extract the tokens every time they are encountered in the text **array**:
 ```python
 greeting_tokens = [token for token in greeting_doc]
 print(greeting_tokens)
@@ -119,7 +119,7 @@ In an index range, the output will be from the object indexed as the number befo
 
 Being able to identify and extract specific parts of speech can be incredibly useful when working with large text corpora. Helpfully, spaCy's nlp pipelines have been trained on large language datasets to be able to automatically, and quite reliably, recognise certain linguistic attributes such as parts of speech, grammatical functions, named entities, and so on. For example, with the Boomkat corpus we have already explored in the previous episode, you might want to further analyse the descriptive words it contains and their sentiments, or isolate named entities such as record labels and place names to begin to construct a network. 
 
-Tasks such as these require understanding how spaCy parses text and classifies parts of speech, as well as using list comprehensions to iterate through text arrays to extract relevant information. Let us inspect our ```greeting_doc``` in this more systematic way, using list comprehension to extract the different token attributes that form part of spaCy's nlp pipeline. 
+Tasks such as these require understanding how spaCy parses text and classifies parts of speech, as well as using 'for' loops to iterate through text arrays to extract relevant information. Let us inspect our ```greeting_doc``` in this more systematic way to extract the different token attributes that form part of spaCy's nlp pipeline. 
 ```python
 for token in greeting_doc:
     print(token.text, token.lemma_, token.pos_, token.tag_, token.dep_,
@@ -165,7 +165,24 @@ len(doc)
 147
 ```
 
+In Python, you can use 'if' and 'if not' statements to further refine your 'for' loop list comprehensions, which makes it possible to focus on particular token attributes while ignoring others. These 'for ... in ... if/not ...' statements rely on standard logical conditions from maths, such as equals to (```==```), not equals to (```!=```), greater/less than (```> / <```), etc. For example, with the Boomkat ```doc``` from above, we can create a list of tokens that excludes all punctuation marks: 
+```python
+word_tokens = [token 
+              for token in doc
+              if not token.is_punct]
+print(word_tokens)
+```
+```
+[Clouds, is, a, perfectly, measured, suite, of, warm, and, hazy, downbeats, from, Gigi, Masin, Marco, Sterk, Young, Marco, and, Johnny, Nash, recorded, in, the, heart, of, Amsterdam, 's, red, light, district, over, one, weekend, in, April, 2014.It, 's, all, about, louche, vibes, and, glowing, notes, gently, absorbing, and, transducing, the, buzz, of, the, streets, outside, the, studio, 's, open, windows, into, eight, elegantly, reserved, improvisations, segueing, between, lush, ambient, drift, dub, wise, solo, piano, pieces, and, chiming, late, night, jazz, patter, In, that, sense, there, 's, striking, similarities, between, Clouds, and, the, recent, Sky, Walking, album, by, Lawrence, and, co., but, where, they, really, go, for, the, looseness, Gaussian, Curve, keep, it, supple, yet, tight, bordering, on, adult, contemporary, suaveness, anointed, with, finest, hash, oil, Imbibe, slowly]
+```
 
+You can also use equals to (```==```) and Boolean values of ```True``` or ```False``` to obtain the same result. 
+```python
+word_tokens2 = [token 
+              for token in doc
+              if token.is_punct==False]
+print(word_tokens2)
+```
 
 ::::::::::: keypoints
 
