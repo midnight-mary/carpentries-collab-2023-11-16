@@ -562,14 +562,15 @@ variable, as before, and check the length.</p>
 <span id="cb22-2"><a href="#cb22-2" tabindex="-1"></a><span class="bu">len</span>(doc)</span></code></pre>
 </div>
 <pre><code><span><span class="fl">147</span></span></code></pre>
-<p>In Python, you can use ‘if’ and ‘if not’ statements to further refine
-your ‘for’ loop list comprehensions, which makes it possible to focus on
-particular token attributes while ignoring others. These ‘for … in …
-if/not …’ statements rely on standard logical conditions from maths,
-such as equals to (<code>==</code>), not equals to (<code>!=</code>),
-greater/less than (<code>&gt; / &lt;</code>), etc. For example, with the
-Boomkat <code>doc</code> from above, we can create a list of tokens that
-excludes all punctuation marks:</p>
+<p>In Python, you can use <strong>‘if’</strong> and <strong>‘if not’
+statements</strong> to further refine your ‘for’ loop list
+comprehensions, which makes it possible to focus on particular token
+attributes while ignoring others. These ‘for … in … if/not …’ statements
+rely on standard logical conditions from maths, such as equals to
+(<code>==</code>), not equals to (<code>!=</code>), greater/less than
+(<code>&gt; / &lt;</code>), etc.</p>
+<p>For example, with the Boomkat <code>doc</code> from above, we can
+create a list of tokens that excludes all punctuation marks:</p>
 <div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -589,6 +590,62 @@ excludes all punctuation marks:</p>
 <span id="cb26-3"><a href="#cb26-3" tabindex="-1"></a>              <span class="cf">if</span> token.is_punct<span class="op">==</span><span class="va">False</span>]</span>
 <span id="cb26-4"><a href="#cb26-4" tabindex="-1"></a><span class="bu">print</span>(word_tokens2)</span></code></pre>
 </div>
+<pre><code>[Clouds, is, a, perfectly, measured, suite, of, warm, and, hazy, downbeats, from, Gigi, Masin, Marco, Sterk, Young, Marco, and, Johnny, Nash, recorded, in, the, heart, of, Amsterdam, 's, red, light, district, over, one, weekend, in, April, 2014.It, 's, all, about, louche, vibes, and, glowing, notes, gently, absorbing, and, transducing, the, buzz, of, the, streets, outside, the, studio, 's, open, windows, into, eight, elegantly, reserved, improvisations, segueing, between, lush, ambient, drift, dub, wise, solo, piano, pieces, and, chiming, late, night, jazz, patter, In, that, sense, there, 's, striking, similarities, between, Clouds, and, the, recent, Sky, Walking, album, by, Lawrence, and, co., but, where, they, really, go, for, the, looseness, Gaussian, Curve, keep, it, supple, yet, tight, bordering, on, adult, contemporary, suaveness, anointed, with, finest, hash, oil, Imbibe, slowly]</code></pre>
+<p>Furthermore, you can use <code>or</code> and <code>and</code>
+conditions to refine your list comprehension. For example, you could
+specify that you want to extract only nouns and proper nouns from your
+<code>doc</code>.</p>
+<div class="codewrapper sourceCode" id="cb28">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a>nouns_and_proper_nouns <span class="op">=</span> [token </span>
+<span id="cb28-2"><a href="#cb28-2" tabindex="-1"></a>              <span class="cf">for</span> token <span class="kw">in</span> doc</span>
+<span id="cb28-3"><a href="#cb28-3" tabindex="-1"></a>              <span class="cf">if</span> token.pos_<span class="op">==</span><span class="st">"NOUN"</span> <span class="kw">or</span> token.pos_<span class="op">==</span><span class="st">"PROPN"</span>]</span>
+<span id="cb28-4"><a href="#cb28-4" tabindex="-1"></a><span class="bu">print</span>(nouns_and_proper_nouns)</span></code></pre>
+</div>
+<pre><code>[Clouds, suite, downbeats, Gigi, Masin, Marco, Sterk, Young, Marco, Johnny, Nash, heart, Amsterdam, light, district, weekend, April, 2014.It, vibes, notes, buzz, streets, studio, windows, improvisations, drift, dub, piano, pieces, night, jazz, patter, sense, similarities, Clouds, Sky, Walking, album, Lawrence, co., looseness, Gaussian, Curve, adult, suaveness, hash, oil]</code></pre>
+<div id="discussion1" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge<a class="anchor" aria-label="anchor" href="#discussion1"></a>
+</h3>
+<div class="callout-content">
+<p>Use <strong>for … if…</strong> syntax to create a list of adjectives
+and adverbs with the variable name <code>adj_and_adv</code> from your
+<code>doc</code>. ::::::::::hint It is a common mistake, but if you use
+<code>and</code> in the code you will get a blank <code>[]</code> result
+because the <code>and</code> specifies that an individual token should
+be both an adjectives <strong>and</strong> an adverb, which is
+impossible in this instance - a distinction that can be missed in casual
+communication but is key to the formal logic of programming. So, you
+should use <code>or</code> to avoid this and print only tokens that are
+<strong>either</strong> adjectives <strong>or</strong> adverbs.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2">Show me the solution</h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div class="accordion-body">
+<div class="codewrapper sourceCode" id="cb30">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" tabindex="-1"></a>adj_and_adv <span class="op">=</span> [token </span>
+<span id="cb30-2"><a href="#cb30-2" tabindex="-1"></a>              <span class="cf">for</span> token <span class="kw">in</span> doc</span>
+<span id="cb30-3"><a href="#cb30-3" tabindex="-1"></a>              <span class="cf">if</span> token.pos_<span class="op">==</span><span class="st">"ADJ"</span> <span class="kw">or</span> token.pos_<span class="op">==</span><span class="st">"ADV"</span>]</span>
+<span id="cb30-4"><a href="#cb30-4" tabindex="-1"></a><span class="bu">print</span>(adj_and_adv)</span></code></pre>
+</div>
+<pre><code>[perfectly, warm, hazy, red, louche, glowing, gently, open, elegantly, lush, ambient, wise, solo, late, recent, really, supple, yet, tight, contemporary, finest, slowly]</code></pre>
+</div>
+</div>
+</div>
+</div>
+<p>:::::::::::::::::::</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
