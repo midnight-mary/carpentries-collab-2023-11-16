@@ -201,7 +201,9 @@ print(nouns_and_proper_nouns)
 Use **for ... if...** syntax to create a list of adjectives and adverbs with the variable name ```adj_and_adv``` from your ```doc```.
 
 ::::::::::hint 
-It is a common mistake, but if you use ```and``` in the code you will get a blank ```[]``` result because the ```and``` specifies that an individual token should be both an adjectives **and** an adverb, which is impossible in this instance - a distinction that can be missed in casual communication but is key to the formal logic of programming. So, you should use ```or``` to avoid this and print only tokens that are **either** adjectives **or** adverbs.
+It is a common mistake, but if you use ```and``` in the code you will get a blank ```[]``` result because the ```and``` specifies that an individual token should be both an adjectives **and** an adverb.  This is impossible in this instance, hence the blank result - a distinction that can be missed in casual communication but is key to the formal logic of programming. 
+
+So, you should use ```or``` to avoid this and print only tokens that are **either** adjectives **or** adverbs.
 :::::::::::
 
 ::::::solution
