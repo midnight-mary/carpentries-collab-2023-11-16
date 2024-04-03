@@ -340,7 +340,7 @@ texts.</li>
   <h3 class="accordion-header" id="headingInstructor1">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div>Instructor Note</h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>Be ready to activate breakout rooms for the exercise.</p>
 </div>
@@ -857,9 +857,10 @@ so <strong>before</strong> you import the package.</p>
 </div>
 <p>Then, you need to load one of spaCy’s language pipelines, in this
 case the large English pipeline, and assign it with the variable name
-‘nlp’. Variables are assigned by typing in the name of the new variable,
-the equals sign, and the name and location of the object you want to
-assign to that variable.</p>
+<code>nlp</code>. Variables are assigned by typing in the name of the
+new variable, the equals sign, and the name or pathway of the object you
+want to assign to that variable. From now on, spaCy will working with
+this pipeline every time you call nlp funtions.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -870,7 +871,8 @@ Python and spaCy to recognise what we input <em>as</em> structured text
 rather than code, a different variable name or an undefined string, we
 will need to assign it a variable name, e.g. <code>text</code>, and
 place the text itself into quotation marks. Either single or double
-quotation marks can be used, but consistency is key.</p>
+quotation marks can be used for the same purpose, but consistency is
+key.</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -894,8 +896,9 @@ output appears as you expect it to.</p>
 using the <code>len()</code> function, which will output the number of
 tokens in your text doc. If you want to see a list of the tokens spaCy
 has identified and counted, you should create a new variable and use
-<strong>list comprehension</strong> syntax to extract the tokens from
-the text <strong>array</strong>:</p>
+<strong>list comprehension</strong> syntax to iterate through the
+<code>greeting_doc</code> and extract the tokens every time they are
+encountered in the text <strong>array</strong>:</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -922,7 +925,7 @@ what might be an explanation?</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1">Give me a hint</h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
 <div class="accordion-body">
 <p>Use the list comprehension method from above to create the
 <code>greeting_tokens</code> variable to see the tokens spaCy
@@ -936,7 +939,7 @@ identified.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -958,7 +961,8 @@ identified.</p>
 <p>From this, we can see that spaCy recognises the smiley face emoji as
 a single token rather than two punctuation marks. We can also see that
 it recognises the ’s as a single token dependency of the previous token,
-not as two separate tokens.</p>
+not as two separate tokens. This is pretty clever, and shows that spaCy
+already has a contextual view of the text we have loaded into it.</p>
 <p>spaCy automatically indexes objects in an array based on their
 position so that they can be called by their individual index number. It
 is important to note that <strong>indexes in Python begin with
@@ -998,6 +1002,86 @@ number after the colon.</p>
 </div>
 </div>
 </div>
+</section><section id="recognising-parts-of-speech"><h2 class="section-heading">Recognising Parts Of Speech<a class="anchor" aria-label="anchor" href="#recognising-parts-of-speech"></a>
+</h2>
+<hr class="half-width">
+<p>Being able to identify and extract specific parts of speech can be
+incredibly useful when working with large text corpora. Helpfully,
+spaCy’s nlp pipelines have been trained on large language datasets to be
+able to automatically, and quite reliably, recognise certain linguistic
+attributes such as parts of speech, grammatical functions, named
+entities, and so on. For example, with the Boomkat corpus we have
+already explored in the previous episode, you might want to further
+analyse the descriptive words it contains and their sentiments, or
+isolate named entities such as record labels and place names to begin to
+construct a network.</p>
+<p>Tasks such as these require understanding how spaCy parses text and
+classifies parts of speech, as well as using list comprehensions to
+iterate through text arrays to extract relevant information. Let us
+inspect our <code>greeting_doc</code> in this more systematic way, using
+list comprehension to extract the different token attributes that form
+part of spaCy’s nlp pipeline.</p>
+<div class="codewrapper sourceCode" id="cb14">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="cf">for</span> token <span class="kw">in</span> greeting_doc:</span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a>    <span class="bu">print</span>(token.text, token.lemma_, token.pos_, token.tag_, token.dep_,</span>
+<span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a>    token.shape_, token.is_alpha, token.is_stop)</span></code></pre>
+</div>
+<pre><code>Let let VERB VB ROOT Xxx True False
+'s us PRON PRP nsubjpass 'x False True
+get get AUX VB auxpass xxx True True
+started start VERB VBN ccomp xxxx True False
+with with ADP IN prep xxxx True True
+spaCy spaCy PROPN NNP pobj xxxXx True False
+:) :) PUNCT . punct :) False False
+. . PUNCT . punct . False False</code></pre>
+<p>Here, every line of the output pertains to a single token in the
+greeting doc, and displays the token text, the lemmatized form of the
+token, the part of speech it represents, its tag, its dependency, and
+its letter case shape. Using Boolean True or False values, it also
+outputs whether the token is an alphanumeric character, and whether it
+is part of spaCy’s default stopwords list.</p>
+<p>Some of the output text is intuitively understandable but, if not,
+you can always use the <code>spacy.explain()</code> function to find out
+more. For example:</p>
+<div class="codewrapper sourceCode" id="cb16">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a>spacy.explain(<span class="st">"NNP)</span></span></code></pre>
+</div>
+<pre><code><span><span class="st">'noun, proper singular'</span></span></code></pre>
+<p>From this, we can tell that spaCy has recognised its own name as a
+noun, not as an adjective meaning space-like. This is an accurate
+reading in this example not only because of the syntactic positioning of
+this word in our text but also because of the token shape, which
+includes the characteristic uppercase ‘C’ that forms part of spaCy’s
+brand identity.</p>
+<p>Let us now move on to a more complex text example. In Jupyter
+Notebook, create a new <code>text</code> variable which takes the whole
+of the first description from the ‘modern_classical_ambient_desc_only’
+spreadsheet you downloaded during the <a href="https://acceleratingdigitalskills.github.io/Processing-Text-Based-Corpora/voyant.html" class="external-link">ast
+episode</a>. Note that Jupyter often auto-fills quotation marks and this
+can get confusing if your text also has quotation marks within it, so
+double-check that they match at the beginning and end of your text. Use
+the <code>print()</code> function to check that the text looks as you
+expected.</p>
+<div class="codewrapper sourceCode" id="cb18">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a>text <span class="op">=</span> <span class="st">"'Clouds' is a perfectly measured suite of warm and hazy downbeats from Gigi Masin, Marco Sterk (Young Marco), and Johnny Nash recorded in the heart of Amsterdam's red light district over one weekend in April, 2014.It's all about louche vibes and glowing notes, gently absorbing and transducing the buzz of the streets outside the studio's open windows into eight elegantly reserved improvisations segueing between lush ambient drift, dub-wise solo piano pieces, and chiming late night jazz patter. In that sense, there's striking similarities between 'Clouds' and the recent Sky Walking album by Lawrence and co., but where they really go for the looseness, Gaussian Curve keep it supple yet tight, bordering on adult contemporary suaveness anointed with finest hash oil. Imbibe slowly."</span></span>
+<span id="cb18-2"><a href="#cb18-2" tabindex="-1"></a><span class="bu">print</span>(text)</span></code></pre>
+</div>
+<pre><code>'Clouds' is a perfectly measured suite of warm and hazy downbeats from Gigi Masin, Marco Sterk (Young Marco), and Johnny Nash recorded in the heart of Amsterdam's red light district over one weekend in April, 2014.It's all about louche vibes and glowing notes, gently absorbing and transducing the buzz of the streets outside the studio's open windows into eight elegantly reserved improvisations segueing between lush ambient drift, dub-wise solo piano pieces, and chiming late night jazz patter. In that sense, there's striking similarities between 'Clouds' and the recent Sky Walking album by Lawrence and co., but where they really go for the looseness, Gaussian Curve keep it supple yet tight, bordering on adult contemporary suaveness anointed with finest hash oil. Imbibe slowly.</code></pre>
+<p>Then, turn the text into an <code>nlp</code> <code>doc</code>
+variable, as before, and check the length.</p>
+<div class="codewrapper sourceCode" id="cb20">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a>doc <span class="op">=</span> nlp(text)</span>
+<span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a><span class="bu">len</span>(doc)</span></code></pre>
+</div>
+<pre><code><span><span class="fl">147</span></span></code></pre>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
