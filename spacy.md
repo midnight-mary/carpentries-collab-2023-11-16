@@ -113,7 +113,6 @@ started with spaCy :) .
 
 In an index range, the output will be from the object indexed as the number before the colon **up to but not including** the number after the colon.
 :::::::::
-
 ## Recognizing Parts Of Speech
 
 Being able to identify and extract specific parts of speech can be incredibly useful when working with large text corpora. Helpfully, spaCy's nlp pipelines have been trained on large language datasets to be able to automatically, and quite reliably, recognise certain linguistic attributes such as parts of speech, grammatical functions, named entities, and so on. For example, with the Boomkat corpus we have already explored in the previous episode, you might want to further analyse the descriptive words it contains and their sentiments, or isolate named entities such as record labels and place names to begin to construct a network. 
@@ -164,7 +163,9 @@ len(doc)
 147
 ```
 
-In Python, you can use 'if' and 'if not' statements to further refine your 'for' loop list comprehensions, which makes it possible to focus on particular token attributes while ignoring others. These 'for ... in ... if/not ...' statements rely on standard logical conditions from maths, such as equals to (```==```), not equals to (```!=```), greater/less than (```> / <```), etc. For example, with the Boomkat ```doc``` from above, we can create a list of tokens that excludes all punctuation marks: 
+In Python, you can use **'if'** and **'if not' statements** to further refine your 'for' loop list comprehensions, which makes it possible to focus on particular token attributes while ignoring others. These 'for ... in ... if/not ...' statements rely on standard logical conditions from maths, such as equals to (```==```), not equals to (```!=```), greater/less than (```> / <```), etc. 
+
+For example, with the Boomkat ```doc``` from above, we can create a list of tokens that excludes all punctuation marks: 
 ```python
 word_tokens = [token 
               for token in doc
@@ -182,6 +183,37 @@ word_tokens2 = [token
               if token.is_punct==False]
 print(word_tokens2)
 ```
+```
+[Clouds, is, a, perfectly, measured, suite, of, warm, and, hazy, downbeats, from, Gigi, Masin, Marco, Sterk, Young, Marco, and, Johnny, Nash, recorded, in, the, heart, of, Amsterdam, 's, red, light, district, over, one, weekend, in, April, 2014.It, 's, all, about, louche, vibes, and, glowing, notes, gently, absorbing, and, transducing, the, buzz, of, the, streets, outside, the, studio, 's, open, windows, into, eight, elegantly, reserved, improvisations, segueing, between, lush, ambient, drift, dub, wise, solo, piano, pieces, and, chiming, late, night, jazz, patter, In, that, sense, there, 's, striking, similarities, between, Clouds, and, the, recent, Sky, Walking, album, by, Lawrence, and, co., but, where, they, really, go, for, the, looseness, Gaussian, Curve, keep, it, supple, yet, tight, bordering, on, adult, contemporary, suaveness, anointed, with, finest, hash, oil, Imbibe, slowly]
+```
+
+Furthermore, you can use ```or``` and ```and``` conditions to refine your list comprehension. For example, you could specify that you want to extract only nouns and proper nouns from your ```doc```.
+```python
+nouns_and_proper_nouns = [token 
+              for token in doc
+              if token.pos_=="NOUN" or token.pos_=="PROPN"]
+print(nouns_and_proper_nouns)
+```
+```
+[Clouds, suite, downbeats, Gigi, Masin, Marco, Sterk, Young, Marco, Johnny, Nash, heart, Amsterdam, light, district, weekend, April, 2014.It, vibes, notes, buzz, streets, studio, windows, improvisations, drift, dub, piano, pieces, night, jazz, patter, sense, similarities, Clouds, Sky, Walking, album, Lawrence, co., looseness, Gaussian, Curve, adult, suaveness, hash, oil]
+```
+::::::::::::::::: challenge
+Use **for ... if...** syntax to create a list of adjectives and adverbs with the variable name ```adj_and_adv``` from your ```doc```.
+::::::::::hint 
+It is a common mistake, but if you use ```and``` in the code you will get a blank ```[]``` result because the ```and``` specifies that an individual token should be both an adjectives **and** an adverb, which is impossible in this instance - a distinction that can be missed in casual communication but is key to the formal logic of programming. So, you should use ```or``` to avoid this and print only tokens that are **either** adjectives **or** adverbs.
+::::::::::
+::::::solution
+```python
+adj_and_adv = [token 
+              for token in doc
+              if token.pos_=="ADJ" or token.pos_=="ADV"]
+print(adj_and_adv)
+```
+```
+[perfectly, warm, hazy, red, louche, glowing, gently, open, elegantly, lush, ambient, wise, solo, late, recent, really, supple, yet, tight, contemporary, finest, slowly]
+```
+::::::
+:::::::::::::::::::
 
 ::::::::::: keypoints
 
