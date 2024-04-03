@@ -220,6 +220,17 @@ print(adj_and_adv)
 
 :::::::::::::::::::
 
+::::::::callout
+
+Like Voyant, spaCy has sets of stop words for the languages it supports that can be called and modified. For this, you have to ```import``` the ```stop_words``` module which contains the English language ```STOP_WORDS``` set and create a ```stop_words``` variable in your own project.
+```python
+from spacy.lang.en import stop_words as stop_words
+stop_words = stop_words.STOP_WORDS
+```
+Use this link to find more [information on how to edit spaCy stopword sets](https://github.com/explosion/spaCy/blob/master/spacy/lang/en/stop_words.py).
+
+::::::::
+
 ::::::::::: keypoints
 
 1. spaCy is a free and open-source Python library for Natural Language Processing which is based on pre-trained processing pipelines. 
