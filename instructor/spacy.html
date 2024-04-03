@@ -259,7 +259,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Introduction to Natural Language Processing with spaCy</h1>
-        <p>Last updated on 2024-04-01 |
+        <p>Last updated on 2024-04-03 |
         
         <a href="https://github.com/acceleratingdigitalskills/Processing-Text-Based-Corpora/edit/main/episodes/spacy.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -306,9 +306,22 @@ commands.</li>
 <hr class="half-width"><p>In progress…</p>
 </section><section id="getting-started-with-spacy"><h2 class="section-heading">Getting Started with spaCy<a class="anchor" aria-label="anchor" href="#getting-started-with-spacy"></a>
 </h2>
-<hr class="half-width"><p>Open Jupyter Notebook. You should already have installed spaCy as
-part of the lesson set-up instructions. If not, you need to do so
-<strong>before</strong> you import the package.</p>
+<hr class="half-width"><p>SpaCy is a free, open-source software library for Natural Language
+Processing that uses the Python and Cython programming languages. One of
+the advantages of using spaCy is that it automatically tokenizes text
+and is able to recognise sentences, grammatical attributes and
+dependencies, named entities, and token lemmas. It can also calculate
+text similarity and perform classification and training tasks.</p>
+<p>Unlike other NLP libraries like NLTK and Flair, however, spaCy was
+developed for professional and commercial rather than educational
+purposes. Practically, this means it has a different learning curve
+because while some basic tasks are automatically built into its language
+pipelines, others are more idiosyncratic. You can find out more about
+its features by visiting <a href="https://spacy.io/usage/spacy-101" class="external-link">spaCy’s documentation
+pages</a>.</p>
+<p>To begin, open Jupyter Notebook. You should already have installed
+spaCy as part of the lesson set-up instructions. If not, you need to do
+so <strong>before</strong> you import the package.</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -349,13 +362,7 @@ output appears as you expect it to.</p>
 <span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="bu">print</span>(greeting_doc)</span></code></pre>
 </div>
 <p>As expected, the output reads
-<code>Let's get started with spaCy :) .</code>.</p>
-<p>One of the advantages of using spaCy is that it automatically
-tokenizes text and is able to recognise sentences, grammatical
-attributes and dependencies, named entities, and token lemmas. You can
-find out more about the features of the <code>en_core_web_lg</code>
-pipeline by visiting <a href="https://spacy.io/models/en#en_core_web_lg" class="external-link">spaCy’s documentation
-pages</a>.</p>
+<code>Let's get started with spaCy :) .</code></p>
 <p>You can calculate the length of your <code>greeting_doc</code> by
 using the <code>len()</code> function, which will output the number of
 tokens in your text doc. If you want to see a list of the tokens spaCy
@@ -431,8 +438,8 @@ is important to note that <strong>indexes in Python begin with
 zero</strong>: the first object is assigned the index 0, the second
 object the index 1, and so on.</p>
 <p>Index numbers, which are always integers, are presented in []
-brackets. You can specify a single index number or a range, by using a
-semicolon between the numbers inside square brackets, to extract them
+brackets. You can specify a single index number or a range by using a
+semicolon between the numbers inside square brackets to extract them
 from your overall text array. For example, this could be useful if you
 had a set of texts and wanted to compare how they began but were not
 interested in their middles or endings.</p>
@@ -456,8 +463,8 @@ interested in their middles or endings.</p>
 <h3 class="callout-title">Indexing in Python<a class="anchor" aria-label="anchor" href="#indexing-in-python"></a>
 </h3>
 <div class="callout-content">
-<p><strong>Remember</strong> If the length is <em>n</em>, the first
-index is 0 and the last index is <em>n-1</em>.</p>
+<p><strong>Remember</strong>: if the length of your array is <em>n</em>,
+the first index is 0 and the last index is <em>n-1</em>.</p>
 <p>In an index range, the output will be from the object indexed as the
 number before the colon <strong>up to but not including</strong> the
 number after the colon.</p>
@@ -539,8 +546,8 @@ any links that you are not going to use.
   "url": "https://acceleratingdigitalskills.github.io/Processing-Text-Based-Corpora/instructor/spacy.html",
   "identifier": "https://acceleratingdigitalskills.github.io/Processing-Text-Based-Corpora/instructor/spacy.html",
   "dateCreated": "2023-11-16",
-  "dateModified": "2024-04-01",
-  "datePublished": "2024-04-02"
+  "dateModified": "2024-04-03",
+  "datePublished": "2024-04-03"
 }
 
   </script><script>
