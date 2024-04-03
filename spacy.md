@@ -253,31 +253,42 @@ print(doc.ents)
 (Gigi Masin, Marco Sterk, Marco, Johnny Nash, Amsterdam, one weekend, April, late night, Sky Walking, Lawrence and co., Gaussian Curve)
 ```
 
-The ```ent``` objects have ```.label_``` and ```.text``` attributes which can tell us, respectively, which of the NER labels printed above our token corresponds to, or, the text of the token that label was assigned to. Note that ```.label``` (without the underscore) outputs the numerical index of the label type rather than the text string name of the label, which could be less useful for intuitive readability when you are exploring your document properties.
+The ```ent``` objects have ```.label_``` and ```.text``` attributes which can tell us, respectively, which of the NER labels printed above our token corresponds to, or, the text of the token that label was assigned to. If you are interested in finding out the label for a specific named entity token, you can use the list comprehension method from above. For example:
+```python
+print([ent.label_ for ent in doc.ents if ent.text=="Gaussian Curve"])
+```
+```
+['ORG']
+```
 
 ::::::::::::::::: challenge
 Using the same method as earlier, (a) create a list of ent texts and ent labels for each token in the ```doc```.
 
 Then, (b) extract only the entities representing people or organizations.
 
+:::::::::::::::::::::::::hint 
+
+Note that ```.label``` (without the underscore) outputs the numerical index of the label type rather than the text string name of the label, which could be less useful for intuitive readability when you are exploring your document properties.
+:::::::::::::::::::::::::
+
 ::::::solution
 (a) 
 ```python
 for ent in doc.ents:
-    print(ent.text, ent.label)
+    print(ent.text, ent.label_)
 ```
 ```
-Gigi Masin 380
-Marco Sterk 380
-Marco 380
-Johnny Nash 380
-Amsterdam 384
-one weekend 391
-April 391
-late night 392
-Sky Walking 386
-Lawrence and co. 383
-Gaussian Curve 383
+Gigi Masin PERSON
+Marco Sterk PERSON
+Marco PERSON
+Johnny Nash PERSON
+Amsterdam GPE
+one weekend DATE
+April DATE
+late night TIME
+Sky Walking PRODUCT
+Lawrence and co. ORG
+Gaussian Curve ORG
 ```
 (b)
 ```python
@@ -289,16 +300,6 @@ print([ent.text for ent in doc.ents if ent.label_ =="PERSON" or ent.label_=="ORG
 ::::::
 
 :::::::::::::::::
-
-
-
-If you are interested in finding out the NER label for a specific text token, you can use the list comprehension method from above. For example:
-```python
-print([ent.label_ for ent in doc.ents if ent.text=="Gaussian Curve"])
-```
-```
-['ORG']
-```
 
 
 
