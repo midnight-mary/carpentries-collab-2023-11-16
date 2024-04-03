@@ -115,7 +115,9 @@ In an index range, the output will be from the object indexed as the number befo
 :::::::::
 ## Recognizing Parts Of Speech
 
-Being able to identify and extract specific parts of speech can be incredibly useful when working with large text corpora. Helpfully, spaCy's nlp pipelines have been trained on large language datasets to be able to automatically, and quite reliably, recognise certain linguistic attributes such as parts of speech, grammatical functions, named entities, and so on. For example, with the Boomkat corpus we have already explored in the previous episode, you might want to further analyse the descriptive words it contains and their sentiments, or isolate named entities such as record labels and place names to begin to construct a network. 
+Being able to identify and extract specific parts of speech can be incredibly useful when working with large text corpora. Helpfully, spaCy's nlp pipelines have been trained on large language datasets to be able to automatically, and quite reliably, recognise certain linguistic attributes such as parts of speech, grammatical functions, named entities, and so on. 
+
+For example, with the Boomkat corpus we have already explored in the previous episode, you might want to further analyse the descriptive words it contains and their sentiments, or isolate named entities such as record labels and place names to begin to construct a network. 
 
 Tasks such as these require understanding how spaCy parses text and classifies parts of speech, as well as using 'for' loops to iterate through text arrays to extract relevant information. Let us inspect our ```greeting_doc``` in this more systematic way to extract the different token attributes that form part of spaCy's nlp pipeline. 
 ```python
@@ -233,7 +235,7 @@ Use this link to find more [information on how to edit spaCy stopword sets](http
 
 ## Named Entity Recognition
 
-Another useful feature built into spaCy's nlp pipeline is Named Entity Recognition (NER). This recognises and classifies proper nouns like place names, countries, currencies, political organizations, and even (some) works of art. As with other tools, we cannot expect NER to be 100% reliable, especially when working with musical sublanguages, but it can still save time and/or streamline manual coding and tagging exercises.
+Another useful feature built into spaCy's ```nlp``` pipeline is Named Entity Recognition (NER). This recognises and classifies proper nouns like place names, countries, currencies, political organizations, and even (some) works of art. As with other tools, we cannot expect NER to be 100% reliable, especially when working with musical sublanguages, but it can still save time and/or streamline manual coding and tagging exercises.
 
 To see a list of the NER labels spaCy uses, you can type the following code (and remember to use the ```spacy.explain()``` function if you need further clarification on any abbreviations):
 ```python
