@@ -340,7 +340,7 @@ texts.</li>
   <h3 class="accordion-header" id="headingInstructor1">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div>Instructor Note</h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>Be ready to activate breakout rooms for the exercise.</p>
 </div>
@@ -876,7 +876,7 @@ key.</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>text <span class="op">=</span> <span class="st">"Let's get started with spacy :) ."</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>text <span class="op">=</span> <span class="st">"Let's get started with spaCy :) ."</span></span></code></pre>
 </div>
 <p>Once you have input your text, you need to create a <code>doc</code>
 variable which you will use to call spaCy’s <code>nlp</code> function
@@ -962,18 +962,17 @@ identified.</p>
 a single token rather than two punctuation marks. We can also see that
 it recognises the ’s as a single token dependency of the previous token,
 not as two separate tokens. This is pretty clever, and shows that spaCy
-already has a contextual view of the text we have loaded into it.</p>
-<p>spaCy automatically indexes objects in an array based on their
-position so that they can be called by their individual index number. It
-is important to note that <strong>indexes in Python begin with
+already has a contextual view of the text loaded into it.</p>
+<p>In part, this has to do with spaCy’s understanding of the tokens in
+the text as a specific sequence. SpaCy automatically indexes objects in
+an array based on their position so that they can be called by their
+individual index number, which is always an integer, and is presented in
+[] brackets.</p>
+<p>It is important to note that <strong>indexes in Python begin with
 zero</strong>: the first object is assigned the index 0, the second
-object the index 1, and so on.</p>
-<p>Index numbers, which are always integers, are presented in []
-brackets. You can specify a single index number or a range by using a
-semicolon between the numbers inside square brackets to extract them
-from your overall text array. For example, this could be useful if you
-had a set of texts and wanted to compare how they began but were not
-interested in their middles or endings.</p>
+object the index 1, and so on. You can specify a single index number or
+a range by using a semicolon between the numbers inside square brackets
+to extract them from your overall text array.</p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -983,9 +982,19 @@ interested in their middles or endings.</p>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a>greeting_doc[<span class="dv">0</span>:<span class="dv">5</span>]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a>greeting_doc[<span class="dv">2</span>:<span class="dv">5</span>]</span></code></pre>
 </div>
-<pre><code>Let's get started with</code></pre>
+<pre><code>get started with</code></pre>
+<p>If you don’t want to specify a beginning or end index number, but
+want to go from or to there from a specified point, you can omit either
+the number before or after the colon. For example, this could be useful
+if you had a set of texts and wanted to compare their endings.</p>
+<div class="codewrapper sourceCode" id="cb14">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a>greeting_doc[<span class="dv">3</span>:]</span></code></pre>
+</div>
+<pre><code>started with spaCy :) .</code></pre>
 <div id="indexing-in-python" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -1002,7 +1011,7 @@ number after the colon.</p>
 </div>
 </div>
 </div>
-</section><section id="recognising-parts-of-speech"><h2 class="section-heading">Recognising Parts Of Speech<a class="anchor" aria-label="anchor" href="#recognising-parts-of-speech"></a>
+</section><section id="recognizing-parts-of-speech"><h2 class="section-heading">Recognizing Parts Of Speech<a class="anchor" aria-label="anchor" href="#recognizing-parts-of-speech"></a>
 </h2>
 <hr class="half-width">
 <p>Being able to identify and extract specific parts of speech can be
@@ -1021,12 +1030,12 @@ iterate through text arrays to extract relevant information. Let us
 inspect our <code>greeting_doc</code> in this more systematic way, using
 list comprehension to extract the different token attributes that form
 part of spaCy’s nlp pipeline.</p>
-<div class="codewrapper sourceCode" id="cb14">
+<div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="cf">for</span> token <span class="kw">in</span> greeting_doc:</span>
-<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a>    <span class="bu">print</span>(token.text, token.lemma_, token.pos_, token.tag_, token.dep_,</span>
-<span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a>    token.shape_, token.is_alpha, token.is_stop)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="cf">for</span> token <span class="kw">in</span> greeting_doc:</span>
+<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a>    <span class="bu">print</span>(token.text, token.lemma_, token.pos_, token.tag_, token.dep_,</span>
+<span id="cb16-3"><a href="#cb16-3" tabindex="-1"></a>    token.shape_, token.is_alpha, token.is_stop)</span></code></pre>
 </div>
 <pre><code>Let let VERB VB ROOT Xxx True False
 's us PRON PRP nsubjpass 'x False True
@@ -1045,41 +1054,42 @@ is part of spaCy’s default stopwords list.</p>
 <p>Some of the output text is intuitively understandable but, if not,
 you can always use the <code>spacy.explain()</code> function to find out
 more. For example:</p>
-<div class="codewrapper sourceCode" id="cb16">
+<div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a>spacy.explain(<span class="st">"NNP)</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a>spacy.explain(<span class="st">"NNP"</span>)</span></code></pre>
 </div>
 <pre><code><span><span class="st">'noun, proper singular'</span></span></code></pre>
 <p>From this, we can tell that spaCy has recognised its own name as a
 noun, not as an adjective meaning space-like. This is an accurate
 reading in this example not only because of the syntactic positioning of
 this word in our text but also because of the token shape, which
-includes the characteristic uppercase ‘C’ that forms part of spaCy’s
-brand identity.</p>
+includes the characteristic uppercase C that forms part of spaCy’s brand
+identity.</p>
 <p>Let us now move on to a more complex text example. In Jupyter
 Notebook, create a new <code>text</code> variable which takes the whole
 of the first description from the ‘modern_classical_ambient_desc_only’
-spreadsheet you downloaded during the <a href="https://acceleratingdigitalskills.github.io/Processing-Text-Based-Corpora/voyant.html" class="external-link">ast
-episode</a>. Note that Jupyter often auto-fills quotation marks and this
-can get confusing if your text also has quotation marks within it, so
+spreadsheet you downloaded during the <a href="https://acceleratingdigitalskills.github.io/Processing-Text-Based-Corpora/voyant.html" class="external-link">last
+episode</a>.</p>
+<p>Note that Jupyter often auto-fills quotation marks and this can get
+confusing if your text also has quotation marks within it, so
 double-check that they match at the beginning and end of your text. Use
 the <code>print()</code> function to check that the text looks as you
 expected.</p>
-<div class="codewrapper sourceCode" id="cb18">
+<div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a>text <span class="op">=</span> <span class="st">"'Clouds' is a perfectly measured suite of warm and hazy downbeats from Gigi Masin, Marco Sterk (Young Marco), and Johnny Nash recorded in the heart of Amsterdam's red light district over one weekend in April, 2014.It's all about louche vibes and glowing notes, gently absorbing and transducing the buzz of the streets outside the studio's open windows into eight elegantly reserved improvisations segueing between lush ambient drift, dub-wise solo piano pieces, and chiming late night jazz patter. In that sense, there's striking similarities between 'Clouds' and the recent Sky Walking album by Lawrence and co., but where they really go for the looseness, Gaussian Curve keep it supple yet tight, bordering on adult contemporary suaveness anointed with finest hash oil. Imbibe slowly."</span></span>
-<span id="cb18-2"><a href="#cb18-2" tabindex="-1"></a><span class="bu">print</span>(text)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a>text <span class="op">=</span> <span class="st">"'Clouds' is a perfectly measured suite of warm and hazy downbeats from Gigi Masin, Marco Sterk (Young Marco), and Johnny Nash recorded in the heart of Amsterdam's red light district over one weekend in April, 2014.It's all about louche vibes and glowing notes, gently absorbing and transducing the buzz of the streets outside the studio's open windows into eight elegantly reserved improvisations segueing between lush ambient drift, dub-wise solo piano pieces, and chiming late night jazz patter. In that sense, there's striking similarities between 'Clouds' and the recent Sky Walking album by Lawrence and co., but where they really go for the looseness, Gaussian Curve keep it supple yet tight, bordering on adult contemporary suaveness anointed with finest hash oil. Imbibe slowly."</span></span>
+<span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a><span class="bu">print</span>(text)</span></code></pre>
 </div>
 <pre><code>'Clouds' is a perfectly measured suite of warm and hazy downbeats from Gigi Masin, Marco Sterk (Young Marco), and Johnny Nash recorded in the heart of Amsterdam's red light district over one weekend in April, 2014.It's all about louche vibes and glowing notes, gently absorbing and transducing the buzz of the streets outside the studio's open windows into eight elegantly reserved improvisations segueing between lush ambient drift, dub-wise solo piano pieces, and chiming late night jazz patter. In that sense, there's striking similarities between 'Clouds' and the recent Sky Walking album by Lawrence and co., but where they really go for the looseness, Gaussian Curve keep it supple yet tight, bordering on adult contemporary suaveness anointed with finest hash oil. Imbibe slowly.</code></pre>
 <p>Then, turn the text into an <code>nlp</code> <code>doc</code>
 variable, as before, and check the length.</p>
-<div class="codewrapper sourceCode" id="cb20">
+<div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a>doc <span class="op">=</span> nlp(text)</span>
-<span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a><span class="bu">len</span>(doc)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a>doc <span class="op">=</span> nlp(text)</span>
+<span id="cb22-2"><a href="#cb22-2" tabindex="-1"></a><span class="bu">len</span>(doc)</span></code></pre>
 </div>
 <pre><code><span><span class="fl">147</span></span></code></pre>
 <div id="keypoints1" class="callout keypoints">
