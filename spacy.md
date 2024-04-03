@@ -222,7 +222,7 @@ print(adj_and_adv)
 
 ::::::::callout
 
-Like Voyant, spaCy has sets of stop words for the languages it supports that can be called and modified. For this, you have to ```import``` the ```stop_words``` module which contains the English language ```STOP_WORDS``` set and create a ```stop_words``` variable in your own project.
+Like Voyant, spaCy has sets of **stopwords** for the languages it supports that can be called and modified. For this, you have to ```import``` the ```stop_words``` module which contains the English language ```STOP_WORDS``` set and create a ```stop_words``` variable in your own project.
 ```python
 from spacy.lang.en import stop_words as stop_words
 stop_words = stop_words.STOP_WORDS
@@ -230,6 +230,77 @@ stop_words = stop_words.STOP_WORDS
 Use this link to find more [information on how to edit spaCy stopword sets](https://github.com/explosion/spaCy/blob/master/spacy/lang/en/stop_words.py).
 
 ::::::::
+
+## Named Entity Recognition
+
+Another useful feature built into spaCy's nlp pipeline is Named Entity Recognition (NER). This recognises and classifies proper nouns like place names, countries, currencies, political organizations, and even (some) works of art. As with other tools, we cannot expect NER to be 100% reliable, especially when working with musical sublanguages, but it can still save time and/or streamline manual coding and tagging exercises.
+
+To see a list of the NER labels spaCy uses, you can type the following code (and remember to use the ```spacy.explain()``` function if you need further clarification on any abbreviations):
+```python
+ner_labels = nlp.get_pipe("ner").labels
+print(ner_labels)
+```
+```
+('CARDINAL', 'DATE', 'EVENT', 'FAC', 'GPE', 'LANGUAGE', 'LAW', 'LOC', 'MONEY', 'NORP', 'ORDINAL', 'ORG', 'PERCENT', 'PERSON', 'PRODUCT', 'QUANTITY', 'TIME', 'WORK_OF_ART')
+```
+
+It is important to note that named entities are a different type of spaCy object than the ```token``` or ```doc``` objects we have been working with so far. Predictably, and presumably unrelated to the talking trees in *Lord of the Rings*, they are called ```ents```. We can create a list of named entities in our ```doc``` by typing:
+
+```python
+print(doc.ents)
+```
+```
+(Gigi Masin, Marco Sterk, Marco, Johnny Nash, Amsterdam, one weekend, April, late night, Sky Walking, Lawrence and co., Gaussian Curve)
+```
+
+The ```ent``` objects have ```.label_``` and ```.text``` attributes which can tell us, respectively, which of the NER labels printed above our token corresponds to, or, the text of the token that label was assigned to. Note that ```.label``` (without the underscore) outputs the numerical index of the label type rather than the text string name of the label, which could be less useful for intuitive readability when you are exploring your document properties.
+
+::::::::::::::::: challenge
+Using the same method as earlier, (a) create a list of ent texts and ent labels for each token in the ```doc```.
+
+Then, (b) extract only the entities representing people or organizations.
+
+::::::solution
+(a) 
+```python
+for ent in doc.ents:
+    print(ent.text, ent.label)
+```
+```
+Gigi Masin 380
+Marco Sterk 380
+Marco 380
+Johnny Nash 380
+Amsterdam 384
+one weekend 391
+April 391
+late night 392
+Sky Walking 386
+Lawrence and co. 383
+Gaussian Curve 383
+```
+(b)
+```python
+print([ent.text for ent in doc.ents if ent.label_ =="PERSON" or ent.label_=="ORG"])
+```
+```
+['Gigi Masin', 'Marco Sterk', 'Marco', 'Johnny Nash', 'Lawrence and co.', 'Gaussian Curve']
+```
+::::::
+
+:::::::::::::::::
+
+
+
+If you are interested in finding out the NER label for a specific text token, you can use the list comprehension method from above. For example:
+```python
+print([ent.label_ for ent in doc.ents if ent.text=="Gaussian Curve"])
+```
+```
+['ORG']
+```
+
+
 
 ::::::::::: keypoints
 
