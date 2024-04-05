@@ -7,7 +7,7 @@ exercises: 35
 :::::::::::::::::::::::::::::::::::::: questions 
 
 - What is spaCy and what can I do with it?
-- What are the steps in its English-language processing pipeline?
+- What are the steps in its English-language NLP pipeline?
 - How can I get started with Python and spaCy?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -17,7 +17,7 @@ exercises: 35
 - Understand the components of spaCy's text processing pipeline.
 - Understand the fundamentals of Python syntax.
 - Write simple Python code in Jupyter Notebook to run spaCy commands.
-- Recognise the affordances of different spaCy objects.
+- Recognise different types of spaCy objects.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -37,7 +37,7 @@ To begin, open Jupyter Notebook. You should already have installed spaCy as part
 ! pip -U install spacy
 import spacy
 ```
-Then, you need to load one of spaCy's language pipelines, in this case the large English pipeline, and assign it with the variable name ```nlp```. Variables are assigned by typing in the name of the new variable, the equals sign, and the name or pathway of the object you want to assign to that variable. From now on, spaCy will working with this pipeline every time you call nlp funtions.
+Then, you need to load one of spaCy's language pipelines, in this case the large English pipeline, and assign it with the variable name ```nlp```. Variables are assigned by typing in the name of the new variable, the equals sign, and the name or pathway of the object you want to assign to that variable. From now on, spaCy will working with this pipeline every time you call ```nlp``` funtions.
 ```python
 nlp = spacy.load("en_core_web_lg")
 ```
@@ -52,7 +52,7 @@ print(greeting_doc)
 ```
 As expected, the output reads ```Let's get started with spaCy :) .```
 
-You can calculate the length of your ```greeting_doc``` by using the ```len()``` function, which will output the number of tokens in your text doc. If you want to see a list of the tokens spaCy has identified and counted, you should create a new variable and use **'for' loops** with **list comprehension** syntax to iterate through the ```greeting_doc``` and extract the tokens every time they are encountered in the text **array**:
+As per the importance of count-based approaches to machine reading discussed previously, you can calculate the length of your ```greeting_doc``` by using the ```len()``` function, which will output the number of tokens in your text doc. If you want to see a list of the tokens spaCy has identified and counted, you should create a new variable and use **'for' loops** with **list comprehension** syntax to iterate through the ```greeting_doc``` and extract the tokens every time they are encountered in the text **array**:
 ```python
 greeting_tokens = [token for token in greeting_doc]
 print(greeting_tokens)
@@ -84,9 +84,9 @@ print(greeting_tokens)
 :::::::::
 ::::::
 
-From this, we can see that spaCy recognises the smiley face emoji as a single token rather than two punctuation marks. We can also see that it recognises the 's as a single token dependency of the previous token, not as two separate tokens. This is pretty clever, and shows that spaCy already has a contextual view of the text loaded into it.
+From this, we can see that spaCy recognises the smiley face emoji as a single token rather than two punctuation mark tokens. We can also see that it recognises the 's as a single token dependency of the previous token, not as two separate tokens. This is pretty clever, and shows that spaCy already has a contextual view of the text loaded into it.
 
-In part, this has to do with spaCy's understanding of the tokens in the text as a specific sequence. SpaCy automatically indexes objects in an array based on their position so that they can be called by their individual index number, which is always an integer, and is presented in [] brackets. 
+In part, this has to do with spaCy's understanding of the tokens in the text as a specific sequence. SpaCy automatically indexes objects in an array based on their position so that they can be called by their individual **index** number, which is always an integer, and is presented in [] brackets. 
 
 It is important to note that **indexes in Python begin with zero**: the first object is assigned the index 0, the second object the index 1, and so on. You can specify a single index number or a range by using a semicolon between the numbers inside square brackets to extract them from your overall text array. 
 ```python
@@ -101,7 +101,7 @@ greeting_doc[2:5]
 ```
 get started with
 ```
-If you don't want to specify a beginning or end index number, but want to go from or to there from a specified point, you can omit either the number before or after the colon. For example, this could be useful if you had a set of texts and wanted to compare their endings.
+If you don't want to specify a beginning or end index number, but want to go from or to there from a specified point, you can omit either the number before or after the colon. This could be useful if, for example, you had a set of texts and wanted to compare their beginnings or endings.
 ```python
 greeting_doc[3:]
 ```
@@ -116,11 +116,11 @@ In an index range, the output will be from the object indexed as the number befo
 :::::::::
 ## Recognizing Parts Of Speech
 
-Being able to identify and extract specific parts of speech can be incredibly useful when working with large text corpora. Helpfully, spaCy's nlp pipelines have been trained on large language datasets to be able to automatically, and quite reliably, recognise certain linguistic attributes such as parts of speech, grammatical functions, named entities, and so on. 
+Being able to identify and extract specific parts of speech can be incredibly useful when working with large text corpora. Helpfully, spaCy's NLP pipelines have been trained on large language datasets to be able to automatically, and quite reliably, recognise certain linguistic attributes such as parts of speech, grammatical functions, named entities, and so on. 
 
-For example, with the Boomkat corpus we have already explored in the previous episode, you might want to further analyse the descriptive words it contains and their sentiments, or isolate named entities such as record labels and place names to begin to construct a network. 
+For example, with the Boomkat corpus we explored in the previous episode, you might want to further analyse the descriptive words it contains and their sentiments, or isolate named entities such as record labels and place names to begin to construct a network. 
 
-Tasks such as these require understanding how spaCy parses text and classifies parts of speech, as well as using 'for' loops to iterate through text arrays to extract relevant information. Let us inspect our ```greeting_doc``` in this more systematic way to extract the different token attributes that form part of spaCy's nlp pipeline. 
+Tasks such as these require understanding how spaCy parses text and classifies parts of speech, as well as using 'for' loops to iterate through text arrays to extract relevant information. Let us inspect our ```greeting_doc``` in this more systematic way to extract the different token attributes that form part of spaCy's NLP pipeline. The words after the full stops of tokens are the attributes.
 ```python
 for token in greeting_doc:
     print(token.text, token.lemma_, token.pos_, token.tag_, token.dep_,
@@ -204,7 +204,7 @@ print(nouns_and_proper_nouns)
 Use **for ... if...** syntax to create a list of adjectives and adverbs with the variable name ```adj_and_adv``` from your ```doc```.
 
 ::::::::::hint 
-It is a common mistake, but if you use ```and``` in the code you will get a blank ```[]``` result because the ```and``` specifies that an individual token should be both an adjectives **and** an adverb.  This is impossible in this instance, hence the blank result - a distinction that can be missed in casual communication but is key to the formal logic of programming. 
+It is a common mistake, but if you use ```and``` in the code you will get a blank ```[]``` result because the ```and``` specifies that an individual token should be both an adjectives **and** an adverb.  This is impossible in this instance, hence the blank result, but could have created confusion with the noun/proper noun example above. 
 
 So, you should use ```or``` to avoid this and print only tokens that are **either** adjectives **or** adverbs.
 :::::::::::
@@ -265,7 +265,9 @@ print([ent.label_ for ent in doc.ents if ent.text=="Gaussian Curve"])
 ```
 
 ::::::::::::::::: challenge
-Using the same method as earlier, (a) create a list of ent texts with and ent labels for each token in the ```doc```.
+Using the same method as when generating annotations of each token in the ```greeting_doc``` earlier:
+
+(a) Create a list of ent texts with ent labels for each token in the ```doc```.
 
 Then, (b) extract only the entities representing people or organizations.
 
@@ -317,7 +319,7 @@ len(doc_ents_and_labels)
 ```
 0
 ```
-The reason that the ```len()``` function did not work as expected is because the type of object that this new variable constitutes is not a ```doc``` object to which spaCy's NLP functions apply. You can inspect the type of object you are dealing with by using the print(type) command:
+The reason that the ```len()``` function did not work as expected is because the type of object that this new variable constitutes is not a ```doc``` object to which spaCy's NLP functions (such as token counting) apply. You can inspect the type of object you are dealing with by using the ```print(type)``` command:
 ```python
 print(type(doc_ents_and_labels))
 ```
@@ -338,7 +340,7 @@ How to do this will be the subject of the [next episode](https://acceleratingdig
 ::::::::::: keypoints
 
 1. SpaCy is a free and open-source Python library for Natural Language Processing which is based on pre-trained processing pipelines.
-2. SpaCy uses language pipelines which are pre-trained to automatically tokenize and tag parts of speech, with powerful recognition and prediction features built-in.
+2. SpaCy uses language pipelines which automatically tokenize and tag parts of speech, with powerful recognition and prediction features built-in.
 3. You can use simple list comprehension syntax to extract information that is relevant to your research question.
 4. The ability to call spaCy's NLP functions depends on the type of data object you are working with.
 
