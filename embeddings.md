@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Word Embeddings"
-teaching: 40
-exercises: 20
+teaching: 0
+exercises: 0
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
@@ -15,11 +15,3 @@ exercises: 20
 - In progress
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-
-
-
-::::::::::: keypoints
-
-In progress
-
-::::::::::: 

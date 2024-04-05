@@ -30,9 +30,12 @@ Be ready to activate breakout rooms for the exercise.
 In groups of 3–4 people, please take 10 minutes to discuss:
 
 – What do you normally read for when you read text?
+
 – What do you read for when you read text about music?
+
 – How does the nature of online text change that?
-– How might working with large amounts of text change how we read it or what we read into it?
+
+- How might working with large amounts of text change how we read it or what we read into it?
 
 Please nominate one member of your group to take notes in the Etherpad and be ready to share your thoughts with the whole group once time is up.
 
