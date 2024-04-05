@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Word Embeddings"
-teaching: 0
-exercises: 0
+teaching: 40
+exercises: 20
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
@@ -15,3 +15,11 @@ exercises: 0
 - In progress
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
+The dataset for this episode can be accessed via this [Zenodo link](https://zenodo.org/records/10931458). 
+
+::::::::::: keypoints
+
+In progress
+
+::::::::::: 
