@@ -69,6 +69,11 @@ Enable the 3D labels mode to see the terms themselves rather than points.
 
 ::::::::::: keypoints
 
-In progress
+1. Word embeddings rely on a conception of language (as a finite vocabulary) as a totality that occupies multi-dimensional space.
+2. Word embeddings are sets of vectors that position a given word in this multi-dimensional space, with every word orthogonal to every other word.
+3. Embeddings are trained by unsupervised machine learning on large text corpora which looks for collocations between words, syllables and characters and builds predictions as to the probability of given n-grams occuring in proximity.
+4. This presupposes that words that are semantically close (i.e. have similar meanings or usages) will be close together in the multi-dimensional space, while words that are semantically different will be far apart.
+5. There are many established statistical methods for manipulating and interpreting word embeddings.
+6. Google TensorFlow's Word Embedding Projector has built-in functions for dimensionality reduction which allows for intuitively readable visualisation of embeddings in 2- or 3-dimensional space.
 
 ::::::::::: 
