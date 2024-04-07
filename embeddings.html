@@ -284,7 +284,7 @@
 <li>Use Python, spaCy and Pandas to create word embeddings for a corpus
 of musical terms.</li>
 <li>Use Google TensorFlow’s Embedding Projector tool to visualise and
-interpet results.</li>
+interpet the results.</li>
 </ul></div>
 </div>
 </div>
@@ -320,7 +320,7 @@ rows match the number of unduplicated terms?</p>
 <p>The terms in our lists are word <strong>types</strong> but are not
 necessarily single <strong>tokens</strong>. As you will recall from our
 first encounter with spaCy, it treats possessives like ’s as separate
-tokens. This means that the process of creatimg a list of doc objects of
+tokens. This means that the process of creating a list of doc objects of
 terms based on their tokens, spaCy’s <code>nlp</code> function has added
 rows (and vectors) for these tokens.</p>
 <p>We can override this by specifying that only the first token in each
@@ -400,12 +400,11 @@ this multi-dimensional space, with every word orthogonal to every other
 word.</li>
 <li>Embeddings are trained by unsupervised machine learning on large
 text corpora which looks for collocations between words, syllables and
-characters and builds predictions as to the probability of given n-grams
-occuring in proximity.</li>
-<li>This presupposes that words that are semantically close (i.e. have
-similar meanings or usages) will be close together in the
-multi-dimensional space, while words that are semantically different
-will be far apart.</li>
+characters, and builds predictions as to the probability of given
+n-grams occuring in proximity. This presupposes that words that are
+semantically close (i.e. have similar meanings or usages) will be close
+together in the multi-dimensional space, while words that are
+semantically different will be far apart.</li>
 <li>There are many established statistical methods for manipulating and
 interpreting word embeddings.</li>
 <li>Google TensorFlow’s Word Embedding Projector has built-in functions
