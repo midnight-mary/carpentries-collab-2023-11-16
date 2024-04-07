@@ -16,7 +16,7 @@ exercises: 20
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-The dataset for this episode can be accessed via this [Zenodo link](https://zenodo.org/records/10931458). 
+The dataset for this episode can be accessed via the ['Episode 5' Zenodo repository](https://zenodo.org/records/10931458). 
 
 ::::::::::: keypoints
 
