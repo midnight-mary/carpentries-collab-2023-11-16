@@ -22,6 +22,36 @@ exercises: 20
 
 The dataset for this episode, containing terms from Boomkat's 'Grime / FWD' and 'Industrial / Wave / Electro' subgenre corpora, can be accessed via the ['Episode 5' Zenodo repository](https://zenodo.org/records/10931458).
 
+::::::::::::::::::challenge
+
+You may have noticed that the ```merge_embeddings_genre_df``` has more rows than the unduplicated ```grime_ind_terms_df``` we created earlier. Why could that be? Can you amend the code used to create the ```grime_ind_embeddings_df``` to make the number of rows match the number of unduplicated terms?
+
+::::::::::::::::::::::::hint 
+
+The terms in our lists are word **types** but are not necessarily single **tokens**. As you will recall from our first encounter with spaCy, it treats possessives like 's as separate tokens. This means that the process of creatimg a list of doc objects of terms based on their tokens, spaCy's ```nlp``` function has added rows (and vectors) for these tokens.
+
+We can override this by specifying that only the first token in each ```doc``` is necessary to represent the term and that others should be discounted.
+
+:::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::solution
+
+```python
+embeddings = []
+for doc in docs:
+    token = doc[0]
+    embeddings.append([token.text] + token.vector.tolist())
+grime_ind_embeddings_df = pd.DataFrame(embeddings)
+grime_ind_embeddings_df.shape
+```
+```
+(685, 301)
+```
+
+::::::::::::::::::::::::::::::
+
+::::::::::::::::::
+
 
 :::::::::::::::::discussion
 
