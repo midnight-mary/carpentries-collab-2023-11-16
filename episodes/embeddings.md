@@ -27,13 +27,13 @@ The dataset for this episode, containing terms from Boomkat's 'Grime / FWD' and 
 
 In breakout rooms of pairs or groups of three, go to the website for Google TensorFlow's [Embedding Projector Tool](https://projector.tensorflow.org/) and load the grime_industrial_embedding data and metadata files. Play around with the settings and the projection and use the Etherpad to write down questions and observations to share with the whole group.
 
-::::::::::::::::::::::::::hint
+:::::::::hint
 
 Use the 'Color By' function to differentiate terms by genre. This will assign a different colour to Grime versus Industrial terms and allow you to visually identify semantic themes that are more prevalent in one or the other genre.
 
 Enable the 3D labels mode to see the terms themselves rather than points.
 
-::::::::::::::::::::::::::
+::::::::
 
 ::::::::::::::::::
 
