@@ -122,7 +122,7 @@ In Voyant, you can inspect the stopword lists by clicking the 'settings' icon on
 Demonstrate the stopwords tool by editing the master list on your own screen e.g. by removing "like", "system", etc.
 
 :::::::::::::::
-### Sentiment 
+
 
 ::::::::: callout
 
