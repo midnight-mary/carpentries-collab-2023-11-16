@@ -62,6 +62,9 @@ desc_nouns_df.to_csv("clouds_nouns.csv")
 
 ::::::::::: keypoints
 
-1. In progress.
+1. Pandas is a Python library for data manipulation and analysis.
+2. You can use Pandas to create dataframes, i.e. data structures consisting of rows and columns from your spaCy ```doc``` and ```list``` objects.
+3. You can add or remove columns and rows based on their labels or values and quantitatively sort and analyse the contents.
+4. You can also use Pandas to write and export .csv and .tsv files for further manual coding or other manipulation.
 
 ::::::::::: 
