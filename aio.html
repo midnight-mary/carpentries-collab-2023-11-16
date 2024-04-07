@@ -1362,7 +1362,7 @@ check this against the results in the last episode.</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1">Give me a hint</h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
 <div class="accordion-body">
 <p>You will need to create a dictionary of annotations and then create a
 dataframe and filter out columns and rows.</p>
@@ -1375,7 +1375,7 @@ dataframe and filter out columns and rows.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1392,13 +1392,66 @@ dataframe and filter out columns and rows.</p>
 <span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a>desc_df <span class="op">=</span> pd.DataFrame.from_records(desc_doc_dict)</span>
 <span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a>desc_pos_df <span class="op">=</span> desc_df.drop(columns<span class="op">=</span>[<span class="st">"tag"</span>, <span class="st">"dep"</span>, <span class="st">"head"</span>])</span>
 <span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a>desc_nouns_df <span class="op">=</span> desc_pos_df[desc_pos_df[<span class="st">"pos"</span>].isin([<span class="st">"NOUN"</span>, <span class="st">"PROPN"</span>])]</span>
-<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a>desc_nouns_df.shape</span></code></pre>
+<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a>desc_nouns_df</span></code></pre>
 </div>
-<pre><code>(47, 2)</code></pre>
+<pre><code>	text	pos
+0	Clouds	NOUN
+6	suite	NOUN
+11	downbeats	NOUN
+13	Gigi	PROPN
+14	Masin	PROPN
+16	Marco	PROPN
+17	Sterk	PROPN
+19	Young	PROPN
+20	Marco	PROPN
+24	Johnny	PROPN
+25	Nash	PROPN
+29	heart	NOUN
+31	Amsterdam	PROPN
+34	light	NOUN
+35	district	NOUN
+38	weekend	NOUN
+40	April	PROPN
+42	2014.It	PROPN
+47	vibes	NOUN
+50	notes	NOUN
+57	buzz	NOUN
+60	streets	NOUN
+63	studio	NOUN
+66	windows	NOUN
+71	improvisations	NOUN
+76	drift	NOUN
+78	dub	NOUN
+82	piano	NOUN
+83	pieces	NOUN
+88	night	NOUN
+89	jazz	NOUN
+90	patter	NOUN
+94	sense	NOUN
+99	similarities	NOUN
+102	Clouds	PROPN
+107	Sky	PROPN
+108	Walking	PROPN
+109	album	NOUN
+111	Lawrence	PROPN
+113	co.	PROPN
+122	looseness	NOUN
+124	Gaussian	PROPN
+125	Curve	NOUN
+134	adult	NOUN
+136	suaveness	NOUN
+140	hash	NOUN
+141	oil	NOUN</code></pre>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>desc_nouns_df.to_csv(<span class="st">"clouds_nouns.csv"</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>desc_nouns_df.shape</span></code></pre>
+</div>
+<pre><code>(47, 2)</code></pre>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>desc_nouns_df.to_csv(<span class="st">"clouds_nouns.csv"</span>)</span></code></pre>
 </div>
 </div>
 </div>
@@ -1488,7 +1541,7 @@ rows match the number of unduplicated terms?</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1">Give me a hint</h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
 <div class="accordion-body">
 <p>The terms in our lists are word <strong>types</strong> but are not
 necessarily single <strong>tokens</strong>. As you will recall from our
@@ -1508,7 +1561,7 @@ should be discounted.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1543,7 +1596,7 @@ write down questions and observations to share with the whole group.</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint2" aria-expanded="false" aria-controls="collapseHint2">
   <h4 class="accordion-header" id="headingHint2">Give me a hint</h4>
 </button>
-<div id="collapseHint2" class="accordion-collapse collapse" data-bs-parent="#accordionHint2" aria-labelledby="headingHint2">
+<div id="collapseHint2" class="accordion-collapse collapse" aria-labelledby="headingHint2" data-bs-parent="#accordionHint2">
 <div class="accordion-body">
 <p>Use the ‘Color By’ function to differentiate terms by genre. This
 will assign a different colour to Grime versus Industrial terms and
