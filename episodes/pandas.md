@@ -47,6 +47,59 @@ desc_doc_dict
 desc_df = pd.DataFrame.from_records(desc_doc_dict)
 desc_pos_df = desc_df.drop(columns=["tag", "dep", "head"])
 desc_nouns_df = desc_pos_df[desc_pos_df["pos"].isin(["NOUN", "PROPN"])]
+desc_nouns_df
+```
+```
+	text	pos
+0	Clouds	NOUN
+6	suite	NOUN
+11	downbeats	NOUN
+13	Gigi	PROPN
+14	Masin	PROPN
+16	Marco	PROPN
+17	Sterk	PROPN
+19	Young	PROPN
+20	Marco	PROPN
+24	Johnny	PROPN
+25	Nash	PROPN
+29	heart	NOUN
+31	Amsterdam	PROPN
+34	light	NOUN
+35	district	NOUN
+38	weekend	NOUN
+40	April	PROPN
+42	2014.It	PROPN
+47	vibes	NOUN
+50	notes	NOUN
+57	buzz	NOUN
+60	streets	NOUN
+63	studio	NOUN
+66	windows	NOUN
+71	improvisations	NOUN
+76	drift	NOUN
+78	dub	NOUN
+82	piano	NOUN
+83	pieces	NOUN
+88	night	NOUN
+89	jazz	NOUN
+90	patter	NOUN
+94	sense	NOUN
+99	similarities	NOUN
+102	Clouds	PROPN
+107	Sky	PROPN
+108	Walking	PROPN
+109	album	NOUN
+111	Lawrence	PROPN
+113	co.	PROPN
+122	looseness	NOUN
+124	Gaussian	PROPN
+125	Curve	NOUN
+134	adult	NOUN
+136	suaveness	NOUN
+140	hash	NOUN
+141	oil	NOUN
+```
+```python
 desc_nouns_df.shape
 ```
 ```
